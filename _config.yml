@@ -26,8 +26,8 @@ url                      : "https://heijung1201.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "heijung1201/heijung1201.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/jung.png"
+masthead_title           : "Hei-Jung's blog"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -76,7 +76,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/hufs.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Hei-Jung Jang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/hufs.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a **super cool** engineer."
   location         : "Seoul, South Korea"
   email            :
