@@ -76,7 +76,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/hufs.jpg"
+og_image                 : "/assets/images/jung.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Hei-Jung Jang"
-  avatar           : "/assets/images/hufs.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/jung.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a **super cool** engineer."
   location         : "Seoul, South Korea"
   email            :
@@ -104,7 +104,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
       url: "heijung.jang@hotmail.com"
-    - label: "Naver Blog"
+    - label: "Other Blog"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
       url: "https://blog.naver.com/wkdgpwjd007"
