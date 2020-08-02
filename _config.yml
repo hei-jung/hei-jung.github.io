@@ -20,11 +20,11 @@ locale                   : "en-US"
 title                    : "졍's개발노트"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "장혜정(Hei-Jung Jang)"
-description              : "졍의 코딩 노트."
+name                     : "졍의 코딩 노트."
+description              : "개발자를 꿈꾸는 졍의 블로그"
 url                      : "https://heijung1201.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "heijung1201/heijung1201.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "장혜정(Hei-Jung Jang)"
+  name             : "Hei-Jung Jang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a **super cool** engineer."
   location         : "Seoul, South Korea"
