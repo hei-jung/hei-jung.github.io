@@ -9,9 +9,9 @@ categories: android java
 
 ****중요한 components****
 
-(1)activity -> 화면 페이지(sth that will be displayed on)
-(2)service, (3)broadcast receiver -> 백그라운드 작업
-(4)content provider -> 데이터를 공유하는 방법(to share data btw apps. 데이터를 제공해주는 쪽에서 구현)
+- (1)activity -> 화면 페이지(sth that will be displayed on)
+- (2)service, (3)broadcast receiver -> 백그라운드 작업
+- (4)content provider -> 데이터를 공유하는 방법(to share data btw apps. 데이터를 제공해주는 쪽에서 구현)
 
 cf. JNI(java native interface)
 
