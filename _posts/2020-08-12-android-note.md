@@ -41,7 +41,7 @@ Component Lifecycles
 - pause: 객체는 소멸되었지만 상태 정보는 유지.
 - stop
 
-<액티비티 생명주기 메서드>
+(i) 액티비티 생명주기 메서드
 - onCreate() // 액티비티 초기화 코드. 뷰 생성.
   - cf. Bundle: key와 value 저장. 안드로이드 개발에서 자주 쓰이는 일종의 Map.
   - setContentView(): XML로 만든 View 객체를 현재 Activity에 붙여준다.
