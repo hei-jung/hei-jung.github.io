@@ -26,6 +26,17 @@ cf. XML의 역할
 cf. 생명주기(life cycle) 메서드를 잘 알아야 해
 -> 프레임워크 구조의 패턴에 맞게 코드를 작성하기 위함.
 
-cf. intent
-다른 액티비티를 깨워서 새 페이지를 활성화
---- broadcast receiver와 관련이 있다. broadcast receiver 동작 예> 문자메시지(알람이 울리다가도 메시지를 수신함.)
+cf. intent: 컴포넌트 활성화시키는 객체
+- use: 다른 액티비티를 깨워서 새 페이지를 활성화
+- broadcast receiver와 관련이 있다. broadcast receiver 동작 예> 문자메시지(알람이 울리다가도 메시지를 수신함.)
+
+* manifest file: 권한 설정, 추가.
+
+===
+Component Lifecycles
+===
+
+1. Activity lifecycle
+- active
+- pause: 객체는 소멸되었지만 상태 정보는 유지.
+- stop
