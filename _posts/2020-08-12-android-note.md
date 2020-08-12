@@ -30,7 +30,7 @@ cf. intent: 컴포넌트 활성화시키는 객체
 - use: 다른 액티비티를 깨워서 새 페이지를 활성화
 - broadcast receiver와 관련이 있다. broadcast receiver 동작 예> 문자메시지(알람이 울리다가도 메시지를 수신함.)
 
-* manifest file: 권한 설정, 추가.
+cf. manifest file: 권한 설정, 추가.
 
 
 Component Lifecycles
