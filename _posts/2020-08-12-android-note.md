@@ -5,7 +5,7 @@ categories: android java
 
 **안드로이드 프레임워크**
 (Android Framework)
-
+===
 
 ****중요한 components****
 
@@ -45,3 +45,6 @@ Component Lifecycles
 - onCreate() // 액티비티 초기화 코드. 뷰 생성.
   - cf. Bundle: key와 value 저장. 안드로이드 개발에서 자주 쓰이는 일종의 Map.
   - setContentView(): XML로 만든 View 객체를 현재 Activity에 붙여준다.
+  
+(ii) activity_main.xml
+- Attribute id: Attribute을 부를 이름. 속성들은 R 클래스(R.java)에 저장된다. 따라서 .java 파일에서 접근하려면 *R.id.정의한id*라고 쓴다.
