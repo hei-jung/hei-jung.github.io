@@ -32,7 +32,7 @@ cf. intent: 컴포넌트 활성화시키는 객체
 
 * manifest file: 권한 설정, 추가.
 
-===
+
 Component Lifecycles
 ===
 
