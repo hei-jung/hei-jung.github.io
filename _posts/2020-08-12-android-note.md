@@ -30,7 +30,7 @@ cf. intent: 컴포넌트 활성화시키는 객체
 - use: 다른 액티비티를 깨워서 새 페이지를 활성화
 - broadcast receiver와 관련이 있다. broadcast receiver 동작 예> 문자메시지(알람이 울리다가도 메시지를 수신함.)
 
-cf. manifest file: 권한 설정, 추가.
+cf. manifest file: 권한 설정, 추가. 프로그램에 대한 명세서.
 
 
 Component Lifecycles
@@ -40,3 +40,8 @@ Component Lifecycles
 - active
 - pause: 객체는 소멸되었지만 상태 정보는 유지.
 - stop
+
+<액티비티 생명주기 메서드>
+- onCreate() // 액티비티 초기화 코드. 뷰 생성.
+  - cf. Bundle: key와 value 저장. 안드로이드 개발에서 자주 쓰이는 일종의 Map.
+  - setContentView(): XML로 만든 View 객체를 현재 Activity에 붙여준다.
