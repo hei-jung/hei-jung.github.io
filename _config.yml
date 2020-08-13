@@ -103,7 +103,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
-      url: "heijung.jang@hotmail.com"
+      url: "mailto:heijung.jang@hotmail.com"
     - label: "Other Blog"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
