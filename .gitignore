@@ -1,0 +1,8 @@
+_site/
+.bundle
+.jekyll-metadata
+*.gem
+Gemfile.lock
+pkg/
+test/destination
+test/source/.jekyll-cache
