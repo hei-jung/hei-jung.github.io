@@ -59,3 +59,8 @@ cf. manifest file: 권한 설정, 추가. 프로그램에 대한 명세서.
 2. 메뉴
 - 상단의 : 누르면 나타나는 메뉴 - options 메뉴
 - view를 길게 누르면 나타나는 메뉴 - context 메뉴
+
+**Adapter**
+
+getView(position, convertView, parent): Adapter에서 가장 중요한 메서드 (--이하 parameter 설명--)
+  - position: 처리할 데이터의 위치. 해당 위치의 데이터를 읽어 리소스로 지정한 뷰로 생성하여 반환
