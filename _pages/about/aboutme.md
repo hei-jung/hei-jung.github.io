@@ -130,10 +130,10 @@ title: "소개글(2020)"
 
 > Language Skills
 
-- Korean/한국어: *native*
 - English: *proficient*
-- Japanese/日本語: *fluent*
-- French/Français: *conversational*
+- Korean(한국어): *native*
+- Japanese(日本語): *fluent*
+- French(Français): *conversational*
 
 > Computer Skills
 
