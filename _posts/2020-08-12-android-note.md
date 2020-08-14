@@ -60,7 +60,32 @@ cf. manifest file: 권한 설정, 추가. 프로그램에 대한 명세서.
 - 상단의 : 누르면 나타나는 메뉴 - options 메뉴
 - view를 길게 누르면 나타나는 메뉴 - context 메뉴
 
+
 **Adapter**
 
 getView(position, convertView, parent): Adapter에서 가장 중요한 메서드 (--이하 parameter 설명--)
   - position: 처리할 데이터의 위치. 해당 위치의 데이터를 읽어 리소스로 지정한 뷰로 생성하여 반환
+
+
+**Intent**
+
+- Activity를 이동한다는 것은, 다른 Activity를 활성화시키는 것! ---> **Intent**
+  - 안드로이드는 현재 프로그램 외에도 다른 프로그램을 불러올 수 있음
+  - 다른 프로그램은 분리된 프로세스에 있으므로, 메모리 자원을 공유하지 않음
+  - 직접적이지 않은 다른 방식으로 지목을 해서 깨워야 함
+    => 묵시적인(implicit) 방법 - 조건 사용: intent filter (명시적인 방법 - intent)
+    EX. AndroidManifest.xml 안에서 활성화할 액티비티에 intent-filter 태그 사용
+```xml
+    <intent-filter>
+      <action></action>
+      <data></data>
+      <category></category>
+    </intent-filter>
+```
+
+cf. URI: 자원의 위치
+
+- getIntent(): Activity 클래스에서 제공하는, intent를 받아오는 메서드. 현재 Activity를 활성화하려고 던진 intent를 받아옴.
+- finish(): 현재 Activity를 종료하는 메서드 -> 이전 Activity로 되돌아감.
+  - putExtra(): 종료하면서 Activity 정보를 담아서 보내줌
+  - setResult(): 처리 결과가 정상/비정상인지 보내줌
