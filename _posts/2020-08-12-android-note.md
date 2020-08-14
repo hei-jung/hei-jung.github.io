@@ -73,7 +73,7 @@ getView(position, convertView, parent): Adapter에서 가장 중요한 메서드
   - 안드로이드는 현재 프로그램 외에도 다른 프로그램을 불러올 수 있음
   - 다른 프로그램은 분리된 프로세스에 있으므로, 메모리 자원을 공유하지 않음
   - 직접적이지 않은 다른 방식으로 지목을 해서 깨워야 함
-    => 묵시적인(implicit) 방법 - 조건 사용: intent filter (명시적인 방법 - intent)
+    => 묵시적인(implicit) 방법 - 조건 사용: intent filter, 상수 코드 사용 (명시적인 방법 - intent. 이동할 Activity 클래스 명시)
     EX. AndroidManifest.xml 안에서 활성화할 액티비티에 intent-filter 태그 사용
 ```xml
     <intent-filter>
@@ -89,3 +89,16 @@ cf. URI: 자원의 위치
 - finish(): 현재 Activity를 종료하는 메서드 -> 이전 Activity로 되돌아감.
   - putExtra(): 종료하면서 Activity 정보를 담아서 보내줌
   - setResult(): 처리 결과가 정상/비정상인지 보내줌
+- Intent intent = new Intent(packageContext, target 액티비티명): 타깃 액티비티를 **명시**
+- startActivity(intent): target으로 지정한 intent로 이동
+- startActivityForResult(intent, requestCode)
+  - requestCode: 어느 액티비티 다녀왔는지 표시
+- onActivityResult(requestCode, resultCode, data)
+  - startActivityForResult()로 다른 액티비티 다녀오면 자동 호출됨. 다녀온 액티비티 처리 결과를 현재 액티비티에 적용
+  - requestCode: 어느 액티비티 다녀왔는지 확인
+  - resultCode: 다녀온 액티비티의 처리 결과가 정상인지 아닌지 학인
+  - data: 다녀온 액티비티 쪽에서 처리 결과를 담아 보낸 intent
+    
+cf. 왜 어떨 땐 this 쓰고 어떤 땐 액티비티명.this 쓰지?
+  - 이벤트 핸들링을 하는 경우엔 context의 혼동이 있을 수도 있어, 액티비티명.this라고 쓴다.
+  - 반면, 단순히 액티비티를 이동하는 경우에는 프로그램이 context를 헷갈려하지 않기 때문에 그냥 this라고 써도 무방하다.
