@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /about/
-title: "Curriculum Vitae"
+title: "Curriculum Vitae(CV)"
 ---
 
 # 장혜정
