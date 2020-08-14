@@ -1,16 +1,16 @@
 ---
 layout: single
 permalink: /about/
-title: "소개글(2020)"
+title: "Curriculum Vitae"
 ---
 
-# 졍's개발노트
+# 장혜정
 
-> 개인 공부, 취미용 코딩 블로그
+> 간단히
 
 - 장혜정(Hei-Jung Jang)
-- 2020년 기준 24살
-- 전자공학과 졸업생🎓
+- 1997년 12월 1일생(만 22세)
+- 한국외국어대학교 전자공학과 졸업
 - [네이버 블로그](https://blog.naver.com/wkdgpwjd007)
 
 ## CURRENT
