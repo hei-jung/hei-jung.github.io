@@ -151,6 +151,7 @@ title: "Curriculum Vitae(CV)"
   - Oracle SQL
   
 - Other
+  - Git/GitHub
   - Microsoft Word/PowerPoint/Excel
   - Adobe Illustrator
 
