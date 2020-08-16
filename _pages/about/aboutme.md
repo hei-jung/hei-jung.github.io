@@ -1,25 +1,22 @@
 ---
 layout: single
-permalink: /about/
+permalink: /about-me/
 title: "Curriculum Vitae(CV)"
 ---
 
 # 장혜정
 
-> 간단히
+> 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
 - 장혜정(Hei-Jung Jang)
 - 1997년 12월 1일생(만 22세)
 - 한국외국어대학교 전자공학과 졸업
-- [네이버 블로그](https://blog.naver.com/wkdgpwjd007)
+- [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
+- [GitHub](https://github.com/heijung1201)
 
 ## CURRENT
 
 - 엔코아 플레이데이터 ***자율주행을 위한 임베디드 및 AI 영상분석 컨버전스 SW 개발자 양성과정*** 수강 중 (2020.04 ~)
-
-## OBJECTIVE
-
-- 다양한 사람들과 협업하며 배울 점을 찾고, 스스로 발전해나간다.
 
 ## EDUCATION
 
@@ -157,7 +154,7 @@ title: "Curriculum Vitae(CV)"
 
 ## OTHER ACTIVITIES
 
-- 2019 교내 자유소프트웨어 동아리 GnuVill(그누빌)
+- 2019 교내 자유소프트웨어 동아리 GnuVill(그누빌) 수료
 - 2018 드론조종개발과정 수료
 - 2018 컨버전스형 IT 연합동아리 CADI(카디) 6기 앱개발 파트 일반회원 상반기 수료
 - 2018 ICOOS(아이쿠스) 일본 드리머즈 7기 문화홍보조
