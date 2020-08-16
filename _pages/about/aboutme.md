@@ -136,21 +136,23 @@ title: "Curriculum Vitae(CV)"
 
 > Computer Skills
 
-- C
-- OrCad
-- MultiSim
-- Verilog HDL
-- ModelSim
-- Java
-  - Web(MyBatis, Spring,...)
-  - Android App
-- Python
-  - IoT
-  - OpenCV
-  - TensorFlow
-- Oracle SQL
-- Microsoft Word/PowerPoint/Excel
-- Adobe Illustrator
+- Programming
+  - C/C++
+  - Python
+  - Java
+
+- Engineering
+  - OrCad
+  - MultiSim
+  - ModelSim
+    - Verilog HDL
+
+- Database
+  - Oracle SQL
+  
+- Other
+  - Microsoft Word/PowerPoint/Excel
+  - Adobe Illustrator
 
 ## OTHER ACTIVITIES
 
