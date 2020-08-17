@@ -36,10 +36,12 @@ O(n!)>O(2^N)>O(N^2)>O(NlogN)>O(N)>O(√N)>O(logN)>O(1)
 
 - 숫자 -> 형변환 int(input())
 - 문자단위 (char)
+
 ```python
 char_lst = list(input())
 lst = list(map(int, input().split()))
 ```
+
 - map(x, y)는 x 함수를 y 원소에 모두 적용한 map 객체를 return.
 - 나중에 char_lst 내용 -> 문자열: join 메서드
 - **문제에서는 약간의 여백을 두는 게 좋음.** *EX. 100이면 배열 -> 105로*
@@ -51,6 +53,7 @@ cf. 표기법
 ## 코드 예제
 
 > return 방식
+
 ```python
 # 1번
 def function(x):
@@ -59,20 +62,24 @@ def function(x):
     else:
         return False
 ```
+
 ```python
 # 2번
 def function(x):
     if x:   return True
     return False
 ```
+
 ```python
 # 3번
 def function(x):
     return True if x else False 
 ```
+
 => 2, 3번이 나음.
 
 > 문자열 타입을 정수 타입으로 변환
+
 ```python
 def stoi(s, n):
     ret = 0
@@ -81,6 +88,7 @@ def stoi(s, n):
         ret += int(s[i])*n**(l-i-1)
     return ret
 ```
+
 ```python
 def stoi(s, n):
     ret = 0
@@ -90,6 +98,7 @@ def stoi(s, n):
 ```
 
 > 제곱
+
 ```python
 def pow_custom(a, b):
     ret = 1
@@ -99,6 +108,7 @@ def pow_custom(a, b):
         b //= 2
     return ret
 ```
+
 ```python
 def pow_custom(a, b, mod):
     ret = 1
@@ -110,6 +120,7 @@ def pow_custom(a, b, mod):
 ```
 
 > 최대공약수
+
 ```python
 # 내가 짜본 코드
 def gcd(a, b):
@@ -121,6 +132,7 @@ def gcd(a, b):
         if r==0:
             return b
 ```
+
 ```python
 # 1부터 체크하는 방식
 def gcd(a, b):
@@ -130,6 +142,7 @@ def gcd(a, b):
             ret = i
     return ret
 ```
+
 ```python
 # min(a, b)부터 체크하는 방식
 # 훨씬 빠르다!
@@ -138,6 +151,7 @@ def gcd(a, b):
         if a%i==0 and b%i==0:
             return i
 ```
+
 ```python
 # 유클리드 호제법
 def gcd(a, b):
@@ -145,6 +159,7 @@ def gcd(a, b):
 ```
 
 > 소수 판별법
+
 ```python
 # O(N)
 def isPrime(N):
@@ -152,6 +167,7 @@ def isPrime(N):
         if N%i==0:  return False
     return True
 ```
+
 ```python
 # O(√N)
 def ifPrime(N):
@@ -161,6 +177,7 @@ def ifPrime(N):
         i += 1
     return True
 ```
+
 ```python
 # 에라토스테네스의 체
 def era(N):
@@ -174,6 +191,7 @@ def era(N):
 ```
 
 > 하노이 탑 예제(대표적인 재귀함수 예제)
+
 ```python
 def hanoi(st, ed, sz):
     if sz==1:   return print(st, ed)
@@ -185,6 +203,7 @@ n = int(input())
 print(2**n-1)
 hanoi(1, 3, n)
 ```
+
 => 최저조건에 대한 조건문!
 
 ## 정렬 알고리즘
@@ -201,16 +220,20 @@ hanoi(1, 3, n)
 - deque: rotate 가능. 2개 포인터 사용. 큐+스택
 
 * list 출력 시: print(ans)
+
 ```python
 print(f"<{str(ans)[1:-1]}>")
 ```
+
 * cf. fstring
+
 ```python
 apple = 'apple'
 print(f'{apple}')
 ```
 
 ## 이진트리
+
 ```python
 while not a==b:
     if a>b: a //= 2
@@ -229,20 +252,25 @@ print(a)
 
 ## 기타 메모.
 ### map 함수
+
 ```python
 map(function, iterable)
 ```
+
 - Return an iterator that applies function to every item on iterable, yielding the results.
 - 함수와 이터러블을 입력으로 받아, 입력받은 자료형의 각 요소를 함수 function이 수행한 결과를 묶어서 돌려주는 함수이다.
 
 <예시>
 > 6 7 1 1 2 3 6
+
 ```python
 lst = sorted(list(map(int, input().split())))
 ```
+
 => 결과: lst = [1, 1, 2, 3, 6, 6, 7]
 
 ### split 함수
+
 ```python
 str.split() # 괄호 안의 파라미터는 문자열을 리스트로 쪼개는 구분자로 사용
 # EX.
