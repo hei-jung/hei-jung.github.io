@@ -45,7 +45,7 @@ lst = list(map(int, input().split()))
 - map(x, y)는 x 함수를 y 원소에 모두 적용한 map 객체를 return.
 - 나중에 char_lst 내용 -> 문자열: join 메서드
 - **문제에서는 약간의 여백을 두는 게 좋음.** *EX. 100이면 배열 -> 105로*
-cf. 표기법
+- cf. 변수/함수 명명법
   - 함수: camelCase
   - 변수: snake_case
   - PascalCase
