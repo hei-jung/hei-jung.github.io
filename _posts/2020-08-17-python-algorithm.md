@@ -260,8 +260,7 @@ map(function, iterable)
 - Return an iterator that applies function to every item on iterable, yielding the results.
 - 함수와 이터러블을 입력으로 받아, 입력받은 자료형의 각 요소를 함수 function이 수행한 결과를 묶어서 돌려주는 함수이다.
 
-<예시>
-> 6 7 1 1 2 3 6
+> 예시 입력: 6 7 1 1 2 3 6
 
 ```python
 lst = sorted(list(map(int, input().split())))
@@ -273,7 +272,6 @@ lst = sorted(list(map(int, input().split())))
 
 ```python
 str.split() # 괄호 안의 파라미터는 문자열을 리스트로 쪼개는 구분자로 사용
-# EX.
 str.split(',')  # '1, ,2' -> ['1', ' ', '2']
 str.split('<>') # '1<>2<>3' -> ['1', '2', '3']
 ```
