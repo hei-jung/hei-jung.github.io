@@ -3,13 +3,13 @@ title: "전화부 예제"
 categories: android java
 ---
 
-##AndroidManifest.xml
+## AndroidManifest.xml
 ```xml
 <uses-permission android:name="android.permission.CALL_PHONE" />
 <application>...</application>
 ```
 
-##Member 클래스
+## Member 클래스
 ```java
 public class Member implements Serializable {
     // Member 객체를 View로 전달할 수 있도록 Serializable 불러옴
@@ -20,7 +20,7 @@ public class Member implements Serializable {
     ...
 ```
 
-##PhoneAdaptor
+## PhoneAdaptor
 ```java
 public class PhoneAdaptor extends ArrayAdapter<Member> {
     private Context context;
@@ -71,7 +71,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 }
 ```
 
-##PhoneAdaptor에 대한 View
+## PhoneAdaptor에 대한 View
 > item_layout.xml
 ```xml
 <Linear Layout>
@@ -82,7 +82,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 </Linear Layout>
 ```
 
-##MainActivity.java
+## MainActivity.java
 > 액티비티 
 ```java
     @Override
@@ -184,7 +184,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 
 ```
 
-##AddActivity.java
+## AddActivity.java
 > 라디오버튼 설정
 ```java
 types.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
