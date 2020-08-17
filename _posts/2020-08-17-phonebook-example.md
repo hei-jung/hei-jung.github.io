@@ -1,5 +1,5 @@
 ---
-title: "전화부 예제"
+title: "전화번호부 예제"
 categories: android java
 ---
 
