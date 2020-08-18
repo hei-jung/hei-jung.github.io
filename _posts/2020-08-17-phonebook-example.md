@@ -1,15 +1,17 @@
 ---
-title: "전화번호부 예제"
+title: "안드로이드 - 전화번호부 예제"
 categories: android java
 ---
 
 ## AndroidManifest.xml
+
 ```xml
 <uses-permission android:name="android.permission.CALL_PHONE" />
 <application>...</application>
 ```
 
 ## Member 클래스
+
 ```java
 public class Member implements Serializable {
     // Member 객체를 View로 전달할 수 있도록 Serializable 불러옴
@@ -21,6 +23,7 @@ public class Member implements Serializable {
 ```
 
 ## PhoneAdaptor
+
 ```java
 public class PhoneAdaptor extends ArrayAdapter<Member> {
     private Context context;
@@ -72,7 +75,9 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```
 
 ## PhoneAdaptor에 대한 View
+
 > item_layout.xml
+
 ```xml
 <Linear Layout>
 <ImageView/>
@@ -83,7 +88,9 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```
 
 ## MainActivity.java
+
 > 액티비티 
+
 ```java
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +106,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```    
 
 > option메뉴 생성
+
 ```java
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -121,6 +129,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```    
 
 > 다른 액티비티에서 되돌아왔을 때 실행할 내용
+
 ```java
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -153,6 +162,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```    
 
 > context메뉴 
+
 ```java
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -185,7 +195,9 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 ```
 
 ## AddActivity.java
+
 > 라디오버튼 설정
+
 ```java
 types.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
     @Override
@@ -208,6 +220,7 @@ types.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 ```
 
 > spinner 이미지 선택
+
 ```java
 imgIdx = new ArrayList<>();
       imgIdx.add(R.drawable.img1);
@@ -239,6 +252,7 @@ imgIdx = new ArrayList<>();
 ```
 
 > '저장' 버튼에 대한 onClick 메서드
+
 ```java
 public void onSave(View view) {
     String name = editName.getText().toString();
