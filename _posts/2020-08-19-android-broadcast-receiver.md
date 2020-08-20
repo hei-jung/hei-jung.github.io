@@ -1,3 +1,8 @@
+---
+title : "안드로이드 - Receiver"
+categories: android java
+---
+
 ## Broadcast Receiver
 
 - UI가 없다. -> 알림을 위해선 dialogue box, toast, notification 등 이용.
