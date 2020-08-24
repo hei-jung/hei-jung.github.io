@@ -3,18 +3,16 @@ title: "안드로이드 - 데이터베이스 연동 (1)"
 categories: android java
 ---
 
-[오늘 수업내용 바로가기](#안드로이드-DB-연동-이어서)
-
 ### 안드로이드-DB 연동 복습
-
-(8/21 수업 내용. 이 날 수업 하루 빠져서 내용 놓침..ㅠㅠ)
 
 - 지난 주 목요일(8/20) 필기 내용
   - 안드로이드 스튜디오 우측 하단의 Device File Explorer > data > data > 프로젝트패키지명 > shared_prefs > idcheck.xml
   - 안드로이드: 보안을 위해 다른 애플리케이션과 데이터 폴더를 공유하지 않는다.
-  
-- [(8/21)예지언니 필기 참고](https://github.com/Ahnyezi/Android_note/blob/master/0821.md)
 
+(8/21 수업 내용. 이 날 수업 하루 빠져서 내용 놓침..ㅠㅠ)
+
+- [(8/21)예지언니 필기 참고](https://github.com/Ahnyezi/Android_note/blob/master/0821.md)
+  
 - sqlite
   - 가장 정석적인 방법
 - room
