@@ -212,7 +212,7 @@ public void open() {
 
 public Cursor select(String t, String where) {
     String sql = "select * from " + t;
-    if (where != null || !where.equals("")) {
+    if (where != null && !where.equals("")) {
         sql += " where " + where;
     }
     return db.query(sql);
@@ -272,7 +272,7 @@ public boolean onCreate() {
 }
 ```
 
-- 데이터의 MIME 타입 구분
+- URI에 따라 MIME 타입 구분
 
 ```java
 @Override
@@ -369,5 +369,71 @@ public int update(Uri uri, ContentValues values, String selection,
     }
     getContext().getContentResolver().notifyChange(uri, null);
     return cnt;
+}
+```
+
+
+> ProviderTestActivity 액티비티
+
+- 멤버변수
+
+```java
+private EditText editName;
+private EditText editTel;
+private ListView listView;
+private ArrayAdapter<Member> adapter;
+private ArrayList<Member> list;
+private Uri uri = MyContentProvider.CONTENT_URI;
+```    
+
+- onCreate() 메서드
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_provider_test);
+    editName = findViewById(R.id.editName);
+    editTel = findViewById(R.id.editTel);
+    listView = findViewById(R.id.listView);
+    list = new ArrayList<>();
+    adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
+    listView.setAdapter(adapter);
+    getAll();
+}
+```    
+
+- getAll() 메서드 추가
+
+```java
+public void getAll() {
+    list.clear();
+    Cursor c = getContentResolver().query(uri, null, null, null, null);
+    if (c.moveToFirst()) {
+        do {
+            list.add(new Member(c.getInt(0), c.getString(1), c.getString(2)));
+        } while (c.moveToNext());
+    }
+    adapter.notifyDataSetChanged();
+}
+```    
+
+- 버튼 핸들러 onClick 메서드
+
+```java
+public void onSave(View view) {
+    String n = editName.getText().toString();
+    String t = editTel.getText().toString();
+    ContentValues cv = new ContentValues();
+    cv.put("name", n);
+    cv.put("tel", t);
+    getContentResolver().insert(uri, cv);
+    editName.setText("");
+    editTel.setText("");
+    getAll();
+}
+
+public void onEdit(View view) {
+    // 숙제
 }
 ```
