@@ -410,6 +410,7 @@ public boolean onContextItemSelected(@NonNull MenuItem item) {
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
+```
 
 > SMSActivity를 묵시적으로 활성화: 지난번 전화번호부 app이랑 연동하기 위해
 
