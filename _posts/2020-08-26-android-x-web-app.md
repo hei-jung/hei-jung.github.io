@@ -262,7 +262,7 @@ public class LoginActivity extends AppCompatActivity {
         ContentValues cv = new ContentValues();
         cv.put("id", id);
         cv.put("pwd", pwd);
-        model.req("https://192.168.22.128:7878/web_and/login", cv);
+        model.req("https://서버IP주소:포트주소/web_and/login", cv);
         id_et.setText("");
         pwd_et.setText("");
     }
