@@ -84,7 +84,7 @@ public class PListActivity extends AppCompatActivity {
             }
         });
 
-        model.req("http://192.168.22.128:8888/products", "get", null);
+        model.req("http://서버IP주소:8888/products", "get", null);
     }
 }
 ```
