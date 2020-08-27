@@ -136,6 +136,9 @@ if (MainActivity.session_id.equals("")) {
 return page;
 ```
 
+참고.<br>
+세션은 객체 타입을 비롯한 다양한 타입을 저장할 수 있지만, 쿠키는 문자열만 저장 가능.
+
 > RequestHttpURLConnection의 request 파라미터를 수정했으므로 WebViewModel의 req도 수정
 
 ```java
