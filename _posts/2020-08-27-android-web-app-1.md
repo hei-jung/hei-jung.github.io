@@ -179,7 +179,7 @@ public class MyInfoActivity extends AppCompatActivity {
             }
         });
 
-        model.req("http://192.168.22.128:7878/web_and/MyInfo", "get", null);
+        model.req("http://서버IP주소:7878/web_and/MyInfo", "get", null);
     }
 }
 ```
