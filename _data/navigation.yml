@@ -6,8 +6,6 @@ main:
     url: /about-me/
   - title: "Categories"
     url: /categories/
-  - title: "Guest"
-    url: /guest/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
