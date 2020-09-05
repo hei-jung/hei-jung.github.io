@@ -3,7 +3,7 @@ title: "안드로이드 - 인터넷 오픈API 활용 (2)"
 categories: android java
 ---
 
-- [이전 글](https://heijung1201.github.io/android/java/weather-api-example-first/)에서는 xml 형식 데이터를 활용했다.
+- [이전 글](https://hei-jung.github.io/android/java/weather-api-example-first/)에서는 xml 형식 데이터를 활용했다.
 - 이번에는 json 형식 데이터를 불러와보자.
 - 액티비티와 레이아웃은 이전 글과 동일하게 설정.
 - Main Activity에서 show 함수만 다르게 쓴다.
