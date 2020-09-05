@@ -8,7 +8,7 @@ categories: android java
 
 ## MainActivity
 
-1. [인터넷 권한 설정](https://heijung1201.github.io/android/java/android-internet-web-browser-example/)
+1. [인터넷 권한 설정](https://hei-jung.github.io/android/java/android-internet-web-browser-example/)
 
 2. TextView를 하나 만든다.
 
