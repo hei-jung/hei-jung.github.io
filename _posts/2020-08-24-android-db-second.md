@@ -94,7 +94,7 @@ new Thread() {
 
 > build.gradle (Module: app)
 
-[참고: build.gradle 전체코드](https://heijung1201.github.io/android/java/android-db/)
+[참고: build.gradle 전체코드](https://hei-jung.github.io/android/java/android-db/)
 
 ```gradle
 // View Model 의존성
