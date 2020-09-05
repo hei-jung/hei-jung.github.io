@@ -3,7 +3,7 @@ title: "안드로이드 - 소켓 통신"
 categories: android java
 ---
 
-* [인터넷 권한 설정](https://heijung1201.github.io/android/java/android-internet-web-browser-example/)은 당연히 필수겠죠?
+* [인터넷 권한 설정](https://hei-jung.github.io/android/java/android-internet-web-browser-example/)은 당연히 필수겠죠?
 
 ## Server
 
