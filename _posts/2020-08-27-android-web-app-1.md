@@ -3,7 +3,7 @@ title: "안드로이드 - Web과 App 연동 이어서(1)"
 categories: android java
 ---
 
-[어제 수업내용 및 코드](https://heijung1201.github.io/android/java/android-x-web-app/)
+[어제 수업내용 및 코드](https://hei-jung.github.io/android/java/android-x-web-app/)
 <details>
 <summary>요약 접기/펼치기</summary>
 <h3>웹 서버 통한 로그인 기능</h3>
