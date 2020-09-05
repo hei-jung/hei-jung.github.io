@@ -22,9 +22,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "졍의 코딩 노트"
 description              : "개발자를 꿈꾸는 졍의 블로그"
-url                      : "https://heijung1201.github.io"
+url                      : "https://hei-jung.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "heijung1201/heijung1201.github.io"
+repository               : "hei-jung/hei-jung.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/jung.png"
 masthead_title           : "Hei-Jung's blog"
@@ -33,7 +33,7 @@ words_per_minute         : 200
 comments:
   provider               : disqus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : heijung1201-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : hei-jung-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -51,7 +51,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : "https://heijung1201.github.io" # blank (default) uses feed.xml
+  path                   : "https://hei-jung.github.io" # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -117,7 +117,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url: "https://github.com/"
-      url: "https://github.com/heijung1201"
+      url: "https://github.com/hei-jung"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -134,7 +134,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/heijung1201"
+      url: "https://github.com/hei-jung"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:

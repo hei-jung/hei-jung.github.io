@@ -12,7 +12,7 @@ title: "Curriculum Vitae(CV)"
 - 1997년 12월 1일생(만 22세)
 - 한국외국어대학교 전자공학과 졸업
 - [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
-- [GitHub](https://github.com/heijung1201)
+- [GitHub](https://github.com/hei-jung)
 
 ## CURRENT
 
@@ -39,8 +39,8 @@ title: "Curriculum Vitae(CV)"
   - 설계도구: *MultiSim*
 
 - 캡스톤 설계 프로젝트: 안드로이드 앱으로 제어하는 DIY 디지털 디스플레이
-  - [안드로이드](https://github.com/heijung1201/LedControl)
-  - [아두이노](https://github.com/heijung1201/LedControl_arduino)
+  - [안드로이드](https://github.com/hei-jung/LedControl)
+  - [아두이노](https://github.com/hei-jung/LedControl_arduino)
 
 - 디지털 시계 FPGA 설계
   - 언어: *Verilog HDL*
@@ -73,15 +73,15 @@ title: "Curriculum Vitae(CV)"
 
 > 플레이데이터
 
-- [DB 연동 Java 미니 프로젝트](https://github.com/heijung1201/myDbApp)
+- [DB 연동 Java 미니 프로젝트](https://github.com/hei-jung/myDbApp)
 
-- [Raspberry Pi 3B 활용 Python 미니 프로젝트](https://github.com/heijung1201/catchmind_game)
+- [Raspberry Pi 3B 활용 Python 미니 프로젝트](https://github.com/hei-jung/catchmind_game)
   - 내 역할: 서버 및 클라이언트 Back-end 구현, 사진/그림/맞추기 클라이언트에 대한 GUI 틀 마련
 
-- [Python OpenCV 미니 프로젝트](https://github.com/heijung1201/MiniProject_OpenCV)
+- [Python OpenCV 미니 프로젝트](https://github.com/hei-jung/MiniProject_OpenCV)
   - 내 역할: 얼굴 인식 알고리즘, 로그인 기능 구현
 
-- [CSV 데이터 활용 머신러닝 미니 프로젝트](https://github.com/heijung1201/PokeDex)
+- [CSV 데이터 활용 머신러닝 미니 프로젝트](https://github.com/hei-jung/PokeDex)
 
 ## SKILLS
 
