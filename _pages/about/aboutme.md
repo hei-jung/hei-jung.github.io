@@ -28,7 +28,7 @@ title: "Curriculum Vitae(CV)"
 
 > 학과
 
-- C언어 미니 프로젝트: 미니게임천국
+- C언어 미니 프로젝트: [미니게임천국](https://github.com/hei-jung/teamproject_heaven)
   - 언어: *C*
   - IDE도구: *Visual Studio*
 
