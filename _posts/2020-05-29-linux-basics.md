@@ -2,7 +2,7 @@
 title: "Linux Basics"
 categories: linux raspberry-pi
 toc: true
-toc_sticky: false
+toc_sticky: true
 header:
   overlay_image : /assets/images/header_linux.jpg
   overlay_filter: 0.3
