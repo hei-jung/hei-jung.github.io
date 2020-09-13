@@ -4,8 +4,8 @@ categories: linux raspberry-pi
 toc: true
 #toc_sticky: true
 header:
-  overlay_image : /assets/images/linux.png
-  overlay_filter: 1
+  overlay_image : /assets/images/header_linux.jpg
+  overlay_filter: 0.7
 ---
 
 # 리눅스 기본
@@ -32,13 +32,13 @@ header:
 su 아이디|사용자를 아이디로 변경
 su|사용자를 root로 변경
 sudo 명령어|root 권한으로 명령어 실행
-파일명 일부 + Tab키|자동완성
+파일명 일부 + `Tab`키|자동완성
 ls|디렉토리 내부에 있는 파일 목록(dir 비슷한 역할)
 rm|파일을 삭제(cf. 중복파일 .swp가 생기면 sudo rm .파일명.swp 해서 삭제)
--f 붙이면|강제
+`-f` 붙이면|강제
 cd|디렉터리 이동
-~|home 디렉토리를 의미
-/|root 디렉토리를 의미
+`~`|home 디렉토리를 의미
+`/`|root 디렉토리를 의미
 bin|명령어 실행 프로그램(ls, rm, etc.)을 저장해둔 디렉토리
 echo|네트워크 잘 되는지 안 되는지 확인하는 데 쓸 수 있음
 tmp|임시 파일이 저장되는 디렉토리
