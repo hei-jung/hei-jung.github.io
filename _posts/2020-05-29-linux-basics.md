@@ -5,7 +5,7 @@ toc: true
 #toc_sticky: true
 header:
   overlay_image : /assets/images/header_linux.jpg
-  overlay_filter: 0.7
+  overlay_filter: 0.3
 ---
 
 # 리눅스 기본
