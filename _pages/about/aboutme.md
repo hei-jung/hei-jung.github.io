@@ -14,10 +14,6 @@ title: "Curriculum Vitae(CV)"
 - [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
 
-## CURRENT
-
-- 엔코아 플레이데이터 ***자율주행을 위한 임베디드 및 AI 영상분석 컨버전스 SW 개발자 양성과정*** 수강 중 (2020.04 ~)
-
 ## EDUCATION
 
 - 한국외국어대학교 전자공학과 졸업 (2016.02 ~ 2020.02)
@@ -87,41 +83,24 @@ title: "Curriculum Vitae(CV)"
 
 > Language Skills
 
-- 🇺🇸English: *proficient*
-- 🇰🇷Korean(한국어): *native*
-- 🇯🇵Japanese(日本語): *fluent*
+||English|Korean(한국어)|Japanese(日本語)|
+|:---|:---:|:---:|:---:|
+|`listening` & `speaking`|*fluent*|*native*|*conversational*|
+|`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
 > Computer Skills
 
-- Programming
-  - C/C++
-  - Python
-  - Java
-
-- Engineering
-  - OrCad
-  - MultiSim
-  - ModelSim
-    - Verilog HDL
-
-- Database
-  - Oracle SQL
-  
-- Other
-  - Git/GitHub
-  - Microsoft Word/PowerPoint/Excel
-  - Adobe Illustrator
+|Programming|Engineering|Database|Other|
+|---|---|---|---|
+|C/C++<br>- `simple communication programming`<br>- `Arduino`|OrCad|Oracle SQL|Git/GitHub|
+|Python<br>- `Raspberry Pi`<br>- `OpenCV`<br>- `Machine Learning(Scikit-Learn, Tensorflow, Keras...)`|MultiSim|No SQL<br>- `Firebase`|Microsoft Office|
+|Java<br>- `socket programming`<br>- `web`<br>- `Android`|Verilog HDL<br>- `ModelSim`||Adobe Illustrator|
 
 ## OTHER ACTIVITIES
 
-- 2019 교내 자유소프트웨어 동아리 GnuVill(그누빌) 수료
+- 2020 엔코아 플레이데이터 자율주행을 위한 임베디드 및 AI 영상분석 컨버전스 SW 개발자 양성과정 수료
+- 2019 한국외대 자유소프트웨어 동아리 GnuVill(그누빌) 수료
 - 2019 IDEC SoC 설계과목 HDL응용설계 이수
-- 2018 드론조종개발과정 수료
+- 2018 한국외대 청년취업아카데미 소형무인기(드론) 개발/조종과정 수료
 - 2018 컨버전스형 IT 연합동아리 CADI(카디) 6기 앱개발 파트 일반회원 상반기 수료
-- 2018 ICOOS(아이쿠스) 일본 드리머즈 7기 문화홍보조
-  - 우수활동자 수상
-- 2017 교내 길고양이보호 동아리 냥거주입 홍보팀
-  - 동아리 로고, 프로필 헤더 이미지 및 홍보 포스터 제작
-- 2017 참이랑지역아동센터 수학 멘토링 봉사
-- 2016 교내 보드게임 동아리 트릭스 2학기 부회장
-- 2016 학과 집행부 홍보부원
+- 2016 한국외대 전자공학과 집행부 홍보부원
