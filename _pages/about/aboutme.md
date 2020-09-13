@@ -1,4 +1,7 @@
 ---
+header:
+  overlay_image : /assets/images/header_about.jpg
+  overlay_filter: 0.2
 layout: single
 permalink: /about-me/
 title: "Curriculum Vitae(CV)"
