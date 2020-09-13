@@ -9,7 +9,7 @@ title: "Curriculum Vitae(CV)"
 
 Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
 
-# Hi. My name is Hei-Jung.
+# Hi, My name is Hei-Jung!
 
 > I expect to get opportunities to learn from projects and talented people, and enhance my skills on programming and research.
 
