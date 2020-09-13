@@ -12,7 +12,7 @@
   - Bachelor's Degree in Electronics Engineering
 - [Korean Blog](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
-- [Contact by e-mail](mailto:heijung.jang@hotmail.com)
+- [Contact Me📩](mailto:heijung.jang@hotmail.com)
 
 ## EDUCATION
 
@@ -29,7 +29,7 @@ First Distinction Scholarship, *1st Semester of 2017*
 
 - 2016, performed teamwork in designing a practical product (salt and pepper shaker) using 3D printer<br>
 - 2016, performed teamwork in programming a simple C program using Visual Studio<br>
-- 2016, performed teamwork in designing a simple CPU circuit using OrCad<br>
+- 2017, performed teamwork in designing a simple CPU circuit using OrCad<br>
 - 2018, worked on a toy project which provides food recipes via Android app<br>
 - 2018, designed an amplifier circuit using Multisim<br>
 - 2018, created an [Android app](https://github.com/hei-jung/LedControl) compatible 7 segment digital clock using LED strips and [Arduino module](https://github.com/hei-jung/LedControl_arduino) with Android Studio and Arduino IDE<br>
@@ -46,26 +46,28 @@ First Distinction Scholarship, *1st Semester of 2017*
 
 > Language Skills
 
-English|Korean(한국어)|Japanese(日本語)
--|-|-
-*proficient*|*native*|*fluent*
+||English|Korean(한국어)|Japanese(日本語)|
+|:---|:---:|:---:|:---:|
+|`listening` & `speaking`|*fluent*|*native*|*conversational*|
+|`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
 > Computer Skills
 
-Programming|Engineering|Database|Other
--|-|-|-
-C/C++|OrCad|Oracle SQL|Git/GitHub
-Python|MultiSim|No SQL(firebase)|Microsoft Office
-Java|ModelSim(Verilog HDL)||Adobe Illustrator
+|Programming|Engineering|Database|Other|
+|---|---|---|---|
+|C/C++<br>- `simple communication programming`<br>- `Arduino`|OrCad|Oracle SQL|Git/GitHub|
+|Python<br>- `Raspberry Pi`<br>- `OpenCV`<br>- `Machine Learning(Scikit-Learn, Tensorflow, Keras...)`|MultiSim|No SQL<br>- `Firebase`|Microsoft Office|
+|Java<br>- `socket programming`<br>- `web`<br>- `Android`|Verilog HDL<br>- `ModelSim`||Adobe Illustrator|
 
 ## OTHER ACTIVITIES
 
+- 2020 Completed Embedded & AI Video Analytics Convergence SW Development Course in PlayData, EnCore Education Centre
 - 2019 Member of HUFS Software Club GnuVill
 - 2019 Completed IDEC HDL Application & Design Education
 - 2018 Completed Drone Control & Development Course
 - 2018 6th Year Member of IT Club CADI
 - 2018 Cultural Exchange Program in Tokyo, Japan
 - 2017 Member of HUFS Stray Cat Club
-- 2017 Math Tutor for Volunteering
+- 2017 Math Tutor Volunteering
 - 2016 Vice President of HUFS Boardgame Club
 - 2016 Member of HUFS Dept. of EE Student Council
