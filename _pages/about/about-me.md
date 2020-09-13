@@ -7,7 +7,7 @@ permalink: /about-me/
 title: "Curriculum Vitae(CV)"
 ---
 
-Go to: [English Ver.](https://hei-jung.github.io/about-me-eng/)
+Go to: [English Ver.](https://hei-jung.github.io/about/)
 
 # 장혜정
 
