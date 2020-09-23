@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - Web과 App 연동 이어서(3)"
-categories: android java
+title: "Connecting Android App to Web Server(3)"
+categories: java android
 ---
 
 웹 서버 상의 이미지 데이터를 안드로이드 앱으로 가져와보자!<br>

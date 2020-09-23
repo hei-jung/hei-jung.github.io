@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 전화번호부 예제"
-categories: android java
+title: "Android Phonebook Example"
+categories: java android
 ---
 
 ## AndroidManifest.xml

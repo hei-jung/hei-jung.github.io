@@ -1,6 +1,6 @@
 ---
 title: "기초 알고리즘과 파이썬 코딩"
-categories: python algorithm
+categories: algorithm python
 ---
 [토크ON강좌](https://www.youtube.com/playlist?list=PL9mhQYIlKEhfg0aLdaO04wYUovLMXY4DU)
 를 참고하여 필기한 내용.

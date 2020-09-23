@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - Content Provider"
-categories: android java
+title: "Android Content Provider"
+categories: java android
 ---
 
 # Content Provider

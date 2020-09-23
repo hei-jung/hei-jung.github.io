@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 데이터베이스 연동 (1)"
-categories: android java
+title: "Connecting Android App to Database(1)"
+categories: java android
 ---
 
 ### 안드로이드-DB 연동 복습

@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 서비스"
-categories: android java
+title: "Android Service"
+categories: java android
 ---
 
 ## Service

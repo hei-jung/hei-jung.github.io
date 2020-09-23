@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 인터넷 오픈API 활용 (1)"
-categories: android java
+title: "Android Open API Application(1)"
+categories: java android
 ---
 
 [Open날씨API](https://openweathermap.org/current)를 활용해보자.

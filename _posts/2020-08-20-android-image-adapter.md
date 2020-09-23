@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 이미지 어댑터 활용"
-categories: android java
+title: "Android Image Adapter Application"
+categories: java android
 ---
 
 (2020-08-18 수업 내용)

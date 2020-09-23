@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - Web과 App 연동 이어서(2)"
-categories: android java
+title: "Connecting Android App to Web Server(2)"
+categories: java android
 ---
 
 이번엔 restful 웹에서 만들었던 쇼핑몰 데이터를 가져와보자.<br>

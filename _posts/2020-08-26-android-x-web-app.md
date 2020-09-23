@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - Web과 App 연동"
-categories: android java
+title: "Connecting Android App to Web Server"
+categories: java android
 ---
 
 ### 기본 설정(안드로이드)

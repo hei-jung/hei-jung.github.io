@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 기본"
-categories: android java
+title: "Android Basics"
+categories: java android
 ---
 
 안드로이드 프레임워크(Android Framework)

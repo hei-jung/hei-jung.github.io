@@ -1,6 +1,6 @@
 ---
-title: "안드로이드 - 인터넷 오픈API 활용 (2)"
-categories: android java
+title: "Android Open API Application(2)"
+categories: java android
 ---
 
 - [이전 글](https://hei-jung.github.io/android/java/weather-api-example-first/)에서는 xml 형식 데이터를 활용했다.
