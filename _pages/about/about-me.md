@@ -85,11 +85,32 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 
 > Computer Skills
 
-|Programming|Engineering|Database|Other|
-|---|---|---|---|
-|C/C++<br>- `simple communication programming`<br>- `Arduino`|OrCad|Oracle SQL|Git/GitHub|
-|Python<br>- `Raspberry Pi`<br>- `OpenCV`<br>- `Machine Learning(Scikit-Learn, Tensorflow, Keras...)`|MultiSim|No SQL<br>- `Firebase`|Microsoft Office|
-|Java<br>- `socket programming`<br>- `web`<br>- `Android`|Verilog HDL<br>- `ModelSim`||Adobe Illustrator|
+|Programming Language|Skills|
+|---|---|
+|C|- `simple communication programming`<br>- `micro processor controlling`|
+|Python|- `machine learning`<br>- `image processing`|
+|Java|- `socket programming`<br>- `web development`<br>- `android development`|
+|Arduino|- `IoT`|
+|Verilog HDL|- `FPGA`|
+
+<br>
+
+|Engineering Tool|Skills|
+|---|---|
+|OrCad|- `digital logic circuit design`|
+|MultiSim|- `electrical & electronic circuit design`
+|ModelSim|- `Verilog HDL`<br>- `FPGA`
+
+<br>
+
+||Other|
+|---|---|
+|Database|`Oracle SQL`|
+|Cloud Service Platform|`Firebase`|
+|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn`|
+|Collab Tools|`Slack` `Git/GitHub` `Jira`|
+|OS|`Windows` `Raspbian`|
+|Boards|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B`|
 
 ## OTHER ACTIVITIES
 
