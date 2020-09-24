@@ -11,7 +11,7 @@ categories: java android
 
 (8/21 수업 내용. 이 날 수업 하루 빠져서 내용 놓침..ㅠㅠ)
 
-- [(8/21)예지언니 필기 참고](https://github.com/Ahnyezi/Android_note/blob/master/0821.md)
+- [(8/21)예디언니 필기 참고](https://github.com/Ahnyezi/Android_note/blob/master/0821/README.md)
   
 - sqlite
   - 가장 정석적인 방법
