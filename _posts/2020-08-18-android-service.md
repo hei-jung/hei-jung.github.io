@@ -9,7 +9,7 @@ categories: java android
 
 > 볼륨을 조절하는 간단한 버튼 앱을 이용해 Service 생명주기를 알아보자
 
-1. New>Service>Service 선택해서 Service 생성
+(1) New>Service>Service 선택해서 Service 생성
 
 - Service 클래스를 상속받는 MyService 클래스가 만들어진다.
 
@@ -29,7 +29,7 @@ public class MyService extends Service {
     android:exported="true"></service>
 ```
 
-2. MyService에 Service 클래스의 추상메서드 구현
+(2) MyService에 Service 클래스의 추상메서드 구현
 
 ```java
 @Override
@@ -64,7 +64,7 @@ public boolean onUnbind(Intent intent) {
 }
 ```
 
-3. MainActivity에서 서비스와 바인딩할 수 있는 메서드 구현
+(3) MainActivity에서 서비스와 바인딩할 수 있는 메서드 구현
 
 ```java
 private MyService.MyBinder mm;
@@ -105,7 +105,7 @@ public void onStopBtn(View view) {
 }
 ```
 
-4. Service와 Activity를 바인딩할 Binder 구현
+(4) Service와 Activity를 바인딩할 Binder 구현
 
 - MyService.java
 
@@ -137,7 +137,7 @@ class MyBinder extends Binder {
 }
 ```
 
-5. MainActivity에서 Progress Bar 설정
+(5) MainActivity에서 Progress Bar 설정
 
 ```java
     private ProgressBar progressBar;
@@ -151,7 +151,7 @@ class MyBinder extends Binder {
     }
 ```
 
-- 3번의 connection 부분에 progressBar 설정 추가
+- (3)의 connection 부분에 progressBar 설정 추가
 
 ```java
 ServiceConnection connection = new ServiceConnection() {
