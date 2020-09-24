@@ -67,7 +67,7 @@ public class EchoServer {
 
 > 안드로이드 앱을 클라이언트로
 
-1. MyThread 클래스
+__(1) MyThread 클래스__
 
 ```java
 public class MyThread extends Thread {
@@ -93,7 +93,7 @@ public class MyThread extends Thread {
 }
 ```
 
-2. 레이아웃
+__(2) 레이아웃__
 
 - 서버한테 보낼 메시지를 쓸 EditText
 - 전송 Button
@@ -102,7 +102,7 @@ public class MyThread extends Thread {
 private EditText msg; // 메인 액티비티에서
 ```
 
-3. MainActivity
+__(3) MainActivity__
 
 - 버튼 핸들러
 
