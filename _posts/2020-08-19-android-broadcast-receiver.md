@@ -26,9 +26,9 @@ categories: java android
     android:exported="true" />
 ```
 
-**<Broadcast Receiver의 호출 방식>**
+__Broadcast Receiver의 호출 방식__
 
-1. 명시적
+(1) 명시적
 
 > MyReceiver
 
@@ -50,7 +50,7 @@ public void onBtn1(View view) {
 }
 ```
 
-2. 묵시적
+(2) 묵시적
 
 > Manifest 파일의 MyReceiver2에 대한 Receiver 태그를 지운다.
 
