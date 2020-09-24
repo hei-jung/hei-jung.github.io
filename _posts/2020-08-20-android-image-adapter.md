@@ -9,7 +9,7 @@ categories: java android
 
 > Grid View로 이미지 여러 개를 표시하고, 두 이미지를 클릭하여 서로 위치를 바꿔보자.
 
-1. 레이아웃 xml
+(1) 레이아웃 xml
 
 ```xml
 <!-- vertical linear layout에 grid view를 추가 -->
@@ -35,7 +35,7 @@ categories: java android
 </LinearLayout>
 ```
 
-2. Main Activity
+(2) Main Activity
 
 ```java
 public class MainActivity8 extends AppCompatActivity {
@@ -68,7 +68,7 @@ public class MainActivity8 extends AppCompatActivity {
 }
 ```
 
-3. Image Adapter
+(3) Image Adapter
 
 ```java
 class ImageAdapter extends BaseAdapter {
