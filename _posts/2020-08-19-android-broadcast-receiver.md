@@ -1,6 +1,7 @@
 ---
-title : "Android Receiver"
-categories: java android
+title : "[Android] Android Receiver"
+categories: android
+tags: android java
 ---
 
 ## Broadcast Receiver

@@ -1,6 +1,7 @@
 ---
-title: "Android Phonebook Example"
-categories: java android
+title: "[Android] Android Phonebook Example"
+categories: android
+tags: android java
 ---
 
 ## AndroidManifest.xml

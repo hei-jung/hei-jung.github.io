@@ -1,6 +1,7 @@
 ---
-title: "Android SMS Receiver Example"
-categories: java android
+title: "[Android] Android SMS Receiver Example"
+categories: android
+tags: android java
 ---
 
 ## 수신한 메시지를 ArrayList에 저장해서 표시하고, Options 메뉴로 메시지를 전송하는 앱을 만들어보자!

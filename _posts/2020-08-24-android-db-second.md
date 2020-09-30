@@ -1,6 +1,7 @@
 ---
-title: "Connecting Android App to Database(2)"
-categories: java android
+title: "[Android] Connecting Android App to Database(2)"
+categories: android
+tags: android java database
 ---
 
 ## 안드로이드-DB 연동 이어서 두 번째

@@ -1,6 +1,7 @@
 ---
-title: "Android Open API Application(1)"
-categories: java android
+title: "[Android] Android Open API Application(1)"
+categories: android
+tags: android java
 ---
 
 [Open날씨API](https://openweathermap.org/current)를 활용해보자.

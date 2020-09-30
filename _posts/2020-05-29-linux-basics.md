@@ -1,6 +1,7 @@
 ---
-title: "Linux Basics"
-categories: linux raspberry-pi
+title: "[Linux] Linux Basics"
+categories: linux
+tags: linux raspberry-pi raspbianOS
 toc: true
 toc_sticky: true
 header:

@@ -1,6 +1,7 @@
 ---
-title: "Android Socket Communication"
-categories: java android
+title: "[Android] Android Socket Communication"
+categories: android
+tags: android java
 ---
 
 * [인터넷 권한 설정](https://hei-jung.github.io/android/java/android-internet-web-browser-example/)은 당연히 필수겠죠?

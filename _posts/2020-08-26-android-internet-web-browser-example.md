@@ -1,6 +1,7 @@
 ---
-title: "Android & Internet"
-categories: java android
+title: "[Android] Android & Internet"
+categories: android
+tags: android java
 ---
 
 ## 간단한 웹 브라우저

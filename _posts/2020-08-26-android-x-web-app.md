@@ -1,6 +1,7 @@
 ---
-title: "Connecting Android App to Web Server"
-categories: java android
+title: "[Android] Connecting Android App to Web Server"
+categories: android
+tags: android java
 ---
 
 ### 기본 설정(안드로이드)

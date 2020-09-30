@@ -1,6 +1,7 @@
 ---
-title: "Connecting Android App to Web Server(1)"
-categories: java android
+title: "[Android] Connecting Android App to Web Server(1)"
+categories: android
+tags: android java
 ---
 
 [어제 수업내용 및 코드](https://hei-jung.github.io/android/java/android-x-web-app/)

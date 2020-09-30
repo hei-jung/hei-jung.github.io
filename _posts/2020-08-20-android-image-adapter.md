@@ -1,6 +1,7 @@
 ---
-title: "Android Image Adapter Application"
-categories: java android
+title: "[Android] Android Image Adapter Application"
+categories: android
+tags: android java
 ---
 
 (2020-08-18 수업 내용)
