@@ -3,12 +3,16 @@ title: "Design Pattern"
 permalink: /design-pattern/
 layout: category
 author_profile: true
-toc: true
-toc_sticky: true
 taxonomy: design-pattern
 ---
 
-## 디자인 패턴의 정의, 목적
+## 목차
+
+1. [디자인 패턴의 정의와 목적](#디자인-패턴의-정의와-목적)
+2. [디자인 패턴 유형](#디자인-패턴-유형)
+3. [디자인 패턴 포스트 전체 보기](#디자인-패턴-포스트-전체-보기)
+
+## 디자인 패턴의 정의와 목적
 
 디자인 패턴은 효율적인 소프트웨어 설계를 위한 일종의 설계 기법으로, GoF(Gang of Four)가 쓴 책 "디자인 패턴"을 통해 구체적으로 처음 제시되었다.<br>
 특정한 알고리즘이 아니라, 소프트웨어 개발 시 자주 발생하는 반복적인 문제에 대한 해결 방법론이다.<br>
@@ -54,7 +58,7 @@ taxonomy: design-pattern
 - Strategy
 - Visitor
 
-<br>
+---
 
 패턴 적용 범위 따라 `클래스 패턴`, `객체 패턴`으로 나눌 수도 있다.<br>
 
