@@ -3,6 +3,8 @@ title: "Design Pattern"
 permalink: /design-pattern/
 layout: category
 author_profile: true
+toc: true
+toc_sticky: true
 taxonomy: design-pattern
 ---
 
@@ -26,19 +28,41 @@ taxonomy: design-pattern
 
 객체의 생성 방식을 정해준다. 캡슐화와 관련이 있다.
 
+- [Factory Method](https://hei-jung.github.io/design-pattern/factory-method/)
+- Abstract Factory
+- Builder
+- Singleton
+- Prototype
+
 ### 2. 구조 패턴(Structural Patterns)
 
 객체를 조직화한다. 클래스나 객체의 구성과 관련이 있다.
 
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Proxy
+
 ### 3. 행위 패턴(Behavioral Pattern)
 
-클래스나 객체 간의 상호작용에 관여한다.<br>
+클래스나 객체 간의 상호작용에 관여한다.
+
+- Template Method
+- Iterator
+- Observer
+- Strategy
+- Visitor
+
+<br>
 
 패턴 적용 범위 따라 `클래스 패턴`, `객체 패턴`으로 나눌 수도 있다.<br>
 
 ### 1. 클래스 패턴(Class Pattern)
 
 클래스 간의 관계에 관여하며, 보통 상속을 통해 정의한다. 정적(static)인 패턴이다.
+
+EX. Factory Method, Adapter, Template Method, Interpreter
 
 ### 2. 객체 패턴(Object Pattern)
 
