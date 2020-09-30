@@ -109,8 +109,8 @@ Map<String, Integer> recipe = bread.getRecipe();
 
 System.out.println("recipe");
 for (String key : recipe.keySet()) {
-  int value = recipe.get(key);
-  System.out.println(key + ": " + value);
+	int value = recipe.get(key);
+	System.out.println(key + ": " + value);
 }
 ```
 
