@@ -1,6 +1,7 @@
 ---
-title: "기초 알고리즘과 파이썬 코딩"
-categories: algorithm python
+title: "[Algorithm] 기초 알고리즘과 파이썬 코딩"
+categories: algorithm
+tags: algorithm python
 toc: true
 toc_sticky: true
 ---
