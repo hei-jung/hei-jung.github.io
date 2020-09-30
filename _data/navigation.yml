@@ -4,6 +4,8 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about-me/
+  - title: "Design Pattern"
+    url: /design-pattern/
   - title: "Categories"
     url: /categories/
   # - title: "Posts"
