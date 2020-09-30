@@ -64,8 +64,8 @@ taxonomy: design-pattern
 
 ### 1. 클래스 패턴(Class Pattern)
 
-클래스 간의 관계에 관여하며, 보통 상속을 통해 정의한다. 정적(static)인 패턴이다.
-EX. Factory Method, Adapter, Template Method, Interpreter
+클래스 간의 관계에 관여하며, 보통 상속을 통해 정의한다. 정적(static)인 패턴이다.<br>
+(EX. Factory Method, Adapter, Template Method, Interpreter)
 
 ### 2. 객체 패턴(Object Pattern)
 
