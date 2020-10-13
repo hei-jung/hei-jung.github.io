@@ -22,8 +22,8 @@ taxonomy: design-pattern
 
 ## 디자인 패턴 유형
 
-대표적인 유형으로는 GoF 외에도 MVC(Model View Controller) 등이 있다.<br>
-여기서는 GoF 디자인 패턴을 정리해보고자 한다.
+대표적인 유형으로는 GoF 외에도 MVC(Model View Controller) 등이 있다.
+여기서는 GoF 디자인 패턴을 정리해보고자 한다.<br>
 GoF는 디자인 패턴을 수행 목적에 따라 `생성 패턴`, `구조 패턴`, `행위 패턴`으로 분류한다.<br>
 
 ### 1. 생성 패턴(Creational Patterns)
