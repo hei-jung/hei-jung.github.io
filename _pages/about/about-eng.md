@@ -86,7 +86,7 @@ First Distinction Scholarship, *1st Semester of 2017*
 |---|---|
 |Database|`Oracle SQL`|
 |Cloud Service Platform|`Firebase`|
-|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn`|
+|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn` `OpenCV` `YOLO`|
 |Collab Tools|`Slack` `Git/GitHub` `Jira`|
 |OS|`Windows` `Raspbian`|
 |Boards|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B`|

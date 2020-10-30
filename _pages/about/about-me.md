@@ -107,7 +107,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 |---|---|
 |Database|`Oracle SQL`|
 |Cloud Service Platform|`Firebase`|
-|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn`|
+|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn` `OpenCV` `YOLO`|
 |Collab Tools|`Slack` `Git/GitHub` `Jira`|
 |OS|`Windows` `Raspbian`|
 |Boards|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B`|
