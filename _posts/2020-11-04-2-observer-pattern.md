@@ -7,23 +7,16 @@ toc: true
 toc_sticky: true
 ---
 
-참고.
-[위키백과](https://ko.wikipedia.org/wiki/%EC%98%B5%EC%84%9C%EB%B2%84_%ED%8C%A8%ED%84%B4),
-[디자인패턴 - 옵저버 패턴(2016.01.25 작성)](https://flowarc.tistory.com/entry/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%98%B5%EC%A0%80%EB%B2%84-%ED%8C%A8%ED%84%B4Observer-Pattern),
-[디자인패턴 - 옵저버 패턴(2016.05.03 작성)](https://jusungpark.tistory.com/8),
-[옵저버 패턴 아주 간단하게 정리해보기(2019.10.07 작성)](https://pjh3749.tistory.com/266)
-[옵저버 패턴(2019.03.09 작성)](https://coloredrabbit.tistory.com/86),
-[감시자 패턴(2012.12.09 작성)](https://kimsunzun.tistory.com/entry/Observer%EA%B0%90%EC%8B%9C%EC%9E%90%ED%8C%A8%ED%84%B4)
+옵저버 패턴은 객체의 상태 변화와 관련이 있는 디자인 패턴이다.<br>
 
 ## 특징
 
-옵저버 패턴은 객체의 상태 변화와 관련이 있는 디자인 패턴이다.<br> 
-주체 객체(Subject)에 관찰자 객체(Observer 또는 Listener)들과의 의존 관계를 정의해둔다.
+주체 객체(Subject)에 관찰자 객체(Observer 또는 Listener)들과의 의존 관계를 정의해둔다.<br>
 주체 객체가 자신의 상태가 변할 때마다 관찰자들에게 메서드 등을 통해서 상태 변화를 직접 알려, 관찰자들이 변화에 대해 자동으로 갱신될 수 있도록 한다.<br>
-이러한 동작 방식으로, Publish/Subscribe 모델로도 알려져 있다.
-주로 분산 이벤트 핸들러를 구현할 때 사용된다. 즉, UI 설계할 때 많이 쓰인다. 예를 들어서 안드로이드 앱의 버튼 OnClickListener 같은...?
+Publish/Subscribe 모델로도 알려져 있으며 주로 분산 이벤트 핸들러를 구현할 때 사용된다. 즉, UI 설계할 때 많이 쓰인다.<br>
+예를 들어서 안드로이드 앱의 버튼 OnClickListener 같은...?
 
-Java에서는 옵저버 패턴을 적용한 java.util.Observable 클래스를 기본 제공하고 있다.
+참고로 Java에서는 옵저버 패턴을 적용한 java.util.Observable 클래스를 기본 제공하고 있으나, 다른 클래스를 함께 상속받지 못하는 불편함이 있다.
 
 ### 구성
 
@@ -130,7 +123,7 @@ public class Mom implements Observer {
 }
 ```
 
-main 함수에서 적절한 실행코드 구현:
+실행 결과:
 
 ```java
 public class Main {
@@ -152,3 +145,14 @@ public class Main {
 	}
 }
 ```
+
+![1104](https://user-images.githubusercontent.com/40985307/98117216-bc961680-1eec-11eb-94ea-8e85adefc601.png)
+
+
+참고.
+[위키백과](https://ko.wikipedia.org/wiki/%EC%98%B5%EC%84%9C%EB%B2%84_%ED%8C%A8%ED%84%B4),
+[디자인패턴 - 옵저버 패턴(2016.01.25 작성)](https://flowarc.tistory.com/entry/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EC%98%B5%EC%A0%80%EB%B2%84-%ED%8C%A8%ED%84%B4Observer-Pattern),
+[디자인패턴 - 옵저버 패턴(2016.05.03 작성)](https://jusungpark.tistory.com/8),
+[옵저버 패턴 아주 간단하게 정리해보기(2019.10.07 작성)](https://pjh3749.tistory.com/266),
+[옵저버 패턴(2019.03.09 작성)](https://coloredrabbit.tistory.com/86),
+[감시자 패턴(2012.12.09 작성)](https://kimsunzun.tistory.com/entry/Observer%EA%B0%90%EC%8B%9C%EC%9E%90%ED%8C%A8%ED%84%B4)
