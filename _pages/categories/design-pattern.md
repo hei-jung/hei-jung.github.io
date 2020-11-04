@@ -33,7 +33,7 @@ GoF는 디자인 패턴을 수행 목적에 따라 `생성 패턴`, `구조 패�
 - [Factory Method](https://hei-jung.github.io/design-pattern/factory-method/)
 - Abstract Factory
 - Builder
-- Singleton
+- [Singleton](https://hei-jung.github.io/design-pattern/singleton/)
 - Prototype
 
 ### 2. 구조 패턴(Structural Patterns)

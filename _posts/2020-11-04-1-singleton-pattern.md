@@ -5,6 +5,11 @@ categories: design-pattern
 tags: sw-engineering design-pattern solution
 ---
 
+참고.
+[싱글턴 패턴](https://medium.com/webeveloper/%EC%8B%B1%EA%B8%80%ED%84%B4-%ED%8C%A8%ED%84%B4-singleton-pattern-db75ed29c36),
+[싱글톤 패턴을 쓰는 이유와 문제점](https://jeong-pro.tistory.com/86),
+[싱글톤 패턴](https://gyoogle.dev/blog/design-pattern/Singleton%20Pattern.html)
+
 ## 특징
 
 단 한 개의 인스턴스만 생성해서 프로그램 어디서든 접근할 수 있게 하는 기법이다.
