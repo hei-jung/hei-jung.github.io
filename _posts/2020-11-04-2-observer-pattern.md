@@ -27,13 +27,13 @@ Publish/Subscribe 모델로도 알려져 있으며 주로 분산 이벤트 핸�
 
 주체 객체와 관찰자 객체의 관계는 1대1이 될 수도 있고, 1대多가 될 수도 있다.
 
-(장점)<br>
+### 장점
 - 직관적으로 이해할 수 있다.
 - 인터페이스를 이용하여 클래스나 객체 간 의존도가 낮아진다.
   - 결합도↓↓
 - 객체들 간 주고받는 정보 단위가 크거나, 객체의 규모가 크고 객체 간의 관계가 복잡할 때 유리하다.
 
-(단점)<br>
+### 단점
 - Thread-safe하지 않다.
   - 비동기 방식이므로, 이벤트를 제때 못 받을 수도.
 - Observer 객체를 제때 제거하지 않으면 메모리 누수가 일어날 수도 있다.
@@ -42,7 +42,7 @@ Publish/Subscribe 모델로도 알려져 있으며 주로 분산 이벤트 핸�
 
 ## 예제 코드
 
-옵저버 객체 정의
+### 옵저버 객체 정의
 
 ```java
 public interface Observer {
@@ -50,7 +50,7 @@ public interface Observer {
 }
 ```
 
-주체 객체 정의
+### 주체 객체 정의
 
 ```java
 public interface Publisher {
@@ -60,7 +60,9 @@ public interface Publisher {
 }
 ```
 
-주체 객체 복실이 구현: 상태 변화 정보 제공하는 publisher 
+### 주체 객체 구현
+
+상태 변화 정보 제공하는 publisher 복실이
 
 ```java
 public class Boksil implements Publisher {
@@ -103,6 +105,8 @@ public class Boksil implements Publisher {
 }
 ```
 
+### 옵저버 객체 구현(Subscribers)
+
 복실이의 울음소리를 관찰하는 집사들
 
 ```java
@@ -123,7 +127,7 @@ public class Mom implements Observer {
 }
 ```
 
-실행 결과:
+### 실행 결과
 
 ```java
 public class Main {
