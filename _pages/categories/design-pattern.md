@@ -52,7 +52,7 @@ GoF는 디자인 패턴을 수행 목적에 따라 `생성 패턴`, `구조 패�
 
 - Template Method
 - Iterator
-- Observer
+- [Observer](https://hei-jung.github.io/design-pattern/observer/)
 - Strategy
 - Visitor
 
