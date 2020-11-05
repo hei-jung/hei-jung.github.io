@@ -83,34 +83,18 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 |`listening` & `speaking`|*fluent*|*native*|*conversational*|
 |`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
+TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389, JLPT N2
+
 > Computer Skills
 
-|Programming Language|Skills|
+||Details|
 |---|---|
-|C|- `simple communication programming`<br>- `micro processor controlling`|
-|Python|- `machine learning`<br>- `image processing`|
-|Java|- `socket programming`<br>- `web development`<br>- `android development`|
-|Arduino|- `IoT`|
-|Verilog HDL|- `FPGA`|
-
-<br>
-
-|Engineering Tool|Skills|
-|---|---|
-|OrCad|- `digital logic circuit design`|
-|MultiSim|- `electrical & electronic circuit design`
-|ModelSim|- `Verilog HDL`<br>- `FPGA`
-
-<br>
-
-||Other|
-|---|---|
-|Database|`Oracle SQL`|
-|Cloud Service Platform|`Firebase`|
-|Opensource & Framework|`Android` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn` `OpenCV` `YOLO`|
-|Collab Tools|`Slack` `Git/GitHub` `Jira`|
-|OS|`Windows` `Raspbian`|
-|Boards|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B`|
+|Language|`C` `Java` `Python` `Arduino` `VerilogHDL`|
+|OS|`Windows` `Linux` `Mac`|
+|Database & SQL|`OracleSQL`|
+|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn` `OpenCV` `YOLO`|
+|Tool|`OrCad` `MultiSim` `ModelSim`|
+|Board|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B` `ESP32`|
 
 ## OTHER ACTIVITIES
 
