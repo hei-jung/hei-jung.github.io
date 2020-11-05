@@ -62,7 +62,7 @@ First Distinction Scholarship, *1st Semester of 2017*
 |`listening` & `speaking`|*fluent*|*native*|*conversational*|
 |`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
-TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389, JLPT N2
+TOEIC 885, TOEFL iBT 91(MyBest 99), JLPT N2
 
 > Computer Skills
 
