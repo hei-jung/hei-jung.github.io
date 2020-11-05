@@ -92,9 +92,8 @@ TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389, JLPT N2
 |Language|`C` `Java` `Python` `Arduino` `VerilogHDL`|
 |OS|`Windows` `Linux` `Mac`|
 |Database & SQL|`OracleSQL`|
-|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `Keras` `OpenAI Gym` `Scikit Learn` `OpenCV` `YOLO`|
+|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `OpenCV` `YOLO`|
 |Tool|`OrCad` `MultiSim` `ModelSim`|
-|Board|`TI MSP430` `TI DSP28335` `Arduino Uno` `Arduino Nano` `Raspberry Pi 3B` `ESP32`|
 
 ## OTHER ACTIVITIES
 
