@@ -3,8 +3,6 @@ title: "[Design Pattern] Factory Method"
 permalink: /design-pattern/factory-method/
 categories: design-pattern
 tags: sw-engineering design-pattern solution
-toc: true
-toc_sticky: true
 ---
 
 팩토리 메서드 패턴은 객체지향 디자인 패턴이다.<br>

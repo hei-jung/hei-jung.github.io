@@ -12,7 +12,7 @@ tags: android java database
 
 > LiveDataTestActivity 액티비티 생성
 
-1. Live Data 쓰지 않고 파생 쓰레드에서 데이터 갱신하기
+(1) Live Data 쓰지 않고 파생 쓰레드에서 데이터 갱신하기
 
 - 멤버변수
 
@@ -44,7 +44,7 @@ new Thread() {
 
 **=> 원래 이렇게 하면 실행 오류 나야 함. 근데 왜 되지?**
 
-2. Live Data 추가
+(2) Live Data 추가
 
 - 멤버변수에 liveData 변수 추가
 

@@ -3,8 +3,6 @@ title: "[Design Pattern] Observer"
 permalink: /design-pattern/observer/
 categories: design-pattern
 tags: sw-engineering design-pattern solution
-toc: true
-toc_sticky: true
 ---
 
 옵저버 패턴은 객체의 상태 변화와 관련이 있는 디자인 패턴이다.<br>
@@ -13,8 +11,8 @@ toc_sticky: true
 
 주체 객체(Subject)에 관찰자 객체(Observer 또는 Listener)들과의 의존 관계를 정의해둔다.<br>
 주체 객체가 자신의 상태가 변할 때마다 관찰자들에게 메서드 등을 통해서 상태 변화를 직접 알려, 관찰자들이 변화에 대해 자동으로 갱신될 수 있도록 한다.<br>
-Publish/Subscribe 모델로도 알려져 있으며 주로 분산 이벤트 핸들러를 구현할 때 사용된다. 즉, UI 설계할 때 많이 쓰인다.<br>
-예를 들어서 안드로이드 앱의 버튼 OnClickListener 같은...?
+Publish/Subscribe 모델로도 알려져 있으며 주로 분산 이벤트 핸들러를 구현할 때 사용된다. 즉, UI 설계할 때 많이 쓰인다.
+예를 들어서 안드로이드 앱의 버튼 OnClickListener 같은.
 
 참고로 Java에서는 옵저버 패턴을 적용한 java.util.Observable 클래스를 기본 제공하고 있으나, 다른 클래스를 함께 상속받지 못하는 불편함이 있다.
 
@@ -60,9 +58,9 @@ public interface Publisher {
 }
 ```
 
-### 주체 객체 구현
+### 주체 객체 구현(Publisher)
 
-상태 변화 정보 제공하는 publisher 복실이
+상태 변화 정보를 제공하는 복실이
 
 ```java
 public class Boksil implements Publisher {

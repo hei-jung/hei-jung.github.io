@@ -38,7 +38,7 @@ tags: android java
 
 > MainActivity에 연락처 읽기/쓰기 권한 추가
 
-1. onCreate() 메서드 안에서
+### 1. onCreate() 메서드 안에서
 
 ```java
 /* 안드로이드 기본 내장 전화번호부에서 연락처 읽어오는 권한 얻기 */
@@ -53,7 +53,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 }
 ```
 
-2. 권한 요청하는 아래의 두 메서드 추가
+### 2. 권한 요청하는 아래의 두 메서드 추가
 
 ```java
 public boolean getPermission() {

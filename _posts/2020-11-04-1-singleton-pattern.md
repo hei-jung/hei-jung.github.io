@@ -1,16 +1,11 @@
 ---
-title: "[Design Pattern] Java Singleton"
+title: "[Design Pattern] Singleton"
 permalink: /design-pattern/singleton/
 categories: design-pattern
 tags: sw-engineering design-pattern solution
-toc: true
-toc_sticky: true
 ---
 
-참고.
-[싱글턴 패턴](https://medium.com/webeveloper/%EC%8B%B1%EA%B8%80%ED%84%B4-%ED%8C%A8%ED%84%B4-singleton-pattern-db75ed29c36),
-[싱글톤 패턴을 쓰는 이유와 문제점](https://jeong-pro.tistory.com/86),
-[싱글톤 패턴](https://gyoogle.dev/blog/design-pattern/Singleton%20Pattern.html)
+싱글턴 패턴은 객체 인스턴스를 한 번만 생성하는 디자인 패턴이다.
 
 ## 특징
 
@@ -24,13 +19,13 @@ Java에서 싱글턴을 구현할 때는 생성자를 `private`으로 선언하�
 ### 장점
 - 프로그램이 시작될 때 최초 한 번만 메모리를 할당하므로, 메모리 낭비를 막을 수 있다.
   - 인스턴스 남발 방지
-- 전역 인스턴스이기 때문에 다른 클래스의 인스턴스들 간 데이터 공유에 용이하다.
+- 전역 인스턴스이기 때문에 서로 다른 클래스의 인스턴스들 간 데이터 공유에 용이하다.
   - 하나의 자원을 모두가 공유해서 써야 하는 경우 유리
 
 ### 단점
 - 동시성 문제를 잘 고려해서 설계해야 한다.
   - 멀티스레드 환경에서의 동기화 처리
-- 싱글턴 인스턴스를 너무 남발하면 다른 클래스의 인스턴스들 간 결합도가 높아진다.
+- 싱글턴 인스턴스를 너무 남발하면 서로 다른 클래스의 인스턴스들 간 결합도가 높아진다.
   - 객체 지향 설계 원칙에 위배 → 꼭 필요한 경우가 아니면 지양하자.
 
 ## 예제 코드
@@ -122,3 +117,7 @@ public class Singleton {
 }
 ```
 
+참고.
+[싱글턴 패턴](https://medium.com/webeveloper/%EC%8B%B1%EA%B8%80%ED%84%B4-%ED%8C%A8%ED%84%B4-singleton-pattern-db75ed29c36),
+[싱글톤 패턴을 쓰는 이유와 문제점](https://jeong-pro.tistory.com/86),
+[싱글톤 패턴](https://gyoogle.dev/blog/design-pattern/Singleton%20Pattern.html)

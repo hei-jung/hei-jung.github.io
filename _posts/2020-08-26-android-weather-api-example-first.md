@@ -9,11 +9,11 @@ tags: android java
 
 ## MainActivity
 
-1. [인터넷 권한 설정](https://hei-jung.github.io/android/java/android-internet-web-browser-example/)
+### 1. [인터넷 권한 설정](https://hei-jung.github.io/android/java/android-internet-web-browser-example/)
 
-2. TextView를 하나 만든다.
+### 2. TextView를 하나 만든다.
 
-3. onCreate
+### 3. onCreate
 
 > 네트워크는 예측 불가능하기 때문에 main 쓰레드에서 처리되면 안 됨 -> thread 분리 ([참고](https://codetravel.tistory.com/27))
 
@@ -28,7 +28,7 @@ StrictMode.setThreadPolicy(policy);
 show();
 ```
 
-4. show()
+### 4. show()
 
 ```java
 public void show() {
@@ -97,7 +97,9 @@ public void show() {
 ```
 
 
-## DTO:- WeatherInfo
+## DTO
+
+> WeatherInfo
 
 ```java
 public class WeatherInfo {
