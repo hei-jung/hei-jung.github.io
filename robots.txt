@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hei-jung.github.io/sitemap.xml
