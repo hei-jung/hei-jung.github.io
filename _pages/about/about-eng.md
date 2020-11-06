@@ -15,13 +15,13 @@ Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
 
 ## SUMMARY
 
-- 장혜정
-  - Hei-Jung Jang(or you can call me **Irene**)
+- Hei-Jung Jang
+  - 장혜정
   - ジャン・ヘジョン
 - from Seoul, South Korea
 - Hankuk University of Foreign Studies(HUFS)
   - Bachelor's Degree in Electronics Engineering
-- [Korean Blog](https://blog.naver.com/wkdgpwjd007)
+- [Naver Blog](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
 - [Contact Me📩](mailto:heijung.jang@hotmail.com)
 
@@ -35,6 +35,15 @@ Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
 
 Second Distinction Scholarship, *2nd Semester of 2016*<br>
 First Distinction Scholarship, *1st Semester of 2017*
+
+## INTERESTS
+
+- Signal Processing
+  - Sensor Data Analytics
+- IoT
+  - BCI, BMI
+  - HCI
+  - Smart Factory / Smart Farm Solutions
   
 ## PROJECTS & EXPERIENCES
 
@@ -48,10 +57,11 @@ First Distinction Scholarship, *1st Semester of 2017*
 - 2019, studied 5G communication system and deep reinforcement learning with Python for senior project and thesis<br>
 - 2019, studied deep learning with breast cancer dataset and Python<br>
 - 2019, worked on an Android app for the student cafeteria with Android Studio<br>
-- 2020, [mini project no.1 - Java and Database](https://github.com/hei-jung/myDbApp)
-- 2020, [mini project no.2 - Raspberry Pi](https://github.com/hei-jung/catchmind_game)
-- 2020, [mini project no.3 - OpenCV](https://github.com/hei-jung/MiniProject_OpenCV)
-- 2020, [mini project no.4 - Machine Learning](https://github.com/hei-jung/PokeDex)
+- 2020, [mini project no.1 - Java Food Order System](https://github.com/hei-jung/myDbApp)
+- 2020, [mini project no.2 - IoT CatchMind Game](https://github.com/hei-jung/catchmind_game)
+- 2020, [mini project no.3 - OpenCV Attendance Application](https://github.com/hei-jung/MiniProject_OpenCV)
+- 2020, [mini project no.4 - Machine Learning Pokédex](https://github.com/hei-jung/PokeDex)
+- 2020, [python application for the visually impaired](https://github.com/hei-jung/Seesun)
 
 ## SKILLS
 

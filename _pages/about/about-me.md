@@ -13,11 +13,12 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 
 > 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
-- Hei-Jung Jang / ジャン・ヘジョン
+- Hei-Jung Jang
 - 1997년 12월 1일생(만 22세)
 - 한국외국어대학교 전자공학과 졸업
 - [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
+- [Contact Me📩](mailto:heijung.jang@hotmail.com)
 
 ## EDUCATION
 
@@ -27,52 +28,34 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - 성적장학금
     - 2017/1, 학장
 	- 2016/2, 학과(부)장
+	
+## INTERESTS
+
+- 신호처리
+  - 센서 데이터 분석
+- IoT
+  - BCI, BMI
+  - HCI
+  - 스마트팩토리 / 스마트팜
   
 ## PROJECTS
 
-> 학과
-
-- C언어 미니 프로젝트
-  - [미니게임천국](https://github.com/hei-jung/teamproject_heaven)
-
-- 간단한 CPU 설계
-  - *OrCad* 사용
-
-- BJT 트랜지스터를 사용한 증폭기 설계
-  - *MultiSim* 사용
-
-- 캡스톤 설계 프로젝트: 안드로이드 앱으로 제어하는 DIY 디지털 디스플레이
-  - [안드로이드](https://github.com/hei-jung/LedControl)
-  - [아두이노](https://github.com/hei-jung/LedControl_arduino)
-
-- 디지털 시계 FPGA 설계
-  - *Verilog HDL*, *ModelSim*, *Xilinx* 사용
-
-- 졸업논문: 강화학습을 이용한 5G Network Slicing 트래픽 제어
-  - *Python* 사용
-  
-> 연합 동아리
-
-- 딥러닝 활용 안드로이드 앱 토이 프로젝트: 냉장고 앱
-  - 참고. [프로젝트 요약](https://github.com/hei-jung/cookit_project)
-
-> 교내 동아리
-
-- 유방암 데이터셋 활용 딥러닝 스터디
-
-- 교내 학생식당 앱 개발 참여(서울캠퍼스 창업동아리와 협업)
-
-> 플레이데이터
-
-- [DB 연동 Java 미니 프로젝트](https://github.com/hei-jung/myDbApp)
-
-- [Raspberry Pi 3B 활용 Python 미니 프로젝트](https://github.com/hei-jung/catchmind_game)
-  - 역할: 서버 및 클라이언트 Back-end 구현, 사진/그림/맞추기 클라이언트에 대한 GUI 틀 마련
-
-- [Python OpenCV 미니 프로젝트](https://github.com/hei-jung/MiniProject_OpenCV)
-  - 역할: 얼굴 인식 알고리즘, 로그인 기능 구현
-
-- [CSV 데이터 활용 머신러닝 미니 프로젝트](https://github.com/hei-jung/PokeDex)
+- 2016, [C언어 프로젝트 미니게임천국](https://github.com/hei-jung/teamproject_heaven)
+- 2017, 컴퓨터구조 프로젝트 CPU 설계
+- 2018, [CADI 토이 프로젝트 냉장고 앱](https://github.com/hei-jung/cookit_project)
+- 2018, 전자회로 프로젝트 BJT 트랜지스터를 사용한 증폭기 설계
+- 2018, 캡스톤 프로젝트 안드로이드 앱으로 제어하는 DIY 디지털 디스플레이
+  - [안드로이드 구현](https://github.com/hei-jung/LedControl)
+  - [아두이노 구현](https://github.com/hei-jung/LedControl_arduino)
+- 2019, [Verilog 디지털 시계](https://github.com/hei-jung/digitalClockHDL) 설계
+- 2019, 졸업논문: 강화학습을 이용한 5G Network Slicing 트래픽 제어
+- 2019, 유방암 데이터셋 활용 딥러닝 스터디 프로젝트
+- 2019, 한국외대 창업동아리와 협업, 교내 학생식당 앱 개발 프로젝트
+- 2020, [플레이데이터 미니 프로젝트 1 - Java 음식 주문 시스템](https://github.com/hei-jung/myDbApp)
+- 2020, [플레이데이터 미니 프로젝트 2 - IoT 캐치마인드 게임](https://github.com/hei-jung/catchmind_game)
+- 2020, [플레이데이터 미니 프로젝트 3 - OpenCV 얼굴인식 출석부](https://github.com/hei-jung/MiniProject_OpenCV)
+- 2020, [플레이데이터 미니 프로젝트 4 - 머신러닝 포켓몬 도감](https://github.com/hei-jung/PokeDex)
+- 2020, [시각장애인의 안전한 보행을 돕는 시선 프로젝트](https://github.com/hei-jung/Seesun)
 
 ## SKILLS
 
