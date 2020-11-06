@@ -40,6 +40,7 @@ First Distinction Scholarship, *1st Semester of 2017*
 
 - Signal Processing
   - Sensor Data Analytics
+  - Medical Image Processing
 - IoT
   - BCI, BMI
   - HCI
@@ -47,13 +48,12 @@ First Distinction Scholarship, *1st Semester of 2017*
   
 ## PROJECTS & EXPERIENCES
 
-- 2016, performed teamwork in designing a practical product (salt and pepper shaker) using 3D printer<br>
-- 2016, performed teamwork in programming a simple C program using Visual Studio<br>
-- 2017, performed teamwork in designing a simple CPU circuit using OrCad<br>
+- 2016, performed teamwork in programming [a simple C program](https://github.com/hei-jung/teamproject_heaven)<br>
+- 2017, performed teamwork in designing a simple CPU circuit<br>
 - 2018, worked on a toy project which provides food recipes via Android app<br>
-- 2018, designed an amplifier circuit using Multisim<br>
+- 2018, designed an amplifier circuit using BJT<br>
 - 2018, created an [Android app](https://github.com/hei-jung/LedControl) compatible 7 segment digital clock using LED strips and [Arduino module](https://github.com/hei-jung/LedControl_arduino) with Android Studio and Arduino IDE<br>
-- 2019, worked on a digital clock project with Verilog HDL<br>
+- 2019, worked on a [digital clock project](https://github.com/hei-jung/digitalClockHDL) with Verilog HDL<br>
 - 2019, studied 5G communication system and deep reinforcement learning with Python for senior project and thesis<br>
 - 2019, studied deep learning with breast cancer dataset and Python<br>
 - 2019, worked on an Android app for the student cafeteria with Android Studio<br>
@@ -93,5 +93,4 @@ TOEIC 885, TOEFL iBT 91(MyBest 99), JLPT N2
 - 2018 6th Year Member of IT Club CADI
 - 2018 Cultural Exchange Program in Tokyo, Japan
 - 2017 Math Tutor Volunteering
-- 2016 Vice President of HUFS Boardgame Club
 - 2016 Member of HUFS Dept. of EE Student Council
