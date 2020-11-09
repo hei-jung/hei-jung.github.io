@@ -42,6 +42,7 @@ First Distinction Scholarship, *1st Semester of 2017*
   - Sensor Data Analytics
   - Medical Image Processing
 - IoT
+  - IoMT
   - BCI, BMI
   - HCI
   - Smart Factory / Smart Farm Solutions
