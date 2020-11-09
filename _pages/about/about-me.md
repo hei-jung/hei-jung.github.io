@@ -35,6 +35,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - 센서 데이터 분석
   - 의료영상처리
 - IoT
+  - IoMT
   - BCI, BMI
   - HCI
   - 스마트팩토리 / 스마트팜
