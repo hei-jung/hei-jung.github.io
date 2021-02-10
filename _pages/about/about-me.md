@@ -31,33 +31,30 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 	
 ## INTERESTS
 
-- 신호처리
-  - 센서 데이터 분석
-  - 의료영상처리
-- IoT
-  - IoMT
-  - BCI, BMI
-  - HCI
-  - 스마트팩토리 / 스마트팜
+- 생체의공학 분야
+  - 의료 데이터 분석
+  - 영상처리
+  - IoMT(Internet of Medical Things)
   
-## PROJECTS
+## PROJECTS & EXPERIENCES
 
-- 2016, [C언어 프로젝트 미니게임천국](https://github.com/hei-jung/teamproject_heaven)
-- 2017, 컴퓨터구조 프로젝트 CPU 설계
-- 2018, [CADI 토이 프로젝트 냉장고 앱](https://github.com/hei-jung/cookit_project)
-- 2018, 전자회로 프로젝트 BJT 트랜지스터를 사용한 증폭기 설계
+- 2020, 비카누스 성우하이텍 Web HMI 프론트엔트 구현
+- 2020, [시각장애인의 안전한 보행을 돕는 시선 프로젝트](https://github.com/hei-jung/Seesun)
+- 2020, [플레이데이터 미니 프로젝트 4 - 머신러닝 포켓몬 도감](https://github.com/hei-jung/PokeDex)
+- 2020, [플레이데이터 미니 프로젝트 3 - OpenCV 얼굴인식 출석부](https://github.com/hei-jung/MiniProject_OpenCV)
+- 2020, [플레이데이터 미니 프로젝트 2 - IoT 캐치마인드 게임](https://github.com/hei-jung/catchmind_game)
+- 2020, [플레이데이터 미니 프로젝트 1 - Java 음식 주문 시스템](https://github.com/hei-jung/myDbApp)
+- 2019, 한국외대 창업동아리와 협업, 교내 학생식당 앱 개발 프로젝트
+- 2019, 유방암 데이터셋 활용 딥러닝 스터디 프로젝트
+- 2019, 졸업논문: 강화학습을 이용한 5G Network Slicing 트래픽 제어
+- 2019, [Verilog 디지털 시계](https://github.com/hei-jung/digitalClockHDL) 설계
 - 2018, 캡스톤 프로젝트 안드로이드 앱으로 제어하는 DIY 디지털 디스플레이
   - [안드로이드 구현](https://github.com/hei-jung/LedControl)
   - [아두이노 구현](https://github.com/hei-jung/LedControl_arduino)
-- 2019, [Verilog 디지털 시계](https://github.com/hei-jung/digitalClockHDL) 설계
-- 2019, 졸업논문: 강화학습을 이용한 5G Network Slicing 트래픽 제어
-- 2019, 유방암 데이터셋 활용 딥러닝 스터디 프로젝트
-- 2019, 한국외대 창업동아리와 협업, 교내 학생식당 앱 개발 프로젝트
-- 2020, [플레이데이터 미니 프로젝트 1 - Java 음식 주문 시스템](https://github.com/hei-jung/myDbApp)
-- 2020, [플레이데이터 미니 프로젝트 2 - IoT 캐치마인드 게임](https://github.com/hei-jung/catchmind_game)
-- 2020, [플레이데이터 미니 프로젝트 3 - OpenCV 얼굴인식 출석부](https://github.com/hei-jung/MiniProject_OpenCV)
-- 2020, [플레이데이터 미니 프로젝트 4 - 머신러닝 포켓몬 도감](https://github.com/hei-jung/PokeDex)
-- 2020, [시각장애인의 안전한 보행을 돕는 시선 프로젝트](https://github.com/hei-jung/Seesun)
+- 2018, 전자회로 프로젝트 BJT 트랜지스터를 사용한 증폭기 설계
+- 2018, [CADI 토이 프로젝트 냉장고 앱](https://github.com/hei-jung/cookit_project)
+- 2017, 컴퓨터구조 프로젝트 CPU 설계
+- 2016, [C언어 프로젝트 미니게임천국](https://github.com/hei-jung/teamproject_heaven)
 
 ## SKILLS
 
@@ -68,7 +65,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 |`listening` & `speaking`|*fluent*|*native*|*conversational*|
 |`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
-TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389, JLPT N2
+TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389(2018년 12월 응시), JLPT N2
 
 > Computer Skills
 
@@ -77,7 +74,7 @@ TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389, JLPT N2
 |Language|`C` `Java` `Python` `Arduino` `VerilogHDL`|
 |OS|`Windows` `Linux` `Mac`|
 |Database & SQL|`OracleSQL`|
-|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `OpenCV` `YOLO`|
+|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `OpenCV` `YOLO` `React`|
 |Tool|`OrCad` `MultiSim` `ModelSim`|
 
 ## OTHER ACTIVITIES
