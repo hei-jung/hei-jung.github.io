@@ -38,10 +38,10 @@ First Distinction Scholarship, *1st Semester of 2017*
 
 ## INTERESTS
 
-- Medical Engineering
-  - Data Analytics
-  - Image Processing
-  - IoMT(Internet of Medical Things)
+- Medical, Healthcare
+  - Data Science
+  - Big Data Analysis
+  - Machine Learning
   
 ## PROJECTS & EXPERIENCES
 

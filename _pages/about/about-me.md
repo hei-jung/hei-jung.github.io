@@ -31,10 +31,10 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 	
 ## INTERESTS
 
-- 생체의공학 분야
-  - 의료 데이터 분석
-  - 영상처리
-  - IoMT(Internet of Medical Things)
+- Medical, Healthcare
+  - Data Science
+  - Big Data Analysis
+  - Machine Learning
   
 ## PROJECTS & EXPERIENCES
 
