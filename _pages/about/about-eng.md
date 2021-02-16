@@ -42,6 +42,7 @@ First Distinction Scholarship, *1st Semester of 2017*
   - Data Science
   - Big Data Analysis
   - Machine Learning
+  - Imaging/Image Processing
   
 ## PROJECTS & EXPERIENCES
 

@@ -35,6 +35,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - Data Science
   - Big Data Analysis
   - Machine Learning
+  - Imaging/Image Processing
   
 ## PROJECTS & EXPERIENCES
 
