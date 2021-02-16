@@ -14,7 +14,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 > 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
 - Hei-Jung Jang
-- 1997년 12월 1일생(만 22세)
+- 1997년 12월 1일생
 - 한국외국어대학교 전자공학과 졸업
 - [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
