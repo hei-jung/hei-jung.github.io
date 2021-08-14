@@ -6,8 +6,10 @@ main:
     url: /about-me/
   - title: "Design Pattern"
     url: /design-pattern/
-  - title: "Categories"
-    url: /categories/
+  - title: "CV and ML"
+    url: /cv-and-ml/
+#   - title: "Categories"
+#     url: /categories/
   # - title: "Posts"
   #   url: /posts/
   # - title: "Sample Posts"
