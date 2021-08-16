@@ -16,9 +16,10 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 - Hei-Jung Jang
 - 1997년 12월 1일생
 - 한국외국어대학교 전자공학과 졸업
+- 이화여자대학교 컴퓨터의학과 재학중
 - [Naver 블로그](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
-- [Contact Me📩](mailto:heijung.jang@hotmail.com)
+- [Contact Me📩](mailto:heijung.jang@ewhain.net)
 
 ## EDUCATION
 
@@ -28,7 +29,8 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - 성적장학금
     - 2017/1, 학장
 	- 2016/2, 학과(부)장
-	
+- 이화여자대학교 컴퓨터의학과 재학 (2021.09 ~)
+
 ## INTERESTS
 
 - Medical, Healthcare
@@ -36,7 +38,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - Big Data Analysis
   - Machine Learning
   - Imaging/Image Processing
-  
+
 ## PROJECTS & EXPERIENCES
 
 - 2020, 비카누스 성우하이텍 Web HMI 프론트엔트 구현
@@ -66,7 +68,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
 |`listening` & `speaking`|*fluent*|*native*|*conversational*|
 |`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
-TOEIC 885, TOEFL iBT 91(MyBest 99), TEPS 389(2018년 12월 응시), JLPT N2
+TOEIC 930, TOEFL iBT 91(MyBest 99), TEPS 437, JLPT N2
 
 > Computer Skills
 

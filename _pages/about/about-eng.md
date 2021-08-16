@@ -21,16 +21,19 @@ Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
 - from Seoul, South Korea
 - Hankuk University of Foreign Studies(HUFS)
   - Bachelor's Degree in Electronics Engineering
+- Ewha Womans University
+  - Major in Computational Medicine
 - [Naver Blog](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
-- [Contact Me📩](mailto:heijung.jang@hotmail.com)
+- [Contact Me📩](mailto:heijung.jang@ewhain.net)
 
 ## EDUCATION
 
 - Bachelor, Hankuk University of Foreign Studies(HUFS) (2016.02 ~ 2020.02)
   - Majored in **Dept. of Electronics Engineering** (Bachelor of Engineering)
   - Double Majored **Japanese Interpretation and Translation** (Bachelor of Arts)
-  
+- Major in Computational Medicine, Ewha Womans University (2021.09 ~)
+
 ## HONOURS & AWARDS
 
 Second Distinction Scholarship, *2nd Semester of 2016*<br>
@@ -43,7 +46,7 @@ First Distinction Scholarship, *1st Semester of 2017*
   - Big Data Analysis
   - Machine Learning
   - Imaging/Image Processing
-  
+
 ## PROJECTS & EXPERIENCES
 
 - 2020, worked on a Web HMI project as a front end developer (business project)<br>
@@ -72,7 +75,7 @@ First Distinction Scholarship, *1st Semester of 2017*
 |`listening` & `speaking`|*fluent*|*native*|*conversational*|
 |`reading` & `writing`|*highly proficient*|*native*|*proficient*|
 
-TOEIC 885, TOEFL iBT 91(MyBest 99), JLPT N2
+TOEIC 930, TOEFL iBT 91(MyBest 99), JLPT N2
 
 > Computer Skills
 
