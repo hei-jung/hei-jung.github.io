@@ -4,6 +4,7 @@ categories: machine-learning
 tags: python ML pytorch
 ---
 
+자주 쓰는 loss funcion method 정리.<br>
 
 ## MSELoss
 
