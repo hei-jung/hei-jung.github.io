@@ -11,19 +11,19 @@ toc_sticky: true
 
 
 
-## 0. 왜 이 글을 쓰게 됐는지?
+## 왜 이 글을 쓰게 됐는지?
 
 우리 랩실은 원격 접속이 가능하다. 그래서 꼭 학교에 오지 않더라도 집에서도 필요한 작업을 자유롭게 할 수 있었다.<br>
 그런데 어느 날 학교 측에서 보안 때문에 포트를 하나 빼고 다 막아버려서 추가 설정이 필요해졌다.<br>
 
 
 
-## 1. SSH 터미널 환경설정
+## SSH 터미널 환경설정
 
 이 설정을 하려면 먼저 linux 터미널에 ssh 명령어가 설치되어 있어야 한다.
 
 
-### ssh 설치 확인 및 설치
+### 1. ssh 설치 확인 및 설치
 
 터미널을 열어 아래의 명령어를 실행한다.
 
@@ -41,7 +41,7 @@ username@device:~$ sudo apt install ssh
 ```
 
 
-### 포트 설정 변경
+### 2. 포트 설정 변경
 
 포트를 직접 설정하기 전에 기본 포트는 항상 22로 설정되어 있다.
 
@@ -61,7 +61,7 @@ username@device:~$ sudo /etc/init.d/ssh restart
 ```
 
 
-### 포트 변경 확인
+### 3. 포트 변경 확인
 
 다음 명령어를 쳐서 포트가 제대로 바뀌었는지 확인한다.
 
@@ -77,7 +77,7 @@ tcp6       0      0 :::1234                   :::*                    LISTEN    
 ```
 
 
-### 타 PC에서 원격 접속
+### 4. 타 PC에서 원격 접속
 
 이제 다른 컴퓨터를 켜서 우리가 설정한 주소로 잘 접속이 되는지 확인해보자.<br>
 Linux나 Mac 환경을 쓰는 경우엔 터미널을, Windows 환경을 쓰면 Anaconda Prompt 등을 열어 아래와 같이 입력한다.
@@ -133,10 +133,13 @@ $ sftp hj
 
 
 
-## 2. Jupyter Notebook 환경설정
+## Jupyter Notebook 환경설정
 
 ssh 터미널을 사용하면 내 PC에서 linux PC 파일에 접근할 수 있어 편리하다.<br>
 그런데 꼭 파일에 접근할 필요 없이 Jupyter Notebook만 사용하는 게 목적이라면 Jupter Notebook 설정을 해주는 것만으로 원격 접속이 가능하다.
+
+
+### 1. config 파일
 
 ```console
 username@device:~$ vi ~/.jupyter/jupyter_notebook_config.py
@@ -175,7 +178,7 @@ c.NotebookApp.port = 1234  # 주피터 노트북 접속에 사용할 포트번�
 그리고 `ip`와 `port`는 본인 linux 컴퓨터의 ip와 원격 접속에 쓸 포트를 기입하면 된다.
 
 
-### Jupyter Notebook 실행
+### 2. Jupyter Notebook 실행
 
 서버 컴퓨터인 linux 환경에서 실행해줘야 한다. linux 터미널을 열어 `jupyter notebook`을 입력하자.
 
@@ -192,7 +195,7 @@ username@device:~$ jupyter notebook
 그럼 중간에 `http://ip:port` 형태로 주소가 뜰 텐데, 이제 이 주소를 가지고 현재 linux 컴퓨터 외의 다른 기기에서도 접속할 수 있다.
 
 
-### 다른 기기에서 원격 접속
+### 3. 다른 기기에서 원격 접속
 
 브라우저(Chrome, Safari, Microsoft Edge 등등 본인이 편한 거) 실행 > 주소창에 `ip:port` 입력 후 엔터
 
