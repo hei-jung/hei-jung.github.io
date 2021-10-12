@@ -80,7 +80,7 @@ tcp6       0      0 :::1234                   :::*                    LISTEN    
 ### 타 PC에서 원격 접속
 
 이제 다른 컴퓨터를 켜서 우리가 설정한 주소로 잘 접속이 되는지 확인해보자.<br>
-Linux나 Mac 환경을 쓰는 경우엔 터미널을, Windows 환경을 쓰면 Anaconda Prompt를 열어 아래와 같이 입력한다.
+Linux나 Mac 환경을 쓰는 경우엔 터미널을, Windows 환경을 쓰면 Anaconda Prompt 등을 열어 아래와 같이 입력한다.
 
 ```console
 $ ssh username@ip -p 1234
