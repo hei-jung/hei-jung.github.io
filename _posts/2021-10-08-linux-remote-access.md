@@ -212,4 +212,28 @@ c.NotebookApp.notebook_dir = '내 작업경로(절대경로)'
 
 이 부분을 수정했다. 기본값은 공백인데, 그럼 `~/.jupyter/`가 제일 root 경로로 설정되는 모양이다.<br><br>
 그렇게 되면 `~/.jupyter/` 디렉터리 바깥의 파일들에는 접근할 수가 없기 때문에 기호에 따라서 필요한 파일들을 전부 여기로 옮기거나, 아니면 이렇게 경로를 직접 설정해주는 작업이 필요하다.
+이때 경로는 반드시 상대경로가 아닌, **절대경로**를 적어줘야 한다.
 
+
+
+## 유의할 점(매우 중요!!!)
+
+하나의 port를 여러 가지 용도로 사용하는 것은 불가능하다. 이게 무슨 말이냐면, ssh를 위해 열어둘 포트와 Jupyter Notebook을 원격으로 쓰기 위한 포트는 같은 걸 쓸 수 없다.<br>
+예를 들어서 ssh 포트를 1234로 설정한 다음에 Jupyter Notebook config 파일에서도 포트를 똑같이 1234로 설정하고 Jupyter Notebook을 실행하면,
+
+```console
+[I 11:43:55.355 NotebookApp] The port 1234 is already in use, trying another port.
+[I 11:43:55.411 NotebookApp] JupyterLab extension loaded from /compuworks/anaconda3/lib/python3.8/site-packages/jupyterlab
+[I 11:43:55.411 NotebookApp] JupyterLab application directory is /compuworks/anaconda3/share/jupyter/lab
+[I 11:43:55.413 NotebookApp] Serving notebooks from local directory: /home/username/Desktop
+[I 11:43:55.413 NotebookApp] Jupyter Notebook 6.1.4 is running at:
+[I 11:43:55.413 NotebookApp] http://my ip:1235/
+```
+
+이렇게 첫 번째 줄에서 `1234`는 이미 사용중이므로 다른 포트를 사용하라는 메시지가 뜨며 포트가 `1234`의 다음 번지인 `1235`로 자동 할당 된다.<br>
+
+자동 할당된 포트도 외부 PC에서 접근할 수 있으면 괜찮은데, 만약 나처럼 원격 접속에 사용할 수 있는 포트가 한 개 뿐이라면 필요에 따라 ssh나 Jupyter Notebook 둘 중에 하나만 해당 포트를 사용하도록 해야 한다.<br>
+내 경우엔 원격 접속의 주요 목적이 Jupyter Notebook 사용이라서 ssh 포트를 주석 처리하고 Jupyter Notebook config 파일에서만 `c.NotebookApp.port = 포트번호`로 설정했다.
+그 외 ssh나 sftp 프로토콜을 써야 할 때는 [ssh 포트 설정](#SSH-터미널-환경설정)을 따르고 있다.<br>
+
+이건 윈도우의 원격 접속을 설정할 때에도 유의할 점으로, 다음 글에서 다른 PC에서 윈도우로 원격 접속하는 방법을 정리하며 다시 얘기하려 한다.
