@@ -108,7 +108,7 @@ $ vi ~/.ssh/config
 
 `~/.ssh/config`은 ssh 설정 파일이다. 여기에 키워드를 추가해줄 것이다. 요렇게:
 
-```console
+```
 Host {my id}
         Hostname {my ip}
         Port {port}
@@ -117,7 +117,7 @@ Host {my id}
 
 예를 들어서 나는 이런 식으로 설정했다.
 
-```console
+```
 Host hj
         Hostname 000.000.000.000  # 랩실 컴퓨터 ip주소
         Port 1234
@@ -195,3 +195,21 @@ username@device:~$ jupyter notebook
 ### 다른 기기에서 원격 접속
 
 브라우저(Chrome, Safari, Microsoft Edge 등등 본인이 편한 거) 실행 > 주소창에 `ip:port` 입력 후 엔터
+
+![Screenshot from 2021-10-12 12-10-24](https://user-images.githubusercontent.com/40985307/136885057-61530172-f94f-4f6a-be53-d0ed6273f3cc.png)
+
+이런 식으로 Jupyter Notebook 화면이 나오면 잘 되고 있는 거다.
+
+
+### 참고. 작업 경로 설정
+
+나는 처음에 저대로 설정하고 주피터 노트북에 들어갔더니, 내가 쓰는 폴더들이 보이지 않았다.
+알고 보니 이것도 추가 설정이 필요했다. 다시 config 파일을 열어,
+
+```
+c.NotebookApp.notebook_dir = '내 작업경로(절대경로)'
+```
+
+이 부분을 수정했다. 기본값은 공백인데, 그럼 `~/.jupyter/`가 제일 root 경로로 설정되는 모양이다.<br>
+그렇게 되면 `~/.jupyter/` 디렉터리 바깥의 파일들에는 접근할 수가 없기 때문에 기호에 따라서 필요한 파일들을 전부 여기로 옮기거나, 아니면 이렇게 경로를 직접 설정해주는 작업이 필요하다.
+
