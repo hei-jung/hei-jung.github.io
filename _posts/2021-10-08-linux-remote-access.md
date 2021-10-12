@@ -204,7 +204,7 @@ username@device:~$ jupyter notebook
 ### 참고. 작업 경로 설정
 
 나는 처음에 저대로 설정하고 주피터 노트북에 들어갔더니, 내가 쓰는 폴더들이 보이지 않았다.
-알고 보니 이것도 추가 설정이 필요했다. 다시 config 파일을 열어,
+알고 보니 이것도 추가 설정이 필요했다.<br>다시 config 파일을 열어,
 
 ```
 c.NotebookApp.notebook_dir = '내 작업경로(절대경로)'
