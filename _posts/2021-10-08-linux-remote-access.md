@@ -76,17 +76,60 @@ tcp        0      0 0.0.0.0:1234              0.0.0.0:*               LISTEN    
 tcp6       0      0 :::1234                   :::*                    LISTEN      1525/sshd           
 ```
 
-<!--
+
 ### 타 PC에서 원격 접속
 
+이제 다른 컴퓨터를 켜서 우리가 설정한 주소로 잘 접속이 되는지 확인해보자.<br>
+Linux나 Mac 환경을 쓰는 경우엔 터미널을, Windows 환경을 쓰면 Anaconda Prompt를 열어 아래와 같이 입력한다.
+
 ```console
+$ ssh username@ip -p 1234
 ```
+
+username은 linux 컴퓨터의 계정 이름이고 ip는 linux 컴퓨터의 ip 주소(모른다면 터미널에 `ifconfig` 명령어를 쳐서 확인할 수 있다)를 쓰면 된다.
+`-p`는 포트 옵션을 의미하고 `-p`를 쓴 다음에 접속하고자 하는 포트 넘버를 쓰면 해당 포트로 접속하겠다는 뜻이 된다.<br>
+
+sftp를 쓰는 경우,
+
+```console
+$ sftp username@ip -p 1234
+```
+
+이렇게 `ssh` 대신 `sftp`를 쓰면 된다. 바로 `Connected to username.`라고 뜨거나 비밀번호가 설정돼 있는 경우 비밀번호를 입력하라고 뜨면 원격 연결이 잘 되고 있는 것이다.
+
 
 ### 참고. 원격 접속할 ip 및 port 키워드로 저장하기
 
+저렇게 매번 username, ip, port를 치기 귀찮을 때, 얘네를 한꺼번에 묶어 하나의 키워드로 저장하는 편리한 방법이 있다.<br>
+
 ```console
+$ vi ~/.ssh/config
 ```
--->
+
+`~/.ssh/config`은 ssh 설정 파일이다. 여기에 키워드를 추가해줄 것이다. 요렇게:
+
+```console
+Host {my id}
+        Hostname {my ip}
+        Port {port}
+        User {username}
+```
+
+예를 들어서 나는 이런 식으로 설정했다.
+
+```console
+Host hj
+        Hostname 000.000.000.000  # 랩실 컴퓨터 ip주소
+        Port 1234
+        User asdf  # 랩실 컴퓨터에서 쓰는 계정 이름
+```
+
+그럼 다음에 ssh나 sftp 접속을 할 시에는 명령어가 훨씬 간단해진다.
+
+```console
+$ ssh hj
+$ sftp hj
+```
 
 
 
@@ -124,8 +167,10 @@ c.NotebookApp.port = 1234  # 주피터 노트북 접속에 사용할 포트번�
 라고 치고 엔터를 누르면 커서가 c.NotebookApp.ip로 바로 이동한다.<br>
 
 설정값을 바꾸는 변수들에 대해서 조금 설명을 보충하자면, 먼저 `allow_origin`을 `*`로 하면 모든 외부 접속을 허용하겠다는 의미가 된다.<br>
+
 `open_browser`는 자동으로 Jupyter Notebook 창을 열어주겠냐는 건데, 기본값 True를 사용하면 Jupyter Notebook 실행 시 서버 컴퓨터(linux)의 브라우저가 자동으로 열려서 다른 컴퓨터에서 주소를 치고 원격 접속을 할 수 없게 된다.
-따라서 얘는 False로 설정해줘야 한다. 그럼 Jupyter Notebook을 열고자 하는 컴퓨터에서 브라우저를 열고 주소를 쳐서 들어갈 수가 있다.<br>
+따라서 얘는 False로 설정해줘야 한다.<br>그럼 Jupyter Notebook을 열고자 하는 컴퓨터에서 브라우저를 열고 주소를 쳐서 들어갈 수가 있다.<br>
+
 이 부분은 바로 아래 단계에서 무슨 뜻인지 이해할 수 있을 것이다.
 그리고 `ip`와 `port`는 본인 linux 컴퓨터의 ip와 원격 접속에 쓸 포트를 기입하면 된다.
 
