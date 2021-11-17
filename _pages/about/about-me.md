@@ -55,7 +55,7 @@ Go to: [English Ver.](https://hei-jung.github.io/about/)
   - [안드로이드 구현](https://github.com/hei-jung/LedControl)
   - [아두이노 구현](https://github.com/hei-jung/LedControl_arduino)
 - 2018, 전자회로 프로젝트 BJT 트랜지스터를 사용한 증폭기 설계
-- 2018, [CADI 토이 프로젝트 냉장고 앱](https://github.com/hei-jung/cookit_project)
+- 2018, CADI 토이 프로젝트 냉장고 앱
 - 2017, 컴퓨터구조 프로젝트 CPU 설계
 - 2016, [C언어 프로젝트 미니게임천국](https://github.com/hei-jung/teamproject_heaven)
 
