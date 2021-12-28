@@ -75,3 +75,21 @@ delete user with home directory:
 
 `-r`: delete all data including the home directory when deleting user<br>
 `-f`: force option
+
+
+## Clear bash history
+
+[How to clear bash history completely?](askubuntu.com/questions/191999/how-to-clear-bash-history-completely)
+
+```console
+(base) user@device:~$ cat /dev/null > ~/.bash_history
+```
+
+Other alternate way is to link `~/.bash_history` to `/dev/null`
+
+avoiding memory copy:
+
+```console
+(base) user@device:~$ cat /dev/null > ~/.bash_history && history -c && exit
+```
+
