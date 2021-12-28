@@ -6,7 +6,45 @@ toc: true
 toc_sticky: true
 ---
 
+<!--
+template
+```console
+(base) user@device:~$
+```
+-->
+
 # Linux Cheatsheet
+
+## 7zip (7zr, 7za) command
+
+```console
+(base) user@device:~$ sudo apt install p7zip p7zip-full
+```
+
+zip:
+
+```console
+(base) user@device:~$ 7zr a ZIPPED_FILENAME.7z FILENAME
+```
+
+unzip:
+
+```console
+(base) user@device:~$ 7zr x ZIPPED_FILENAME.7z
+```
+
+zip with password:
+
+```console
+(base) user@device:~$ 7za a -pPASSWORD ZIPPED_FILENAME.7z FILENAME
+```
+
+unzip with password:
+
+```console
+(base) user@device:~$ 7za x -pPASSWORD -y ZIPPED_FILENAME.7z
+```
+
 
 ## Find the physical memory available
 
