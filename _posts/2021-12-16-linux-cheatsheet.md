@@ -52,3 +52,26 @@ unzip with password:
 (base) user@device:~$ grep MemTotal /proc/meminfo
 ```
 
+
+## Delete user
+
+check user:
+
+```console
+(base) user@device:~$ ls -la /home |grep USERNAME
+```
+
+delete only user:
+
+```console
+(base) user@device:~$ sudo userdel USERNAME
+```
+
+delete user with home directory:
+
+```console
+(base) user@device:~$ sudo userdel -rf USERNAME
+```
+
+`-r`: delete all data including the home directory when deleting user<br>
+`-f`: force option
