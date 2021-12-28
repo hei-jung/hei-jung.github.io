@@ -79,7 +79,7 @@ delete user with home directory:
 
 ## Clear bash history
 
-[How to clear bash history completely?](askubuntu.com/questions/191999/how-to-clear-bash-history-completely)
+[How to clear bash history completely?](https://askubuntu.com/questions/191999/how-to-clear-bash-history-completely)
 
 ```console
 (base) user@device:~$ cat /dev/null > ~/.bash_history
