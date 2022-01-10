@@ -218,8 +218,7 @@ c.NotebookApp.notebook_dir = '내 작업경로(절대경로)'
 이때 경로는 반드시 상대경로가 아닌, **절대경로**를 적어줘야 한다.
 
 
-
-## 유의할 점(매우 중요!!!)
+## <span style="color:red">유의할 점(매우 중요!!!)</span>
 
 하나의 port를 여러 가지 용도로 사용하는 것은 불가능하다. 이게 무슨 말이냐면, ssh를 위해 열어둘 포트와 Jupyter Notebook을 원격으로 쓰기 위한 포트는 같은 걸 쓸 수 없다.<br>
 예를 들어서 ssh 포트를 1234로 설정한 다음에 Jupyter Notebook config 파일에서도 포트를 똑같이 1234로 설정하고 Jupyter Notebook을 실행하면,
