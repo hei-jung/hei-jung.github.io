@@ -8,6 +8,8 @@ main:
     url: /design-pattern/
   - title: "CV and ML"
     url: /cv-and-ml/
+  - title: "논문 리뷰"
+    url: /paper-review/
 #   - title: "Categories"
 #     url: /categories/
   # - title: "Posts"
