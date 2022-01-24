@@ -92,7 +92,7 @@ username은 linux 컴퓨터의 계정 이름이고 ip는 linux 컴퓨터의 ip �
 sftp를 쓰는 경우,
 
 ```console
-$ sftp username@ip -p 1234
+$ sftp -P 1234 username@ip
 ```
 
 이렇게 `ssh` 대신 `sftp`를 쓰면 된다. 바로 `Connected to username.`라고 뜨거나 비밀번호가 설정돼 있는 경우 비밀번호를 입력하라고 뜨면 원격 연결이 잘 되고 있는 것이다.
