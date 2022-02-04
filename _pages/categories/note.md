@@ -1,6 +1,6 @@
 ---
 title: "잡다한 메모노트"
-permalink: /note/
+permalink: /categories/note/
 layout: category
 author_profile: true
 taxonomy: note
