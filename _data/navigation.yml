@@ -4,31 +4,27 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about-me/
-  - title: "Design Pattern"
+  - title: "논문 리뷰"
+    url: /paper-review/
+  - title: "디자인 패턴"
     url: /design-pattern/
-#   - title: "Categories"
-#     url: /categories/
-  # - title: "Posts"
-  #   url: /posts/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
 
+
+# sidebar
 docs:
   # test
-  - title: Sidebar Test
+  - title: Categories
     children:
-      - title: "Child1"
-        #url:
-      - title: "Child2"
-        #url:
-  # - title: "CV and ML"
-  #   url: /cv-and-ml/
-  # - title: "논문 리뷰"
-  #   url: /paper-review/
+      - title: "알고리즘 뽀개기"
+        url: /categories/algorithm/
+      - title: "리눅스"
+        url: /categories/linux/
+      - title: "머신러닝&컴퓨터비전"
+        url: /categories/cv-and-ml/
+      - title: "안드로이드"
+        url: /categories/android/
+      - title: "웹"
+        url: /categories/web/
   # - title: "Categories"
   #   url: /categories/
   # - title: "Posts"
