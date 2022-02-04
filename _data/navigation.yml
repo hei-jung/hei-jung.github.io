@@ -4,6 +4,8 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about-me/
+  - title: "Design Pattern"
+    url: /design-pattern/
 #   - title: "Categories"
 #     url: /categories/
   # - title: "Posts"
@@ -23,19 +25,17 @@ docs:
         #url:
       - title: "Child2"
         #url:
-  - title: "Design Pattern"
-    url: /design-pattern/
-  - title: "CV and ML"
-    url: /cv-and-ml/
-  - title: "논문 리뷰"
-    url: /paper-review/
-  - title: "Categories"
-    url: /categories/
-  - title: "Posts"
-    url: /posts/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
+  # - title: "CV and ML"
+  #   url: /cv-and-ml/
+  # - title: "논문 리뷰"
+  #   url: /paper-review/
+  # - title: "Categories"
+  #   url: /categories/
+  # - title: "Posts"
+  #   url: /posts/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
