@@ -4,6 +4,8 @@ permalink: /design-pattern/
 layout: category
 author_profile: true
 taxonomy: design-pattern
+sidebar:
+  nav: "docs"
 ---
 
 ## 목차

@@ -4,4 +4,6 @@ permalink: /cv-and-ml/
 layout: category
 author_profile: true
 taxonomy: cv-and-ml
+sidebar:
+  nav: "docs"
 ---
