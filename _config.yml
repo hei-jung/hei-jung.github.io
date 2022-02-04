@@ -104,7 +104,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
       url: "mailto:heijung.jang@hotmail.com"
-    - label: "Other Blog"
+    - label: "Naver Blog"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
       url: "https://blog.naver.com/wkdgpwjd007"
