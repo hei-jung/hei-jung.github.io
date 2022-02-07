@@ -93,3 +93,21 @@ avoiding memory copy:
 (base) user@device:~$ cat /dev/null > ~/.bash_history && history -c && exit
 ```
 
+
+## Check Process
+
+[프로세스 확인하기](https://eehoeskrap.tistory.com/245)
+
+process list:
+
+```console
+(base) user@device:~$ ps
+
+# details
+(base) user@device:~$ ps -f
+
+# all
+(base) user@device:~$ ps -e
+(base) user@device:~$ ps -ef
+
+```
