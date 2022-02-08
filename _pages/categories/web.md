@@ -1,5 +1,5 @@
 ---
-title: "web"
+title: "Web"
 permalink: /categories/web/
 layout: category
 author_profile: true
@@ -8,4 +8,4 @@ sidebar:
   nav: "docs"
 ---
 
-웹 관련 내용 모음.
+PlayData 웹 수업 및 개인 공부 내용 정리
