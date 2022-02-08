@@ -1,7 +1,7 @@
 ---
 title: "[Linux] Linux Cheatsheet"
 categories: linux
-tags: linux ubuntu
+tags: linux cheatsheet
 toc: true
 toc_sticky: true
 ---

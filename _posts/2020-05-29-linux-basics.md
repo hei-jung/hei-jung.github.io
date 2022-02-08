@@ -1,7 +1,7 @@
 ---
 title: "[Linux] Linux Basics"
 categories: linux
-tags: linux raspberry-pi raspbianOS
+tags: linux
 toc: true
 toc_sticky: true
 header:
@@ -96,7 +96,7 @@ H/W
   - cf. 리눅스의 또다른 장점: OS가 실행중일 때도 모듈 업로드가 가능하다. 리눅스 커널을 처음부터 다시 컴파일할
 필요가 없어서 매우 편리!
   - 단, 문제점은 재부팅하면 파일이 없음. 프로그램을 실행 중일 때 유효하다.)
-  
+
 ## 5. 터미널에서 프로그래밍하기
 
 ### Java
