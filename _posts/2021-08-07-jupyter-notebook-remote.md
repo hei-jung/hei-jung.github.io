@@ -1,7 +1,7 @@
 ---
 title: "[Linux] jupyter notebook 원격 서버 설정"
 categories: linux
-tags: linux remote-access
+tags: linux jupyter-notebook
 toc: true
 toc_sticky: true
 ---

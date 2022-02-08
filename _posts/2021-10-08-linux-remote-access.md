@@ -2,7 +2,7 @@
 title: "[Linux] 다른 PC에서 Linux로 원격 접속하기"
 subtitle: "Jupyter Notebook, ip 및 port 설정 등등"
 categories: linux
-tags: linux remote-access
+tags: linux jupyter-notebook
 toc: true
 toc_sticky: true
 ---
