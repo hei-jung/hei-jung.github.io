@@ -1,7 +1,7 @@
 ---
 title: "[머신러닝] validation loss가 training loss보다 작게 나오는 이유!?"
-categories: machine-learning
-tags: python ML
+categories: cv-and-ml
+tags: python machine-learning
 ---
 
 원래 학습 모델을 돌리면 학습 데이터에 대한 손실(training loss)보다 검증 데이터에 대한 손실(validation loss)이 더 큰 게 일반적이다. 근데 어느 날 내 모델은 validation loss가 더 작다는 사실을 발견했다.

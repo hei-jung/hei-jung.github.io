@@ -1,7 +1,7 @@
 ---
 title: "[머신러닝] pytorch loss function 정리"
-categories: machine-learning
-tags: python ML pytorch
+categories: cv-and-ml
+tags: python machine-learning pytorch
 ---
 
 자주 쓰는 loss funcion method 정리.<br>
