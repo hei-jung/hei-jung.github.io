@@ -7,5 +7,3 @@ author_profile: true
 sidebar:
   nav: "docs"
 ---
-
-잡다한 메모 모음

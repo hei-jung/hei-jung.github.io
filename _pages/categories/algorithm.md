@@ -8,8 +8,6 @@ sidebar:
   nav: "docs"
 ---
 
-알고리즘 관련 이론 정리 및 문제 풀이 모음
-
 ## 알고리즘 문제 사이트
 
 백준: https://www.acmicpc.net/ (입출력까지 구현하는 연습 가능)<br>

@@ -7,5 +7,3 @@ author_profile: true
 sidebar:
   nav: "docs"
 ---
-
-일상 및 생각 기록

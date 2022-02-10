@@ -7,5 +7,3 @@ taxonomy: linux
 sidebar:
   nav: "docs"
 ---
-
-리눅스에 대한 이모저모
