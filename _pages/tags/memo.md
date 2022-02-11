@@ -2,7 +2,7 @@
 title: 메모
 layout: tag
 permalink: /tags/memo/
-taxonomy: 메모
+taxonomy: memo
 author_profile: true
 sidebar:
   nav: "docs"
