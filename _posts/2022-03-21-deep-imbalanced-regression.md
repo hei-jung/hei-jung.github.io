@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 ---
 
-# ResNet 논문 리뷰
+# DIR 논문 리뷰
 
 [논문: Delving into Deep Imbalanced Regression](http://proceedings.mlr.press/v139/yang21m.html), [Github](https://github.com/YyzHarry/imbalanced-regression)
 
