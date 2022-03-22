@@ -15,7 +15,7 @@ toc_sticky: true
 ### Imbalanced Regression
 
 내가 학습에 사용하고 있는 데이터는 Medical data이다. Medical/Healthcare data는 다른 데이터에 비해서 특히 더 불균형(imbalanced)인 경우가 많다.
-일반적으로 질병을 예측하기 위한 건강 정보는 병에 걸린 사람보다 걸리지 않은 건강한 사람의 비율이 훨씬 많기 때문이다.<br>
+일반적으로 질병을 예측하기 위한 건강 정보는 병에 걸린 사람보다 걸리지 않은 건강한 사람의 비율이 훨씬 많기 때문이다.
 (병변 데이터라고 하면 비교적 병변 수치가 작은 쪽으로 치우친 분포 형태인 right-skewed (positively skewed) distribution을 보이게 된다.)
 
 1D 데이터 (주로 numerical data) 학습 시 imbalanced data handling에 대한 방법으로는
@@ -30,13 +30,7 @@ toc_sticky: true
 
 기존의 데이터 불균형 문제를 해결하는 방식들은 범주형 데이터 (target with categorical indices)들의 불균형 문제에 초점을 맞추고 있다. (주로 classification task에서의 데이터 불균형)
 본 논문에서는 연속적인 target value로 구성된 데이터로 학습할 때 데이터 불균형 문제 (Deep Imbalanced Regression; DIR)를 해결할 수 있는 방법을 제시한다.
-범주형 label과 연속형 label에 내재적인 차이가 있다는 데서 착안하여, label과 feature에 대한 distribution smoothing 기법을 제안한다. 이는 명시적으로 근처 target의 효과를 인지하고 보정한다.
-
-> Motivated by the intrinsic difference between categorical and continuous label space, we propose distribution smoothing for both labels and features, which explicitly acknowledges the effects of nearby targets, and calibrates both label and learned feature distributions.
-We curate and benchmark large-scale DIR datasets from common real-world tasks in computer vision, natural language processing, and healthcare domains.
-Extensive experiments verify the superior performance of our strategies.
-Extensive experiments verify the superior performance of our strategies.
-Our work fills the gap in benchmarks and techniques for practical imbalanced regression problems.
+범주형 label과 연속형 label의 차이점에서 착안하여 label과 feature에 대한 distribution smoothing 기법을 제안하고 있고 이는 imbalanced regression problem에서 활용할 수 있다.
 
 ## 1. Introduction
 
