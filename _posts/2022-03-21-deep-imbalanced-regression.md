@@ -137,11 +137,11 @@ laplace 필터는 discrete domain에서 쓰이는 필터로, 대충 이런 형�
 
 즉 한가운데의 원소를 기준으로 대칭인 matrix이다.
 
-```
+<span style="color:blue">
 !메모!
 scipy.signal.windows에서는 삼각형 말고도 다양한 모양의 symmetric한 필터를 제공하고 있다.
 customize를 위해 다른 필터들도 시도해볼 수 있을까?
-```
+</span>
 
 LDS를 적용하는 방법은 다음과 같으며,
 
