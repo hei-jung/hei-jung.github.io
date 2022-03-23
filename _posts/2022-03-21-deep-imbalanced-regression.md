@@ -261,7 +261,3 @@ To train the model, we employ a *momenum update* of the running statistics ![fea
 `INV`와 `SQINV`는 각각 inverse-frequency weighting variant, square-root weighting variant를 나타낸다.
 
 저 표를 보면 LDS, FDS, 그리고 LDS랑 FDS를 둘 다 적용했을 때 아무것도 적용 안 했을 때보다 MAE가 작으므로 성능이 조금 더 좋아졌다고 볼 수 있다.
-
-## 5. Conclusion
-
-Deep imbalanced regression task에 대해서 imbalanced data를 어떻게 해결할지에 대한 두 가지 방법을 소개하였다.
