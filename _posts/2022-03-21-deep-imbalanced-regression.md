@@ -19,29 +19,29 @@ toc_sticky: true
 (예를 들어 병변 데이터라고 하면 비교적 병변 수치가 작은 쪽으로 치우친 분포 형태인 right-skewed (positively skewed) distribution을 보이게 된다.)
 
 입력 데이터가 어떤 클래스에 속하는지를 알아보는 classification task을 위한 imbalanced data handling에 대한 방법으로는
-대표적으로 [SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(Synthetic Minority Oversampling TEchnique) 같은 것들이 알려져 있다.<br>
-그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 적용하는 건 적절하지 않다.
+[SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(Synthetic Minority Oversampling TEchnique) 같은 것들이 알려져 있다.<br>
+그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 적용하는 것은 적절하지 않다.
 
-**Delving into Deep Imbalanced Regression** 논문에서는 이런 나에게 필요한 imbalanced data handling 하는 방법을 소개하고 있다.
+**<Delving into Deep Imbalanced Regression>** 논문에서는 이런 나에게 필요한 imbalanced data handling 방법을 소개하고 있다.
 
 ## 0. Abstract
 
 기존의 데이터 불균형 문제를 해결하는 방식들은 범주형 데이터 (target with categorical indices)들의 불균형 문제에 초점을 맞추고 있다. (주로 classification task에서의 데이터 불균형)
 본 논문에서는 연속적인 target value로 구성된 데이터로 학습할 때 데이터 불균형 문제 (Deep Imbalanced Regression; DIR)를 해결할 수 있는 방법을 제시한다.
-범주형 label과 연속형 label의 차이점에서 착안하여 label과 feature에 대한 distribution smoothing 기법을 제안하고 있고 이는 imbalanced regression problem에서 활용할 수 있다.
+범주형 label과 연속형 label의 차이점에서 착안하여 label과 feature에 대한 distribution smoothing 기법을 제안하고 있고, 이는 imbalanced <u>regression problem</u>에서 활용할 수 있다.
 
 ## 1. Introduction
 
 데이터 불균형 문제는 편재한다. 이 현상은 기계 학습에도 큰 방해요소가 되기 때문에 이미 예전부터 이런 문제를 해결하는 방법들이 많이 제안되었다.
 
-그러나 기존의 솔루션들은 일반적으로 이산적으로 class가 나뉘어 있는 이른바 classification 문제에만 주력하고 있다.
+그러나 기존의 솔루션들은 일반적으로 이산적으로 class가 나뉘어 있는, 이른바 classification 문제에만 주력하고 있다.
 정작 현실 세계의 데이터는 연속적이고 범위가 무한한 값들로 이뤄져 있으며 이러한 연속값 데이터 안에서도 불균형 문제가 있는 경우가 많다.
 
 DIR에서는 classification task에 대한 imbalanced data handling과는 다른 새로운 도전장을 내민다. (여기서 앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 말한다.)<br>
 먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.<br>
-그리고 연속적인 label들은 타깃 간에 뭔가 의미가 있을지도 모르는 거리를 가지는데 이건 우리가 data imbalance를 어떻게 해석해야 할지에 대한 힌트를 준다.
+그리고 연속적인 label들은 타깃 간에 뭔가 의미가 있을지도 모르는 거리를 가지는데, 이건 우리가 data imbalance를 어떻게 해석해야 할지에 대한 힌트를 준다.
 예를 들어서 training 데이터에서 t1, t2라는 두 개의 소수 클래스 타깃이 있다고 해보자. (정확히는 클래스는 아니지만 암튼)
-그런데 t1은 인접값이 많이 포진되어 있는 영역 안에 있는 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음), t2는 그렇지가 않다고 하면
+그런데 t1은 인접값이 많이 포진해 있는 영역 안에 있는 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음), t2는 그렇지가 않다고 하면
 이런 경우에 t1은 t2와는 다른 정도의 불균형을 보이는 것이다.<br>
 마지막으로 classification과 달리, 특정 타깃 값들은 데이터가 아예 존재하질 않아서 타깃의 extrapolation이나 interpolation을 필요로 한다.
 
@@ -65,7 +65,7 @@ DIR에서는 classification task에 대한 imbalanced data handling과는 다른
 
 ### 3.1. Label Distribution Smoothing
 
-일단 classification과 regression의 차이점에 대해서 예시를 가지고 설명한다.
+LDS 설명에 앞서 classification과 regression의 차이점에 대해서 예시를 가지고 설명한다.
 
 > Motivating Example
 
@@ -83,14 +83,13 @@ label 범위가 0~99로 같고, label density distribution이 같은 `(1) 100개
 
 > LDS for Imbalanced Data Density Estimation.
 
-앞선 예시에서 연속적인 데이터셋에 대해서는 empirical label density distribution이 실제 label density distribution을 반영하지 않는다는 것을 보였다.
-이것은 인접한 label 데이터 샘플들 간의 의존성(dependence) 때문이다.<br>
-Label Distribution Smoothing (LDS)는 연속적인 타깃 데이터 간 불균형을 효과적으로 학습하기 위해 kernel density estimation을 한다.
+앞선 예시에서 연속적인 데이터셋에 대해서는 empirical label density distribution이 실제 label density distribution을 반영하지 않는다는 것을 보였다. 이것은 인접한 label 데이터 샘플들 간의 의존성(dependence) 때문이다.<br>
+Label Distribution Smoothing (LDS)는 연속적인 타깃 데이터 간 불균형을 효과적으로 학습하기 위해 kernel density을 예측한다.
 
 LDS는 symmetric kernel과 empirical density distribution을 가지고 convolution을 해서 인접한 label의 데이터 샘플끼리 겹친 kernel-smoothed 버전을 만들어낸다.
 여기서 symmetric kernel이라는 건 `k(y, y')=k(y', y)`와 `∇y(k(y, y'))+∇y(k(y', y))=0, ∀y,y'∈Y`을 만족하는 모든 kernel을 의미한다.
 (이 논문에서 `Y`는 label space를 뜻함)
-참고로 symmetric kernel의 대표적인 두 예는 Gaussian kernel과 Laplace kernel이다.
+참고로 Gaussian kernel과 Laplace kernel은 symmetric kernel의 일종으로 볼 수 있고 `k(y, y')=yy'` 같은 건 symmetric하지 않다.
 LDS는 결국 *effective label density distribution*을 다음과 같이 계산하게 된다:
 
 ![Formula 1](/assets/images/dir_formula_1.png)
@@ -100,8 +99,6 @@ LDS는 결국 *effective label density distribution*을 다음과 같이 계산�
 ![Figure 3](/assets/images/dir_figure_3.png)
 
 *Figure 3*은 LDS와 LDS가 label density distribution을 어떻게 smooth하게 만드는지를 보인다.
-loss function에 inverse LDS를 취한 label을 곱해서 re-weighting을 함으로써 cost-sensitive re-weighting 방식을 구현할 수 있다.
-(a straightforward adaptation can be the cost-sensitive re-weighting method, where we re-weight the loss function by multiplying it by the inverse of the LDS estimated label density for each target.)
 
 ```python
 from scipy.ndimage import gaussian_filter1d
@@ -138,7 +135,14 @@ laplace 필터는 discrete domain에서 쓰이는 필터로, 대충 이런 형�
 ![Laplace](/assets/images/laplace_filter.png)
 [출처: Wikipedia](https://en.wikipedia.org/wiki/Discrete_Laplace_operator)
 
-즉 한가운데의 원소를 기준으로 대칭인 matrix이다.<br>
+즉 한가운데의 원소를 기준으로 대칭인 matrix이다.
+
+```
+!메모!
+scipy.signal.windows에서는 삼각형 말고도 다양한 모양의 symmetric한 필터를 제공하고 있다.
+customize를 위해 다른 필터들도 시도해볼 수 있을까?
+```
+
 LDS를 적용하는 방법은 다음과 같으며,
 
 ```python
@@ -164,7 +168,9 @@ lds_kernel_window = get_lds_kernel_window(kernel='gaussian', ks=5, sigma=2)
 eff_label_dist = convolve1d(np.array(emp_label_dist), weights=lds_kernel_window, mode='constant')
 ```
 
-위에서 구한 effective label distribution 추정치를 가지고 loss re-weighting을 해볼 수 있다.
+위에서 구한 effective label distribution 추정치를 가지고 loss re-weighting을 할 수 있다.
+loss function에 각 타깃에 LDS를 취한 label density 예측치의 역수를 곱해서 re-weighting을 함으로써 cost-sensitive하게 loss function을 re-weighting 하는 것이다.<br>
+그것을 코드로 나타내면 아래와 같다.
 
 ```python
 from loss import weighted_mse_loss
@@ -177,7 +183,11 @@ weights = [np.float32(1 / x) for x in eff_num_per_label]
 loss = weighted_mse_loss(preds, labels, weights=weights)
 ```
 
+코드를 통해 LDS는 학습 중 예측값의 분산 정도를 가지고 loss를 다시 계산하는 형태로 이해하였다.
+
 ### 3.2. Feature Distribution Smoothing
+
+
 
 ## 4. Benchmarking DIR
 
