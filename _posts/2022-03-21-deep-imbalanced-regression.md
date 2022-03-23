@@ -192,8 +192,7 @@ loss = weighted_mse_loss(preds, labels, weights=weights)
 
 > Motivating Example.
 
-학습된 feature를 가지고 feature의 통계를 분석해보자. 여기서 각각의 데이터 분포 영역(bin)을 다음과 같이 정의한다:<br>
-![feature bin denotement](/assets/images/dir_feature_bin.png)
+학습된 feature를 가지고 feature의 통계를 분석해보자. 여기서 각각의 데이터 분포 영역(bin)을 ![feature bin denotement](/assets/images/dir_feature_bin.png)으로 정의한다.
 
 ![Figure 4](/assets/images/dir_figure_4.png)
 
