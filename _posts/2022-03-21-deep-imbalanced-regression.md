@@ -250,7 +250,7 @@ To train the model, we employ a *momenum update* of the running statistics ![fea
 
 ## 4. Benchmarking DIR
 
-이 논문에서 제안한 방법을 어떻게 시험했는지에 대한 설명이다.<br>
+이 논문에서 제안한 방법을 어떻게 시험했는지에 대해서 설명하고 있다.<br>
 *IMDB-WIKI* 데이터셋에서 bin 값은 0~7149 중에 있으며 validation 및 test set의 데이터 분포가 고르게끔 직접 구성하였다.
 
 ![Table 1](/assets/images/dir_table_1.png)
