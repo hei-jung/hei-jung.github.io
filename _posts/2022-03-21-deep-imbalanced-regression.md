@@ -67,7 +67,7 @@ DIR에서는 classification task에 대한 imbalanced data handling과는 다른
 
 LDS 설명에 앞서 classification과 regression의 차이점에 대해서 예시를 가지고 설명한다.
 
-> Motivating Example
+> Motivating Example.
 
 label 범위가 0~99로 같고, label density distribution이 같은 `(1) 100개짜리 클래스의 classification example`과 `(2) large-scale의 regression example`을 가지고 설명해보겠다.
 
@@ -121,7 +121,7 @@ def get_lds_kernel_window(kernel, ks, sigma):
 ```
 
 논문에서 제공하는 깃헙 레포에서 위의 LDS kernel을 생성하는 코드를 가져왔다.<br>
-위에서 symmetric kernel이라고 언급한 gaussian 필터와 laplace 필터를 구현하고 있다. triang은 triangle window, 즉 삼각형 필터이다.
+코드를 보면 위에서 symmetric kernel이라고 언급한 gaussian 필터와 laplace 필터를 구현하고 있다. triang은 triangle window, 즉 삼각형 필터이다.
 gaussian 필터와 삼각형 필터는 설명하지 않아도 그림을 보면 그냥 봐도 모두 symmetric하다는 것을 알 수 있다:
 
 ![Gaussian](/assets/images/Gaussian_Filter.png)<br>
@@ -138,9 +138,9 @@ laplace 필터는 discrete domain에서 쓰이는 필터로, 대충 이런 형�
 즉 한가운데의 원소를 기준으로 대칭인 matrix이다.
 
 <span style="color:blue">
-!메모!<br>
+!그냥 내 생각!<br>
 scipy.signal.windows에서는 삼각형 말고도 다양한 모양의 symmetric한 필터를 제공하고 있다.<br>
-customize를 위해 다른 필터들도 시도해볼 수 있을까?<br>
+커스터마이징을 위해 다른 필터들도 시도해볼 수 있을까?<br>
 </span>
 
 LDS를 적용하는 방법은 다음과 같으며,
@@ -187,8 +187,82 @@ loss = weighted_mse_loss(preds, labels, weights=weights)
 
 ### 3.2. Feature Distribution Smoothing
 
+앞선 예시들을 통해 target space에서의 연속성은 feature space에서의 연속성에 대응해야 한다는 직감을 얻을 수 있다.
+즉 학습 모델이 제대로 돌아가고 데이터 분포가 균형 잡혀 있다면, feature 통계를 봤을 때 인접 타깃들끼리는 서로 붙어있어야 한다고 생각할 수 있다.
 
+> Motivating Example.
+
+학습된 feature를 가지고 feature의 통계를 분석해보자. 여기서 각각의 데이터 분포 영역(bin)을 다음과 같이 정의한다:<br>
+![feature bin denotement](/assets/images/dir_feature_bin.png)
+
+![Figure 4](/assets/images/dir_figure_4.png)
+
+위의 *Figure 4*는 타깃 값 30을 기준으로 각 label 값에 대한 예측값 분포를 보여준다.
+그래프를 보면 데이터 불균형에 의해서 0~6에 해당하는 타깃 데이터의 값을 전부 30에 가깝게 예측하고 있다는 걸 알 수 있다.
+0~6 범위 안에 있는 데이터가 충분히 많지 않아서 총 데이터 중 가장 많은 분포를 차지하는 대략 30에 가까운 값을 뱉어내는 것이다.
+
+> FDS Algorithm.
+
+여기에 feature distribution smoothing (FDS)를 적용해보자.<br>
+FDS는 feature 통계를 근처 타깃 영역으로 이동 시킨다. 이말인즉슨 치우친 데이터, 특히 개수가 부족한 데이터의 예측치를 보정하겠다는 뜻이다.
+
+공식을 이해하는 게 어려워서 [코드](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/fds.py#L115)를 먼저 봤다.
+
+```python
+def smooth(self, features, labels, epoch):
+    if epoch < self.start_smooth:
+        return features
+
+    labels = labels.squeeze(1)
+    for label in torch.unique(labels):
+        if label > self.bucket_num - 1 or label < self.bucket_start:
+            continue
+        elif label == self.bucket_start:
+            features[labels <= label] = calibrate_mean_var(
+                features[labels <= label],
+                self.running_mean_last_epoch[int(label - self.bucket_start)],
+                self.running_var_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
+        elif label == self.bucket_num - 1:
+            features[labels >= label] = calibrate_mean_var(
+                features[labels >= label],
+                self.running_mean_last_epoch[int(label - self.bucket_start)],
+                self.running_var_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
+        else:
+            features[labels == label] = calibrate_mean_var(
+                features[labels == label],
+                self.running_mean_last_epoch[int(label - self.bucket_start)],
+                self.running_var_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
+                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
+    return features
+```
+
+`bucket_num`은 데이터의 범위 안에서 그룹을 나눴을 때 그 그룹의 수를 의미하는 것으로 보인다.<br>
+(추후 더 정리)
+
+FDS는 마지막 feature map을 뽑아내는 layer 다음에 feature 보정 layer를 추가하는 방식으로 구현한다.
+모델을 학습시키려면 각 epoch마다 feature bin의 momentum update를 해준다.<br>
+(We integrate FDS into deep networks by inserting a feature calibration layer after the final feature map.
+To train the model, we employ a *momenum update* of the running statistics ![feature bin denotement](/assets/images/dir_feature_bin.png) across each epoch.)
 
 ## 4. Benchmarking DIR
 
+이 논문에서 제안한 방법을 어떻게 시험했는지에 대한 설명이다.<br>
+*IMDB-WIKI* 데이터셋에서 bin 값은 0~7149 중에 있으며 validation 및 test set의 데이터 분포가 고르게끔 직접 구성하였다.
+
+![Table 1](/assets/images/dir_table_1.png)
+
+*Table 1*에서 `Vanilla`는 imbalance handling을 아예 안 한 것,
+`Focal-R`은 classification에서 쓰이는 `Focal loss`라는 loss 함수의 regression 버전,
+`RRT`는 feature와 classifier를 분리시켜서 두 단계로 나눠서 학습시키는 기법인 `Two-stage training`의 regression 버전이다.
+`INV`와 `SQINV`는 각각 inverse-frequency weighting variant, square-root weighting variant를 나타낸다.
+
+저 표를 보면 LDS, FDS, 그리고 LDS랑 FDS를 둘 다 적용했을 때 아무것도 적용 안 했을 때보다 MAE가 작으므로 성능이 조금 더 좋아졌다고 볼 수 있다.
+
 ## 5. Conclusion
+
+Deep imbalanced regression task에 대해서 imbalanced data를 어떻게 해결할지에 대한 두 가지 방법을 소개하였다.
