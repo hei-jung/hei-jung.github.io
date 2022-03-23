@@ -22,7 +22,7 @@ toc_sticky: true
 [SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(Synthetic Minority Oversampling TEchnique) 같은 것들이 알려져 있다.<br>
 그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 적용하는 것은 적절하지 않다.
 
-**<Delving into Deep Imbalanced Regression>** 논문에서는 이런 나에게 필요한 imbalanced data handling 방법을 소개하고 있다.
+**Delving into Deep Imbalanced Regression** 논문에서는 이런 나에게 필요한 imbalanced data handling 방법을 소개하고 있다.
 
 ## 0. Abstract
 
