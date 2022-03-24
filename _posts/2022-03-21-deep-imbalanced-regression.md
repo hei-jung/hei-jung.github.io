@@ -168,6 +168,8 @@ lds_kernel_window = get_lds_kernel_window(kernel='gaussian', ks=5, sigma=2)
 eff_label_dist = convolve1d(np.array(emp_label_dist), weights=lds_kernel_window, mode='constant')
 ```
 
+(bin index는 데이터 값들의 범위에 구간을 나눠서 구간마다 할당해주는 id라고 생각하면 된다.)
+
 위에서 구한 effective label distribution 추정치를 가지고 loss re-weighting을 할 수 있다.
 loss function에 각 타깃에 LDS를 취한 label density 예측치의 역수를 곱해서 re-weighting을 함으로써 cost-sensitive하게 loss function을 re-weighting 하는 것이다.<br>
 그것을 코드로 나타내면 아래와 같다.
