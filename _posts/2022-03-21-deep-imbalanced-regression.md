@@ -20,7 +20,7 @@ toc_sticky: true
 
 입력 데이터가 어떤 클래스에 속하는지를 알아보는 classification task을 위한 imbalanced data handling에 대한 방법으로는
 [SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(Synthetic Minority Oversampling TEchnique) 같은 것들이 알려져 있다.<br>
-그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 적용하는 것은 적절하지 않다.
+그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 그대로 적용하기가 애매하다.
 
 **Delving into Deep Imbalanced Regression** 논문에서는 이런 나에게 필요한 imbalanced data handling 방법을 소개하고 있다.
 
