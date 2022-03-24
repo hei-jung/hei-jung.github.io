@@ -78,8 +78,8 @@ label 범위가 0~99로 같고, label density distribution이 같은 `(1) 100개
 그런데 연속 데이터셋에 대한 그래프인 *Figure 2.(b)*를 보면 *Figure 2.(a)*에 비해서 error distribution이 훨씬 smooth하며 label density distribution과 correlation이 거의 없다는 것이 확인된다.
 
 여기서 눈여겨볼 점은 모든 imbalanced learning method는 직간접적으로 *실증적인 (empirical)* label density distribution의 불균형에 가중치를 주는 식으로 작용하고 있다는 것이다.
-이는 클래스 label 불균형에 대해서는 적절하지만 연속적인 label 값들에 대해선 학습 모델에서 보이는 것만큼의 불균형을 그대로 반영하지 않는다.
-이런 이유로 위의 방식을 연속적인 label space에서 적용하는 것은 적절하지 않다.
+이러한 방식은 클래스 label 불균형에 대해서는 적절하지만 연속적인 label 값들에 대해선 학습 모델에서 보이는 것만큼의 불균형을 그대로 반영하지 않는다.
+이런 이유로 연속적인 label space에서 이 방식을 적용하는 것은 적절하지 않다.
 
 > LDS for Imbalanced Data Density Estimation.
 
