@@ -120,7 +120,7 @@ def get_lds_kernel_window(kernel, ks, sigma):
     return kernel_window
 ```
 
-논문에서 제공하는 깃헙 레포에서 위의 LDS kernel을 생성하는 코드를 가져왔다.<br>
+논문에서 제공하는 깃헙 레포에서 위의 [LDS kernel을 생성하는 코드](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/utils.py#L110)를 가져왔다.<br>
 코드를 보면 위에서 symmetric kernel이라고 언급한 gaussian 필터와 laplace 필터를 구현하고 있다. triang은 triangle window, 즉 삼각형 필터이다.
 gaussian 필터와 삼각형 필터는 설명하지 않아도 그림을 보면 그냥 봐도 모두 symmetric하다는 것을 알 수 있다:
 
@@ -171,7 +171,7 @@ eff_label_dist = convolve1d(np.array(emp_label_dist), weights=lds_kernel_window,
 (bin index는 데이터 값들의 범위에 구간을 나눠서 구간마다 할당해주는 id라고 생각하면 된다.)
 
 위에서 구한 effective label distribution 추정치를 가지고 loss re-weighting을 할 수 있다.
-loss function에 각 타깃에 LDS를 취한 label density 예측치의 역수를 곱해서 re-weighting을 함으로써 cost-sensitive하게 loss function을 re-weighting 하는 것이다.<br>
+loss function에 각 타깃에 LDS를 취한 label density 예측치의 역수를 곱해서 re-weighting을 함으로써 cost-sensitive하게 [loss function을 re-weighting](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/loss.py#L5) 하는 것이다.<br>
 그것을 코드로 나타내면 아래와 같다.
 
 ```python
@@ -183,6 +183,15 @@ weights = [np.float32(1 / x) for x in eff_num_per_label]
 
 # calculate loss
 loss = weighted_mse_loss(preds, labels, weights=weights)
+```
+
+```python
+def weighted_mse_loss(inputs, targets, weights=None):
+    loss = (inputs - targets) ** 2
+    if weights is not None:
+        loss *= weights.expand_as(loss)
+    loss = torch.mean(loss)
+    return loss
 ```
 
 코드를 통해 LDS는 학습 중 예측값의 분산 정도를 가지고 loss를 다시 계산하는 형태로 이해하였다.
