@@ -37,7 +37,7 @@ toc_sticky: true
 그러나 기존의 솔루션들은 일반적으로 이산적으로 class가 나뉘어 있는, 이른바 classification 문제에만 주력하고 있다.
 정작 현실 세계의 데이터는 연속적이고 범위가 무한한 값들로 이뤄져 있으며 이러한 연속형 데이터 안에서도 불균형 문제가 있는 경우가 많다.
 
-DIR에서는 classification task에 대한 imbalanced data handling과는 다른 새로운 도전장을 내민다. (여기서 앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 말한다.)<br>
+DIR은 imbalanced classification과는 다른 종류의 어려움이 있다. (여기서 앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 지칭한다.)<br>
 먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.<br>
 그리고 연속적인 label들은 타깃 간에 뭔가 의미가 있을지도 모르는 거리를 가지는데, 이건 우리가 data imbalance를 어떻게 해석해야 할지에 대한 힌트를 준다.
 예를 들어서 training 데이터에서 t1, t2라는 두 개의 소수 클래스 타깃이 있다고 해보자. (정확히는 클래스는 아니지만 암튼)
