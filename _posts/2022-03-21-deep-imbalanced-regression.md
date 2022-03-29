@@ -199,7 +199,7 @@ def weighted_mse_loss(inputs, targets, weights=None):
 ### 3.2. Feature Distribution Smoothing
 
 앞선 예시들을 통해 이제 target space에서의 연속성은 feature space에서의 연속성에 대응해야 함을 알 수 있다.
-즉 학습 모델이 제대로 돌아가고 데이터 분포가 균형 잡혀 있다면, 인접 타깃에 대한 feature 통계를 봤을 때 인접한 애들끼리는 서로 거의 비슷한 feature 값을 뱉어낼 것이다.
+즉 학습 모델이 제대로 돌아가고 데이터 분포가 균형 잡혀 있다면, 인접 타깃에 대한 feature 통계를 봤을 때 인접한 애들끼리는 서로 비슷한 feature 값을 뱉어낼 것이다.
 
 > Motivating Example.
 
