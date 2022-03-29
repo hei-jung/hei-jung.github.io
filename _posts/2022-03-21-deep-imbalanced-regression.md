@@ -218,6 +218,7 @@ def weighted_mse_loss(inputs, targets, weights=None):
 
 feature distribution smoothing (FDS)는 바로 이런 점에서 고안한 것이다.<br>
 FDS는 feature 통계를 근처 타깃 영역으로 이동 시킨다. 이말인즉슨 치우친 데이터, 특히 <u>개수가 부족한 데이터</u>의 예측치를 보정하겠다는 뜻이다.
+이 보정 방법에 대한 설명은 아직 이해하지 못해서 추후에 추가로 정리하겠다.
 
 <!--FDS is performed by first estimating the statistics of each bin.
 Without loss of generality, we substitute variance with covariance to reflect also the relationship between the various feature elements within z, where Nb is the total number of samples in `b`th bin.
