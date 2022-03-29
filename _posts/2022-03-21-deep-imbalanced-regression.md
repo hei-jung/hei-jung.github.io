@@ -168,7 +168,7 @@ lds_kernel_window = get_lds_kernel_window(kernel='gaussian', ks=5, sigma=2)
 eff_label_dist = convolve1d(np.array(emp_label_dist), weights=lds_kernel_window, mode='constant')
 ```
 
-(bin index는 데이터 값들의 범위에 구간을 나눠서 구간마다 할당해주는 id라고 생각하면 된다.)
+(bin index는 데이터 값들의 범위에 구간(bin)을 나눠서 구간마다 할당해주는 id라고 생각하면 된다.)
 
 위에서 구한 effective label distribution 추정치를 가지고 loss re-weighting을 할 수 있다.
 loss function에 각 타깃에 LDS를 취한 label density 예측치의 역수를 곱해서 re-weighting을 함으로써 cost-sensitive하게 [loss function을 re-weighting](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/loss.py#L5) 하는 것이다.<br>
@@ -198,66 +198,82 @@ def weighted_mse_loss(inputs, targets, weights=None):
 
 ### 3.2. Feature Distribution Smoothing
 
-앞선 예시들을 통해 target space에서의 연속성은 feature space에서의 연속성에 대응해야 한다는 직감을 얻을 수 있다.
-즉 학습 모델이 제대로 돌아가고 데이터 분포가 균형 잡혀 있다면, feature 통계를 봤을 때 인접 타깃들끼리는 서로 붙어있어야 한다고 생각할 수 있다.
+앞선 예시들을 통해 이제 target space에서의 연속성은 feature space에서의 연속성에 대응해야 함을 알 수 있다.
+즉 학습 모델이 제대로 돌아가고 데이터 분포가 균형 잡혀 있다면, 인접 타깃에 대한 feature 통계를 봤을 때 인접한 애들끼리는 서로 거의 비슷한 feature 값을 뱉어낼 것이다.
 
 > Motivating Example.
 
-학습된 feature를 가지고 feature의 통계를 분석해보자. 여기서 각각의 데이터 분포 영역(bin)을 ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"}으로 정의한다.
+예시로 학습된 feature의 통계를 분석해보려고 한다.
+각 bin에 속한 타깃 데이터에 대한 평균(`𝜇`)과 표준편차(`𝜎`)를 계산한 것을 이 논문에서는 ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"}로 표기한다. (여기서 `b`는 타깃 값의 group index 또는 bin index를 나타낸다.)<br>
+그러고 나서 feature 통계 간의 유사 정도를 *Figure 4*의 두 그래프처럼 시각화 할 수 있다.
+*Figure 4*는 타깃 값 30을 기준으로 (`b` 기준값 = 30) 각 label 값에 대한 예측값 분포를 보여준다.
 
 ![Figure 4](/assets/images/dir_figure_4.png)
 
-위의 *Figure 4*는 타깃 값 30을 기준으로 각 label 값에 대한 예측값 분포를 보여준다.
-그래프를 보면 데이터 불균형에 의해서 0~6에 해당하는 타깃 데이터의 값을 전부 30에 가깝게 예측하고 있다는 걸 알 수 있다.
-0~6 범위 안에 있는 데이터가 충분히 많지 않아서 총 데이터 중 가장 많은 분포를 차지하는 대략 30에 가까운 값을 뱉어내는 것이다.
+아래쪽 variance cosine similarity 그래프를 통해 데이터의 분포를 알 수 있다. 즉 핑크색으로 표시한 구간은 데이터 양이 상대적으로 매우 적다.
+위쪽 mean cosine similarity 그래프에서 핑크색 구간 중에서도 0~6 범위의 막대들을 살펴보면, 기준값에서의 막대와 높이가 거의 비슷하다는 것을 알 수 있다.
+다시 말해서 0~6 범위 안에 있는 데이터가 충분히 많지 않다 보니 총 데이터 중 가장 많은 분포를 차지하는 대략 30에 가까운 값을 뱉어내는 것이다.
 
 > FDS Algorithm.
 
-여기에 feature distribution smoothing (FDS)를 적용해보자.<br>
+feature distribution smoothing (FDS)는 바로 이런 점에서 고안한 것이다.<br>
 FDS는 feature 통계를 근처 타깃 영역으로 이동 시킨다. 이말인즉슨 치우친 데이터, 특히 개수가 부족한 데이터의 예측치를 보정하겠다는 뜻이다.
 
-공식을 이해하는 게 어려워서 [코드](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/fds.py#L115)를 먼저 봤다.
+<!--FDS is performed by first estimating the statistics of each bin.
+Without loss of generality, we substitute variance with covariance to reflect also the relationship between the various feature elements within z, where Nb is the total number of samples in `b`th bin.
+Given the feature statistics, we employ again a symmetric kernel `k(yb,yb')` to smooth the distribution of the feature mean and covariance over the target bins `B`. This results in a smoothed version of the statistics.
+With both `{𝜇b,𝛴b}` and `{𝜇b~,𝛴b~}`, we then follow the standard whitening and re-coloring procedure to calibrate the feature representation for each input sample.-->
+
+![Figure 5](/assets/images/dir_figure_5.png)
+
+FDS는 [마지막 feature map을 뽑아내는 layer 다음에 feature 보정 layer, 즉 FDS layer를 끼워넣는 방식](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/resnet.py#L144)으로 구현한다.
 
 ```python
-def smooth(self, features, labels, epoch):
-    if epoch < self.start_smooth:
-        return features
+from fds import FDS
 
-    labels = labels.squeeze(1)
-    for label in torch.unique(labels):
-        if label > self.bucket_num - 1 or label < self.bucket_start:
-            continue
-        elif label == self.bucket_start:
-            features[labels <= label] = calibrate_mean_var(
-                features[labels <= label],
-                self.running_mean_last_epoch[int(label - self.bucket_start)],
-                self.running_var_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
-        elif label == self.bucket_num - 1:
-            features[labels >= label] = calibrate_mean_var(
-                features[labels >= label],
-                self.running_mean_last_epoch[int(label - self.bucket_start)],
-                self.running_var_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
-        else:
-            features[labels == label] = calibrate_mean_var(
-                features[labels == label],
-                self.running_mean_last_epoch[int(label - self.bucket_start)],
-                self.running_var_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_mean_last_epoch[int(label - self.bucket_start)],
-                self.smoothed_var_last_epoch[int(label - self.bucket_start)])
-    return features
+config = dict(feature_dim=..., start_update=0, start_smooth=1, kernel='gaussian', ks=5, sigma=2)
+
+def Network(nn.Module):
+    def __init__(self, **config):
+        super().__init__()
+        self.feature_extractor = ...
+        self.regressor = nn.Linear(config['feature_dim'], 1)  # FDS operates before the final regressor
+        self.FDS = FDS(**config)
+
+    def forward(self, inputs, labels, epoch):
+        features = self.feature_extractor(inputs)  # features: [batch_size, feature_dim]
+        # smooth the feature distributions over the target space
+        smoothed_features = features    
+        if self.training and epoch >= config['start_smooth']:
+            smoothed_features = self.FDS.smooth(smoothed_features, labels, epoch)
+        preds = self.regressor(smoothed_features)
+
+        return {'preds': preds, 'features': features}
 ```
 
-`bucket_num`은 데이터의 범위 안에서 그룹을 나눴을 때 그 그룹의 수를 의미하는 것으로 보인다.<br>
-(추후 더 정리)
+모델을 학습시키려면 각 epoch마다 `{𝜇b,𝛴b}`의 [*momentum update*](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/train.py#L280)를 해준다.
+이 작업을 통해서 학습하는 동안 좀 더 안정적이고 정확한 예측이 가능해진다.
 
-FDS는 마지막 feature map을 뽑아내는 layer 다음에 feature 보정 layer를 추가하는 방식으로 구현한다.
-모델을 학습시키려면 각 epoch마다 feature bin의 momentum update를 해준다.<br>
-(We integrate FDS into deep networks by inserting a feature calibration layer after the final feature map.
-To train the model, we employ a *momentum update* of the running statistics ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"} across each epoch.)
+```python
+model = Network(**config)
+
+for epoch in range(num_epochs):
+    for (inputs, labels) in train_loader:
+        # standard training pipeline
+        ...
+
+    # update FDS statistics after each training epoch
+    if epoch >= config['start_update']:
+        # collect features and labels for all training samples
+        ...
+        # training_features: [num_samples, feature_dim], training_labels: [num_samples,]
+        training_features, training_labels = ..., ...
+        model.FDS.update_last_epoch_stats(epoch)
+        model.FDS.update_running_stats(training_features, training_labels, epoch)
+```
+
+<!--We integrate FDS into deep networks by inserting a feature calibration layer after the final feature map.
+To train the model, we employ a *momentum update* of the running statistics `{𝜇b,𝛴b}` across each epoch.-->
 
 ## 4. Benchmarking DIR
 
