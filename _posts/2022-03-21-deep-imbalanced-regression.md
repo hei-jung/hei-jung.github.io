@@ -257,7 +257,7 @@ def smooth(self, features, labels, epoch):
 FDS는 마지막 feature map을 뽑아내는 layer 다음에 feature 보정 layer를 추가하는 방식으로 구현한다.
 모델을 학습시키려면 각 epoch마다 feature bin의 momentum update를 해준다.<br>
 (We integrate FDS into deep networks by inserting a feature calibration layer after the final feature map.
-To train the model, we employ a *momenum update* of the running statistics ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"} across each epoch.)
+To train the model, we employ a *momentum update* of the running statistics ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"} across each epoch.)
 
 ## 4. Benchmarking DIR
 
