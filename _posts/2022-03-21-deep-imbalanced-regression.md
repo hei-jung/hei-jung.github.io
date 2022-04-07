@@ -14,39 +14,49 @@ toc_sticky: true
 
 ### Imbalanced Regression
 
-내가 학습에 사용하고 있는 데이터는 Medical data이다. Medical/Healthcare data는 다른 데이터에 비해서 특히 더 불균형(imbalanced)인 경우가 많다.
-일반적으로 질병을 예측하기 위한 건강 정보는 병에 걸린 사람보다 걸리지 않은 건강한 사람의 비율이 훨씬 많기 때문이다.
-(예를 들어 병변 데이터라고 하면 비교적 병변 수치가 작은 쪽으로 치우친 분포 형태인 right-skewed (positively skewed) distribution을 보이게 된다.)
+내가 학습에 사용하고 있는 데이터는 Medical data이다. Medical/Clinical/Healthcare data는 다른 데이터에 비해서 특히 더 불균형(imbalanced)인 경우가 많다.
+일반적으로 질병을 예측하기 위한 건강 정보는 병에 걸린 사람보다 걸리지 않은 건강한 사람의 비율이 훨씬 높기 때문이다.<br>
+예를 들어 병변 데이터라고 하면 비교적 병변 수치가 작은 쪽으로 치우친 분포 형태인 right-skewed (positively skewed) distribution을 보이게 된다.
 
-입력 데이터가 어떤 클래스에 속하는지를 알아보는 classification task을 위한 imbalanced data handling에 대한 방법으로는
-[SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(Synthetic Minority Oversampling TEchnique) 같은 것들이 알려져 있다.<br>
-그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 regression task라서 SMOTE 같은 방법을 그대로 적용하기가 애매하다.
+입력 데이터가 어떤 클래스에 속하는지를 알아보는 classification task에서의 imbalanced data handling에 대한 방법으로는
+[SMOTE](https://www.jair.org/index.php/jair/article/view/10302)(<u>S</u>ynthetic <u>M</u>inority <u>O</u>versampling <u>Te</u>chnique) 같은 것들이 알려져 있다.<br>
+그런데 내 연구 주제는 입력 데이터로 이미지를 주고 실수값을 예측하게 하는 *regression task*라서 SMOTE 같은 방법을 그대로 적용하기가 애매하다.
 
-**Delving into Deep Imbalanced Regression** 논문에서는 이런 나에게 필요한 imbalanced data handling 방법을 소개하고 있다.
+**Delving into Deep Imbalanced Regression** 논문에서는 이런 나에게 필요한 데이터 불균형 해결 방법을 소개하고 있다.
 
 ## 0. Abstract
 
 기존의 데이터 불균형 문제를 해결하는 방식들은 범주형 데이터 (target with categorical indices)들의 불균형 문제에 초점을 맞추고 있다. (주로 classification task에서의 데이터 불균형)
-본 논문에서는 연속적인 target value로 구성된 데이터로 학습할 때 데이터 불균형 문제 (Deep Imbalanced Regression; DIR)를 해결할 수 있는 방법을 제시한다.
-범주형 label과 연속형 label의 차이점에서 착안하여 label과 feature에 대한 distribution smoothing 기법을 제안하고 있고, 이는 imbalanced <u>regression problem</u>에서 활용할 수 있다.
+본 논문에서는 연속적인 값들로 구성된 데이터를 학습할 때의 데이터 불균형 문제 (Deep Imbalanced Regression; DIR)를 해결할 수 있는 방법을 제시한다.
+범주형 데이터와 연속형 데이터의 본질적인 차이점에서 착안하여 label과 feature에 대한 distribution smoothing 기법을 제안하고 있고, 이는 imbalanced <u>regression problem</u>에서 활용할 수 있다.
 
 ## 1. Introduction
 
 데이터 불균형 문제는 편재한다. 이 현상은 기계 학습에도 큰 방해요소가 되기 때문에 이미 예전부터 이런 문제를 해결하는 방법들이 많이 제안되었다.
 
-그러나 기존의 솔루션들은 일반적으로 이산적으로 class가 나뉘어 있는, 이른바 classification 문제에만 주력하고 있다.
+그러나 기존의 솔루션들은 일반적으로 이산적(discrete)으로 클래스(class)가 나뉘어 있는, 이른바 classification 문제에만 주력하고 있다.
 정작 현실 세계의 데이터는 연속적이고 범위가 무한한 값들로 이뤄져 있으며 이러한 연속형 데이터 안에서도 불균형 문제가 있는 경우가 많다.
+그 대표적인 예시가 내가 가지고 있는 medical/clinical data이다.
 
-DIR은 imbalanced classification과는 다른 종류의 문제점이 있다. (여기서 앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 지칭한다.)<br>
-먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.<br>
-그리고 연속적인 label들은 타깃 간에 뭔가 의미가 있을지도 모르는 거리를 가지는데, 이건 우리가 data imbalance를 어떻게 해석해야 할지에 대한 힌트를 준다.
-예를 들어서 training 데이터에서 t1, t2라는 두 개의 소수 클래스 타깃이 있다고 해보자. (정확히는 클래스는 아니지만 암튼)
+DIR은 imbalanced classification과는 다른 종류의 문제점이 있는데, 여기선 대표적으로 3가지를 들고 있다. (앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 지칭한다.)<br>
+먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.
+이게 무슨 말이냐 하면, 실수값 데이터는 classification으로 치면 그 값 자체로 하나의 클래스가 되어버린다.
+SMOTE 같은 re-sampling 기법은 보통 소수 클래스 샘플 사이사이에 임의의 값을 새로 생성하는 방식으로 이뤄지는데, 연속 데이터는 그 값 자체로 하나의 클래스니까 클래스 '사이사이' 공간을 정의하기 매우 어려워지는 것이다.<br>
+방금 전 얘기와 같은 맥락에서 연속적인 타깃 데이터들은 타깃 값 자체로 뭔가 의미를 가지며, 이건 데이터 불균형을 어떻게 해석해야 할지에 대한 힌트를 준다.
+예를 들어서 training 데이터셋에서 t1, t2라는 두 개의 소수 클래스 타깃이 있다고 해보자. (정확히는 클래스는 아니지만 암튼)
+
+![Challenge 2](/assets/images/dir_challenge_2.png)<br>
+<span style="font-size:xx-small">(출처: [저자의 포스트](https://towardsdatascience.com/strategies-and-tactics-for-regression-on-imbalanced-data-61eeb0921fca))</span>
+
 그런데 t1은 인접값이 많이 포진해 있는 영역 안에 있는 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음), t2는 그렇지가 않다고 하면
 이런 경우에 t1은 t2와는 다른 정도의 불균형을 보이는 것이다.<br>
 마지막으로 classification과 달리, 특정 타깃 값들은 데이터가 아예 존재하질 않아서 타깃의 extrapolation이나 interpolation을 필요로 한다.
 
+![Challenge 3](/assets/images/dir_challenge_3.png)<br>
+<span style="font-size:xx-small">(출처: 저자의 포스트)</span>
+
 이 논문에서는 단순하면서도 효과적으로 DIR을 다루는 방법 두 가지를 선보인다: **label distribution smoothing (LDS)** and **feature distribution smoothing (FDS)**.
-두 접근법에 대한 핵심적인 발상은 kernel distribution을 써서 인접한 타깃들 간의 유사성 (similarity between nearby targets)을 이용함으로써 label space와 feature space 상에서 distribution smoothing을 해주는 것이다.
+두 접근법에 대한 핵심적인 발상은 kernel distribution을 활용해서 인접한 타깃들 간의 유사도 (similarity)을 이용함으로써 label space와 feature space 상에서 distribution smoothing을 해주는 것이다.
 두 기술 모두 기존 딥러닝 모델들에 쉽게 적용할 수 있고 end-to-end 방식의 optimization이 가능하다.
 또한 이 기술들은 다른 방법들을 함께 사용했을 때 더욱더 효과적이다.
 
