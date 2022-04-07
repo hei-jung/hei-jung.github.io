@@ -38,22 +38,22 @@ toc_sticky: true
 정작 현실 세계의 데이터는 연속적이고 범위가 무한한 값들로 이뤄져 있으며 이러한 연속형 데이터 안에서도 불균형 문제가 있는 경우가 많다.
 그 대표적인 예시가 내가 가지고 있는 medical/clinical data이다.
 
-DIR은 imbalanced classification과는 다른 종류의 문제점이 있는데, 여기선 대표적으로 3가지를 들고 있다. (앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 지칭한다.)<br>
-먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.
+DIR은 imbalanced classification과는 다른 종류의 문제점이 있는데, 여기선 대표적으로 3가지를 들고 있다. (앞으로 타깃(target)이라고 하면 인공신경망 모델에 학습시킬 대상을 지칭한다.)
+
+먼저 연속적인 타깃 값들은 클래스 간 뚜렷한 경계가 없기 때문에 re-sampling이나 re-weighting 같은 전통적인 imbalanced classification 방식을 그대로 적용하기엔 애매해진다.<br>
 이게 무슨 말이냐 하면, 실수값 데이터는 classification으로 치면 그 값 자체로 하나의 클래스가 되어버린다.
-SMOTE 같은 re-sampling 기법은 보통 소수 클래스 샘플 사이사이에 임의의 값을 새로 생성하는 방식으로 이뤄지는데, 연속 데이터는 그 값 자체로 하나의 클래스니까 클래스 '사이사이' 공간을 정의하기 매우 어려워지는 것이다.<br>
+SMOTE 같은 re-sampling 기법은 보통 소수 클래스 샘플 사이사이에 임의의 값을 새로 생성하는 방식으로 이뤄지는데, 연속 데이터는 그 값 자체로 하나의 클래스니까 클래스 '사이사이' 공간을 정의하기 매우 어려워지는 것이다.
+
 방금 전 얘기와 같은 맥락에서 연속적인 타깃 데이터들은 타깃 값 자체로 뭔가 의미를 가지며, 이건 데이터 불균형을 어떻게 해석해야 할지에 대한 힌트를 준다.
-예를 들어서 training 데이터셋에서 t1, t2라는 두 개의 소수 클래스 타깃이 있다고 해보자. (정확히는 클래스는 아니지만 암튼)
-
+예를 들어서 training 데이터셋에서 t1, t2라는 두 개의 타깃이 있다고 해보자.<br>
 ![Challenge 2](/assets/images/dir_challenge_2.png)<br>
-<span style="font-size:xx-small">(출처: [저자의 포스트](https://towardsdatascience.com/strategies-and-tactics-for-regression-on-imbalanced-data-61eeb0921fca))</span>
+<span style="font-size:xx-small">(이미지 출처: [저자의 포스트](https://towardsdatascience.com/strategies-and-tactics-for-regression-on-imbalanced-data-61eeb0921fca))</span><br>
+여기서 t1은 인접값이 많이 포진해 있는 영역 안에 있는 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음), t2는 그렇지가 않다고 하면
+이런 경우에 t1과 t2는 비록 개수는 같을지라도 불균형 정도가 서로 같다고 할 수 없다.
 
-그런데 t1은 인접값이 많이 포진해 있는 영역 안에 있는 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음), t2는 그렇지가 않다고 하면
-이런 경우에 t1은 t2와는 다른 정도의 불균형을 보이는 것이다.<br>
-마지막으로 classification과 달리, 특정 타깃 값들은 데이터가 아예 존재하질 않아서 타깃의 extrapolation이나 interpolation을 필요로 한다.
-
+마지막으로 classification과 달리, 특정 타깃 값들은 데이터가 아예 존재하질 않아서 타깃의 extrapolation이나 interpolation을 필요로 한다.<br>
 ![Challenge 3](/assets/images/dir_challenge_3.png)<br>
-<span style="font-size:xx-small">(출처: 저자의 포스트)</span>
+<span style="font-size:xx-small">(이미지 출처: 저자의 포스트)</span>
 
 이 논문에서는 단순하면서도 효과적으로 DIR을 다루는 방법 두 가지를 선보인다: **label distribution smoothing (LDS)** and **feature distribution smoothing (FDS)**.
 두 접근법에 대한 핵심적인 발상은 kernel distribution을 활용해서 인접한 타깃들 간의 유사도 (similarity)을 이용함으로써 label space와 feature space 상에서 distribution smoothing을 해주는 것이다.
