@@ -46,13 +46,13 @@ SMOTE 같은 re-sampling 기법은 보통 소수 클래스 샘플 사이사이�
 
 방금 전 얘기와 같은 맥락에서 연속적인 타깃 데이터들은 타깃 값들 간 거리에도 의미가 있으며, 이건 데이터 불균형을 어떻게 해석해야 할지에 대한 힌트를 준다.<br>
 예를 들어서 training 데이터셋에서 t1, t2라는 두 개의 타깃이 있다고 해보자.<br>
-![Challenge 2](/assets/images/dir_challenge_2.png)<br>
+![Challenge 2](/assets/images/220321/dir_challenge_2.png)<br>
 <span style="font-size:xx-small">[출처: 저자의 포스트](https://towardsdatascience.com/strategies-and-tactics-for-regression-on-imbalanced-data-61eeb0921fca)</span><br>
 여기서 t1 주변의 값들은 빈도가 높은 반면 ([t1-∆, t1+∆] 범위 안에 샘플 수가 많음) t2는 그렇지가 않은 경우,
 비록 t1의 개수와 t2의 개수가 같을지라도 두 타깃의 불균형 정도가 서로 같다고 할 수 없다.
 
 마지막으로 classification과 달리, 어떤 타깃 값들은 데이터가 아예 존재하질 않아서 타깃의 extrapolation이나 interpolation을 필요로 한다.<br>
-![Challenge 3](/assets/images/dir_challenge_3.png)<br>
+![Challenge 3](/assets/images/220321/dir_challenge_3.png)<br>
 <span style="font-size:xx-small">출처: 저자의 포스트</span>
 
 이 논문에서는 단순하면서도 효과적으로 DIR을 다루는 방법 두 가지를 선보인다: **label distribution smoothing (LDS)** and **feature distribution smoothing (FDS)**.
@@ -82,7 +82,7 @@ LDS 설명에 앞서 classification과 regression의 차이점에 대해서 예�
 label 범위가 0~99로 같고, label density distribution이 같은 `classification 데이터셋`과 `regression 데이터셋`을 가지고 설명해보겠다.<br>
 참고로 이 논문에서는 확실한 비교를 위해 두 데이터셋의 label density distribution을 인위적으로 똑같이 맞춰줬다.
 
-![Figure 2](/assets/images/dir_figure_2.png)
+![Figure 2](/assets/images/220321/dir_figure_2.png)
 
 파란색 막대그래프로 표시된 위쪽 그림은 각 데이터셋의 분포를 보여주고, 빨간색 막대그래프로 표시된 아래쪽 그림은 학습 후의 label 별 test error를 나타낸다.<br>
 *Figure 2.(a)*를 보면 error distribution과 label density distribution에 negative correlation이 있음을 알 수 있다.
@@ -103,11 +103,11 @@ LDS는 symmetric kernel과 empirical density distribution을 가지고 convoluti
 Gaussian kernel과 Laplace kernel은 symmetric kernel의 일종으로 볼 수 있고 `k(y, y')=yy'` 같은 건 symmetric kernel이 아니다.
 LDS는 결국 *effective label density distribution*을 다음과 같이 계산하게 된다:
 
-![Formula 1](/assets/images/dir_formula_1.png)
+![Formula 1](/assets/images/220321/dir_formula_1.png)
 
 `p(y)`는 training data에서의 label 개수고, `p~(y')`는 y' label의 effective density이다.
 
-![Figure 3](/assets/images/dir_figure_3.png)
+![Figure 3](/assets/images/220321/dir_figure_3.png)
 
 *Figure 3*은 LDS의 label density distribution 필터링 방식과 필터링 후 test error와의 correlation을 간단히 보여준다.
 
@@ -135,15 +135,15 @@ def get_lds_kernel_window(kernel, ks, sigma):
 코드를 보면 위에서 symmetric kernel이라고 언급한 gaussian 필터와 laplace 필터를 구현하고 있다. triang은 triangle window, 즉 삼각형 필터이다.
 gaussian 필터와 삼각형 필터는 설명하지 않아도 그림을 보면 그냥 봐도 모두 symmetric(대칭)이라는 것을 알 수 있다:
 
-![Gaussian](/assets/images/Gaussian_Filter.png)<br>
+![Gaussian](/assets/images/220321/Gaussian_Filter.png)<br>
 <span style="font-size:xx-small">[출처: Wikipedia](https://en.wikipedia.org/wiki/Gaussian_filter)</span>
 
-![Triangle](/assets/images/scipy-signal-windows-triang.png)<br>
+![Triangle](/assets/images/220321/scipy-signal-windows-triang.png)<br>
 <span style="font-size:xx-small">[출처: Scipy docs](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.triang.html)</span>
 
 laplace 필터는 discrete domain에서 쓰이는 필터로, 대충 이런 형태를 생각하면 된다:
 
-![Laplace](/assets/images/laplace_filter.png)<br>
+![Laplace](/assets/images/220321/laplace_filter.png)<br>
 <span style="font-size:xx-small">[출처: Wikipedia](https://en.wikipedia.org/wiki/Discrete_Laplace_operator)</span>
 
 즉 한가운데의 원소를 기준으로 대칭인 matrix이다.
@@ -215,15 +215,15 @@ def weighted_mse_loss(inputs, targets, weights=None):
 > Motivating Example.
 
 예시로 학습된 feature의 통계를 분석해보려고 한다.
-각 bin에 속한 타깃 데이터에 대한 평균(`𝜇`)과 표준편차(`𝜎`)를 계산한 것을 ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"}라고 했을 때, (여기서 `b`는 타깃 값의 group index 또는 bin index를 나타낸다.)
-*Figure 4*는 타깃 값 30을 기준으로 (`b` 기준값 = 30) 각 타깃에 대한 feature 벡터 ![feature bin denotement](/assets/images/dir_feature_bin.png){: width="100" height="100"}의 코사인 유사도(cosine similarity)를 보여준다.
+각 bin에 속한 타깃 데이터에 대한 평균(`𝜇`)과 표준편차(`𝜎`)를 계산한 것을 ![feature bin denotement](/assets/images/220321/dir_feature_bin.png){: width="100" height="100"}라고 했을 때, (여기서 `b`는 타깃 값의 group index 또는 bin index를 나타낸다.)
+*Figure 4*는 타깃 값 30을 기준으로 (`b` 기준값 = 30) 각 타깃에 대한 feature 벡터 ![feature bin denotement](/assets/images/220321/dir_feature_bin.png){: width="100" height="100"}의 코사인 유사도(cosine similarity)를 보여준다.
 
 참고로 코사인 유사도는 두 벡터 간의 내적을 통해 두 벡터가 얼마나 비슷한지 계산하는 것이다.
 유사도가 1에 가까울수록 유사한 것으로 볼 수 있고 -1에 가까우면 거의 유사하지만 방향만 반대인 것인데, 예제에서 다루고 있는 데이터는 사람의 나이 데이터라 양수 값만 있으므로 유사도 통계 역시 양수만 나올 것이다.
-![cosine similarity](/assets/images/dir_cosine_similarity.png)<br>
+![cosine similarity](/assets/images/220321/dir_cosine_similarity.png)<br>
 <span style="font-size:xx-small">[출처: 딥러닝을 이용한 자연어 처리 입문](https://wikidocs.net/24603)</span>
 
-![Figure 4](/assets/images/dir_figure_4.png)
+![Figure 4](/assets/images/220321/dir_figure_4.png)
 
 핑크색, 노란색, 파란색으로 표시된 곳은 차례대로 개수가 매우 적은 데이터, 개수가 보통인 데이터, 개수가 많은 데이터를 나타낸다.
 위쪽의 평균 그래프에서 핑크색 구간 중에서도 특히 0~6 범위의 유사도가 거의 1인 것을 알 수 있다.
@@ -234,16 +234,16 @@ def weighted_mse_loss(inputs, targets, weights=None):
 feature distribution smoothing (FDS)는 바로 이런 점에서 고안한 것이다.<br>
 FDS는 feature 벡터를 필터링 해서 편향된 feature 분포를 보정하는 것을 목표로 한다. 이말인즉슨 치우친 데이터, 특히 <u>개수가 부족한 데이터</u>의 예측치를 보정하겠다는 뜻이다.<br>
 먼저 feature space `z`에서 각 bin의 feature 평균 및 분산을 계산하고, 분산 값을 feature들의 covariance (공분산)으로 대치시켜서 feature 벡터를 정규화(normalize)한다.<br>
-![formula 2,3](/assets/images/dir_formula_2-3.png)<br>
+![formula 2,3](/assets/images/220321/dir_formula_2-3.png)<br>
 그리고 이렇게 바뀐 feature 벡터에 필터를 입힌다.<br>
-![formula 4,5](/assets/images/dir_formula_4-5.png)<br>
+![formula 4,5](/assets/images/220321/dir_formula_4-5.png)<br>
 필터를 입히기 전의 `{μb, Σb}`와 `{μ ̃b, Σb}` 둘을 이용해서 <u>standard whitening and re-coloring</u> 절차를 거친다.
 (이 부분은 잘 모르는 개념이라서 해당 논문을 따로 정리해봐야 할 듯)<br>
-![formula 6](/assets/images/dir_formula_6.png)
+![formula 6](/assets/images/220321/dir_formula_6.png)
 
 *Figure 5*는 이러한 과정을 집약적으로 표현한 것이다.
 
-![Figure 5](/assets/images/dir_figure_5.png)
+![Figure 5](/assets/images/220321/dir_figure_5.png)
 
 FDS는 [마지막 feature map을 뽑아내는 layer 다음에 feature 보정 layer, 즉 FDS layer를 끼워넣는 방식](https://github.com/YyzHarry/imbalanced-regression/blob/main/imdb-wiki-dir/resnet.py#L144)으로 구현한다.
 
@@ -295,7 +295,7 @@ for epoch in range(num_epochs):
 이 논문에서 제안한 방법을 어떻게 시험했는지에 대해서 설명하고 있다.<br>
 *IMDB-WIKI* 데이터셋에서 bin 값은 0~7149 중에 있으며 validation 및 test set의 데이터 분포가 고르게끔 직접 구성하였다.
 
-![Table 1](/assets/images/dir_table_1.png)
+![Table 1](/assets/images/220321/dir_table_1.png)
 
 *Table 1*에서 `Vanilla`는 imbalance handling을 아예 안 한 것,
 `Focal-R`은 classification에서 쓰이는 `Focal loss`라는 loss 함수의 regression 버전,
