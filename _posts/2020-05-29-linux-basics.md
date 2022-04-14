@@ -5,7 +5,7 @@ tags: linux
 toc: true
 toc_sticky: true
 header:
-  overlay_image : /assets/images/header_linux.jpg
+  overlay_image : /assets/images/headers/header_linux.jpg
   overlay_filter: 0.3
 ---
 
