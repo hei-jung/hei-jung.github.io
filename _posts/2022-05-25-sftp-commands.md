@@ -1,5 +1,5 @@
 ---
-title: "[Linux] sftp 파일 명령어"
+title: "[Linux] sftp, scp 파일 명령어"
 subtitle: "파일 및 폴더(디렉토리) 다운로드, 업로드"
 categories: linux
 tags: linux
@@ -7,31 +7,48 @@ toc: true
 toc_sticky: true
 ---
 
-sftp 명령어를 알아보자
+sftp와 scp 명령어를 알아보자
 
+## sftp 기본
 
-
-## get
-
-### 파일 다운로드
+원격 호스트로 로그인 먼저 해놓기:
 
 ```console
-> get FILENAME
+$ sftp [-P 포트번호] user@원격IP
 ```
 
-### 디렉토리 다운로드
+## scp 기본
+
+기본 명령어 틀:
 
 ```console
-> get -r DIRNAME
+$ scp [OPTION] [user@]SRC_IP:]SRC_ROUTE [user@]DST_IP:]DST_ROUTE
 ```
 
-## put
+### Options
 
-### 파일 업로드
+|Option|Description|
+|:--:|:------------------------------|
+|`-P`|원격 호스트의 포트번호 (대문자임에 유의)|
+|`-p`|파일 수정 및 액세스 시간 보존|
+|`-r`|파일을 재귀적으로 복사 (디렉토리 전송 시 사용)|
+
+## Download
 
 ```console
-> put FILENAME
+# sftp
+> get [-r] 받을파일
+
+# scp
+$ scp [-P 포트번호] [-r] user@원격IP:받을파일 저장할경로
 ```
 
-### 디렉토리 업로드
+## Upload
 
+```console
+# sftp
+> put [-r] 전송할파일
+
+# scp
+$ scp [-P 포트번호] [-r] 전송할파일 user@원격IP:경로
+```
