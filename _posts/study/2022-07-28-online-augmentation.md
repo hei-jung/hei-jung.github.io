@@ -2,6 +2,8 @@
 title: "[머신러닝] Online augmentation"
 categories: cv-and-ml
 tags: python machine-learning pytorch
+toc: true
+toc_sticky: true
 ---
 
 Online data augmentation에 대해서 알아보자.<br>
@@ -13,7 +15,7 @@ Data Augmentation (데이터 증강)이란 **원래 가지고 있는 데이터�
 Augmentation을 통해 데이터 양을 늘려서 학습할 수 있기 때문에 overfitting을 줄일 수 있고 generalization에 도움이 된다.<br>
 이게 가능한 이유는 컴퓨터는 데이터가 조금만 달라져도 완전히 다른 데이터로 인식하기 때문이다.
 
-![Figure 1](/assets/images/220728/Fig_01.png) [1]
+![Figure 1](/assets/images/220728/Fig_01.png)<span style="font-size:xx-small">[1]</span>
 
 예를 들어 위의 이미지를 우리 사람의 눈으로 봤을 땐 조금씩 회전하거나 좌우반전만 시킨 똑같은 고양이 사진으로 보이지만 컴퓨터의 입장에서 영상 데이터는 **숫자**이기 때문에 전혀 다른 데이터로 보는 것이다.
 
