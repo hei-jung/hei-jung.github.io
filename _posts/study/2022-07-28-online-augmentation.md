@@ -33,7 +33,7 @@ offline augmentation은 학습 전 데이터 전처리 단계에서 augmentation
 offline augmentation랑 비교해보면 오프라인에서는 생성된 데이터가 처음부터 training set의 일부이므로 같은 데이터를 여러 번 학습한다 [2]. (augmentation 안 했을 때 학습 방식이랑 같다고 보면 됨)<br>
 따라서 당연히 online augmentation을 쓰는 것이 offline augmentation을 쓰는 것보다 generalization에 유리하다. 이런 이유로 요즘은 online augmentation을 많이 적용하는 추세이다.
 
-## 3D 영상 Augmentation
+## PyTorch 3D 영상 Augmentation 라이브러리
 
 내가 연구에 사용하고 있는 데이터는 3D 영상 데이터이므로 3D Image Augmentation 방법을 찾아봤다.
 
@@ -112,6 +112,8 @@ transformed_img = random_shift(img)
 ```
 
 ### 3. [SimpleITK](https://simpleitk.org/SPIE2019_COURSE/03_data_augmentation.html), [SimpleITK-Notebooks](https://github.com/InsightSoftwareConsortium/SimpleITK-Notebooks/blob/master/Python/70_Data_Augmentation.ipynb)
+
+### 4. [MedicalTorch](https://github.com/perone/medicaltorch)
 
 ## `TorchIO`를 이용한 Online Augmentation
 
