@@ -13,7 +13,8 @@ toc_sticky: true
 `PyTorch Lightning`은 `PyTorch` 프레임워크를 보다 효율적으로 사용할 수 있도록 만들어진 라이브러리다.<br>
 Lightning 모듈을 사용하면 코드가 훨씬 직관적이고 간결하다는 장점이 있다.
 
-### Clean code
+PyTorch Lightning을 사용했을 때와 사용하지 않았을 때의 코드를 비교해 보자.<br>
+먼저 아래의 코드는 PyTorch Lightning을 안 쓰고 training과 validation을 구현한 것이다.
 
 ```python
 # Training
@@ -85,7 +86,6 @@ for epoch in range(n_epoch):
   print('Train MAE: %.3f / Validation MAE: %.3f' % (train_mae, valid_mae))
 ```
 
-위의 코드는 `PyTorch Lightning`을 안 쓰고 training과 validation을 구현한 것이다.
 이 코드가 `PyTorch Lightning`을 쓰면 이렇게 깔끔해진다:
 
 ```python
