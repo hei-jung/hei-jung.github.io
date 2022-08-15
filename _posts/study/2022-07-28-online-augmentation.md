@@ -35,16 +35,6 @@ Online augmentation model will see different images at each epoch.
 In Offline augmentation, augmented image is part of the training set, it views the augmented image multiple times depending on the number of epochs.<br>
 The model generalizes better with online augmentation as it sees more samples during training with online data augmentation [2].
 
-In this case, we apply transformations in mini-batches and then feed it to the model.
-
-Online augmentation model will see different images at each epoch. In Offline augmentation, augmented image is part of the training set, it views the augmented image multiple times depending on the number of epochs.
-
-The model generalizes better with online augmentation as it sees more samples during training with online data augmentation.
-
-We will be using imgaug class for demonstrating Image Augmentation.
-
-imgaug supports a wide range of data augmentation techniques
-
 학습 도중에 mini-batch에다가 augmentation을 적용하는 방법이다.
 즉, 이 방법을 사용하면 학습 모델이 매 epoch마다 다른 데이터를 학습하게 된다.
 offline augmentation랑 비교해보면 오프라인에서는 생성된 데이터가 처음부터 training set의 일부이므로 같은 데이터를 여러 번 학습한다 [2]. (augmentation 안 했을 때 학습 방식이랑 같다고 보면 됨)<br>
