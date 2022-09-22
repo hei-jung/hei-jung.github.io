@@ -19,18 +19,16 @@ Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
   - 장혜정
   - ジャン・ヘジョン
 - from Seoul, South Korea
-- Hankuk University of Foreign Studies(HUFS)
-  - Bachelor's Degree in Electronics Engineering
-- Ewha Womans University Graduate School
-  - Major in Computational Medicine
+- Bachelor's Degree in Electronics Engineering, Hankuk University of Foreign Studies (HUFS)
+- Majoring in Computational Medicine, Ewha Womans University
 - [Naver Blog](https://blog.naver.com/wkdgpwjd007)
 - [GitHub](https://github.com/hei-jung)
 - [Contact Me📩](mailto:heijung.jang@ewhain.net)
 
 ## EDUCATION
 
-- Major in Computational Medicine, Ewha Womans University Grad School (2021.09 ~)
-- Bachelor, Hankuk University of Foreign Studies(HUFS) (2016.02 ~ 2020.02)
+- Majoring in Computational Medicine, Ewha Womans University Graduate School (2021.09 ~)
+- Bachelor, Hankuk University of Foreign Studies (HUFS) (2016.02 ~ 2020.02)
   - Majored in **Dept. of Electronics Engineering** (Bachelor of Engineering)
   - Double Majored **Japanese Interpretation and Translation** (Bachelor of Arts)
 
