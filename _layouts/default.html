@@ -19,10 +19,9 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     <!-- SCM Music Player https://www.scmplayer.net -->
-    <script type="text/javascript" src="https://www.scmplayer.net/script.js"
-      data-config="{'skin':'skins/tunes/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'NewJeans - Hype Boy','url':'https://youtu.be/ghrlZIMDzbM'},{'title':'NewJeans - Hurt','url':'https://youtu.be/8QWtOgBJZNc'}]}" >
-    </script>
-    <!-- SCM Music Player script end -->
+<script type="text/javascript" src="https://www.scmplayer.net/script.js"
+data-config="{'skin':'skins/tunes/skin.css','volume':50,'autoplay':true,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'NewJeans - Hype Boy','url':'https://youtu.be/ghrlZIMDzbM'},{'title':'NewJeans - Hurt','url':'https://youtu.be/8QWtOgBJZNc'}]}" ></script>
+<!-- SCM Music Player script end -->
 
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
