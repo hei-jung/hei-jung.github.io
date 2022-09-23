@@ -34,8 +34,6 @@ docs:
   - title: "잡다한 메모노트"
     url: /categories/note/
     children:
-      - title: "일상・생각"
-        url: /tags/idea/
       - title: "메모"
         url: /tags/memo/
   # - title: "Categories"
