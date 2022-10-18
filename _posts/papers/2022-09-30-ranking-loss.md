@@ -13,21 +13,21 @@ use_math: true
 
 ## Ranking Loss 개념
 
-chronological age (subject의 실제 나이)를 $y$, estimated brain age (뇌 나이 예측값)를 $\hat{y}$이라고 할 때, 두 데이터 샘플 간 관계 즉, age 간의 차이가 중요하다는 점을 이용하여 age difference loss를 (5)번 식과 같이 두 데이터의 estimated brain age difference와 true age difference에 대한 MSE로 나타낼 수 있다. ($N_p$: $(i,j)$ 데이터 쌍의 개수)
+chronological age (subject의 실제 나이)를 $y$, estimated brain age (뇌 나이 예측값)를 $\hat{y}$이라고 할 때, 두 데이터 샘플 간 관계 즉, age 간의 차이가 중요하다는 점을 이용하여 age difference loss를 (5)번 식과 같이 두 데이터의 estimated brain age difference와 true age difference에 대한 MSE로 나타낼 수 있다. (${N_p}$: $(i,j)$ 데이터 쌍의 개수)
 
-$$ L_d = \frac{1}{N_p} \sum_{(i,j)} (\widehat{y_i}-\widehat{y_j}-(y_i-y_j))^2 (5) $$
+$$ L_d = \frac{1}{N_p} \sum_{(i,j)} ((\hat{y_i}-\hat{y_j})-(y_i-y_j))^2  (5) $$
 
 이때 $L_d$가 두 샘플에 대한 ranking loss이다. age difference의 부호가 곧 두 개 age의 순서를 나타내기 때문이다. $L_d$는 age difference의 크기와 부호 모두 고려한다.
 
 참고로 통계학에서 Spearman's rank correlation coefficient (SRCC; 스피어만 상관계수)라는 게 있다.<br>
 Spearman 상관 계수는 두 변수의 유사 정도를 직관적으로 파악하기 위해 사용되는 도구로, rank variable의 Pearson 상관 계수를 계산하는 것으로 구할 수 있다. 그 식이 아래와 같다.
 
-$$ r_r = \frac{\cov (\Rank (\hat{y}), \Rank (y))}{\sigma_{\Rank (\hat{y})}\sigma_{\Rank (y)}} (6) $$
+$$ r_r = \frac{cov(Rank(\hat{y}), Rank(y))}{\sigma_{Rank(\hat{y})}\sigma_{Rank(y)}}  (6) $$
 
-$\Rank$는 두 변수의 순서를 결정하는 rank operator이고, $\cov (\Rank (\hat{y}), \Rank (y))$는 두 개의 rank variable에 대한 공분산 (covariance), $\sigma$는 각 rank variable에 대한 표준편차이다.<br>
-$\{\hat{y_i}\}$와 $\{y_i\}$에서 각각 집합 안에 중복되는 값이 하나도 없으면 (6)번 식은 (7)번 식처럼 다시 쓸 수 있다. ($N$: $\{\hat{y_i}\}$ 또는 $\{y_i\}$ 집합의 크기 = 총 데이터 수)
+$Rank$는 두 변수의 순서를 결정하는 rank operator이고, $cov(Rank(\hat{y}), Rank(y))$는 두 개의 rank variable에 대한 공분산 (covariance), $\sigma$는 각 rank variable에 대한 표준편차이다.<br>
+$\{\hat{y_i}\}$와 $\{y_i\}$에서 각각 집합 안에 중복되는 값이 하나도 없으면 (6)번 식은 (7)번 식처럼 다시 쓸 수 있다. (${N}$: $\{\hat{y_i}\}$ 또는 $\{y_i\}$ 집합의 크기 = 총 데이터 수)
 
-$$ r_r = 1 - \frac{6\sum_i (\Rank (\hat{y_i}) - \Rank (y_i))^2}{N(N^2-1)} (7) $$
+$$ r_r = 1 - \frac{6\sum_i (Rank(\hat{y_i}) - \Rank(y_i))^2}{N(N^2-1)}  (7) $$
 
 이 식에 대한 증명은 [여기](https://stats.stackexchange.com/questions/89121/prove-the-equivalence-of-the-following-two-formulas-for-spearman-correlation/89211#89211)를 참고하면 된다.
 
@@ -53,9 +53,9 @@ $\{\hat{y_i}\}$와 $\{y_i\}$ 집합 둘 다 중복 값이 없으면 (7)번 식�
 
 (∵ (8)번 식을 (7)번 식에 대입하면 다음과 같이 됨.)
 
-$$ r_r = 1 - \frac{6*L_r}{N(N^2 - 1)} $$
+$$ r_r = 1 - \frac{6L_r}{N(N^2 - 1)} $$
 
-$$ L_r = \alpha * (1 - r_r), \where \alpha = \frac{N(N^2-1)}{6} $$
+$$ L_r = \alpha * (1 - r_r), where  \alpha = \frac{N(N^2-1)}{6} $$
 
 다시 말해서 $L_r$이 0에 가까울수록 Spearman 상관계수는 1에 가까워진다는 의미이고, 이는 곧 $L_r$ 값이 작을수록 예측값이 정답값에 근사하다는 것과 같다.<br>
 따라서 $L_r$ 값을 최소화하는 방향으로 학습 모델을 최적화하는 것이 이 논문의 주 목적이다.
@@ -97,15 +97,15 @@ class SpearmanLoss(torch.nn.Module):
 <span style="font-size:xx-small">
 Training a differentiable sorter [2].<br>
 $\Theta_B$: learnable parameters of a DNN<br>
-$r$: rank from true rank vector $\rk (y)$<br>
+$r$: rank from true rank vector ${rk(y)}$<br>
 $\hat{r}$: rank predicted from the DNN
 </span>
 
 위의 그림을 보면 이해가 쉽다.<br>
-d개의 데이터를 가진 y라는 벡터가 있고 y의 모든 원소에 대해 1부터 d까지 rank를 매긴 벡터를 $\rk (y)$라고 할 때, 이 $\rk (y)$를 예측하기 위한 sorter 모델 $f_\Theta_B$를 만든다.<br>
-즉 $f_\Theta_B$는 ranking operator의 역할을 하는 모델이고 이를 L1 loss를 가지고 학습시킴으로써 gradient descent를 최적화하고자 하는 것이다.<br>
+d개의 데이터를 가진 y라는 벡터가 있고 y의 모든 원소에 대해 1부터 d까지 rank를 매긴 벡터를 ${rk(y)}$라고 할 때, 이 ${rk(y)}$를 예측하기 위한 sorter 모델 $f_{\Theta_B}$를 만든다.<br>
+즉 $f_{\Theta_B}$는 ranking operator의 역할을 하는 모델이고 이를 L1 loss를 가지고 학습시킴으로써 gradient descent를 최적화하고자 하는 것이다.<br>
 
-$$ \min_{\Theta_B} \sum_{n=1}^N \Vert \rk (y^(n)) - f_\Theta_B (y^(n)) \Vert_1  (N: \sample \size) $$
+$$ \min_{\Theta_B} \sum_{n=1}^N \Vert \rk (y^(n)) - f_{\Theta_B} (y^(n)) \Vert_1  (N: sample  size) $$
 
 sorter 네트워크는 그냥 단순한 convolutional architecture를 사용하고 있는데 이 부분에 대한 설명은 건너뛰겠다.
 
@@ -139,7 +139,7 @@ def get_tiedrank(batch_score, dim=0):
 
 `get_rank`나 `get_tiedrank`의 매개변수로는 ground truth가 들어가며 return 값은 ground truth의 rank이다.
 
-SpearmanLoss를 loss function으로 쓰게 되면 이와 같이 rank operator를 이용한 ground truth의 rank인 $\Rank (y_i)$와 sorter를 이용한 predicted rank $\Rank (\hat{y_i})$ 간의 loss를 연산하는 것이다.
+SpearmanLoss를 loss function으로 쓰게 되면 이와 같이 rank operator를 이용한 ground truth의 rank인 $Rank(y_i)$와 sorter를 이용한 predicted rank $Rank(\hat{y_i})$ 간의 loss를 연산하는 것이다.
 
 ---
 
