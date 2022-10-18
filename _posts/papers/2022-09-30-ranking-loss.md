@@ -2,8 +2,6 @@
 title: "[논문리뷰] Ranking Loss"
 categories: paper-review
 tags: machine-learning python pytorch
-toc: true
-toc_sticky: true
 use_math: true
 ---
 
@@ -11,7 +9,6 @@ use_math: true
 
 "Brain Age Estimation From MRI Using Cascade Networks With Ranking Loss" [1]에서 나온 Ranking Loss 개념 및 코드 이해해 보기.
 
-## Ranking Loss 개념
 
 chronological age (subject의 실제 나이)를 $y$, estimated brain age (뇌 나이 예측값)를 $\hat{y}$이라고 할 때, 두 데이터 샘플 간 관계 즉, age 간의 차이가 중요하다는 점을 이용하여 age difference loss를 (5)번 식과 같이 두 데이터의 estimated brain age difference와 true age difference에 대한 MSE로 나타낼 수 있다. (${N_p}$: $(i,j)$ 데이터 쌍의 개수)
 
