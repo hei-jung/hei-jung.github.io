@@ -105,7 +105,7 @@ $\hat{r}$: rank predicted from the DNN
 d개의 데이터를 가진 y라는 벡터가 있고 y의 모든 원소에 대해 1부터 d까지 rank를 매긴 벡터를 ${rk(y)}$라고 할 때, 이 ${rk(y)}$를 예측하기 위한 sorter 모델 $f_{\Theta_B}$를 만든다.<br>
 즉 $f_{\Theta_B}$는 ranking operator의 역할을 하는 모델이고 이를 L1 loss를 가지고 학습시킴으로써 gradient descent를 최적화하고자 하는 것이다.<br>
 
-$$ \min_{\Theta_B} \sum_{n=1}^N \Vert \rk (y^(n)) - f_{\Theta_B} (y^(n)) \Vert_1  (N: sample  size) $$
+$$ \min_{\Theta_B} \sum_{n=1}^N \Vert \rk (y^{(n)}) - f_{\Theta_B} (y^{(n)}) \Vert_1  (N: sample  size) $$
 
 sorter 네트워크는 그냥 단순한 convolutional architecture를 사용하고 있는데 이 부분에 대한 설명은 건너뛰겠다.
 
