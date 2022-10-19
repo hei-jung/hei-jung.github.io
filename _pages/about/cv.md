@@ -18,13 +18,9 @@ title: "Curriculum Vitae(CV)"
 - Bachelor's Degree in Electronics Engineering, Hankuk University of Foreign Studies (HUFS)
 - Majoring in Computational Medicine, Ewha Womans University
 
-<div align=center>
-
 [![GitHub](http://img.shields.io/badge/GitHub-black?style=flat-square&logo=github&link=https://zzsza.github.io/)](https://github.com/hei-jung)
 [![Naver Blog](https://img.shields.io/badge/Naver%20Blog-badge?style=flat-square&logo=Blogger&logoColor=white)](http://blog.naver.com/wkdgpwjd007)
 [Contact Me📩](mailto:heijung.jang@ewhain.net)
-
-</div>
 
 ## EDUCATION
 
@@ -83,6 +79,8 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 <!-- |2020.09|FLEX| -->
 
 > Computer Skills
+
+https://img.shields.io/badge/{배지이름}-{css컬러}?style={스타일}&logo={로고}&logoColor={로고컬러}
 
 - `Linux`
 - `C/C++` `Java` `Python`
