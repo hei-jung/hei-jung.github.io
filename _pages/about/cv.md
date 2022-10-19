@@ -63,7 +63,7 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 ## SKILLS
 
-> Language Skills
+### Language Skills
 
 - Korean: native
 - English: fluent / highly proficient
@@ -78,7 +78,7 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 <!-- |2020.09|FLEX| -->
 
-> Computer Skills
+### Computer Skills
 
 |   |Name|
 |---|----|
@@ -94,7 +94,7 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 |   |National Technical Qualification|
 |---|--------------------------------|
-|2021.06.|Engineer Information Processing (정보처리기사)|
+|2021.06|Engineer Information Processing (정보처리기사)|
 
 
 ## EXTRACURRICULAR ACTIVITIES
