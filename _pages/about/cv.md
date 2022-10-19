@@ -20,8 +20,8 @@ title: "Curriculum Vitae(CV)"
 
 <div align=center>
 
-[![GitHub](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://zzsza.github.io/)](https://github.com/hei-jung)
-[![Naver Blog](https://img.shields.io/badge/naverblog-badge?style=flat-square&logo=Blogger&logoColor=white)](http://blog.naver.com/wkdgpwjd007)
+[![GitHub](http://img.shields.io/badge/GitHub-black?style=flat-square&logo=github&link=https://zzsza.github.io/)](https://github.com/hei-jung)
+[![Naver Blog](https://img.shields.io/badge/Naver%20Blog-badge?style=flat-square&logo=Blogger&logoColor=white)](http://blog.naver.com/wkdgpwjd007)
 [Contact Me📩](mailto:heijung.jang@ewhain.net)
 
 </div>
