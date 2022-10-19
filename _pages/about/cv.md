@@ -3,34 +3,29 @@ header:
   overlay_image : /assets/images/headers/header_about.jpg
   overlay_filter: 0.2
 layout: single
-permalink: /about/
+permalink: /cv/
 title: "Curriculum Vitae(CV)"
 ---
-
-Go to: [Korean Ver.](https://hei-jung.github.io/about-me/)
 
 # Hi, My name is Hei-Jung!
 
 > I expect to get opportunities to learn from projects and talented people, and enhance my skills on programming and research.
+> 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
-## SUMMARY
-
-- Hei-Jung Jang
-  - 장혜정
-  - ジャン・ヘジョン
+- Hei-Jung Jang (장혜정)
 - from Seoul, South Korea
 - Bachelor's Degree in Electronics Engineering, Hankuk University of Foreign Studies (HUFS)
 - Majoring in Computational Medicine, Ewha Womans University
-- [Naver Blog](https://blog.naver.com/wkdgpwjd007)
-- [GitHub](https://github.com/hei-jung)
-- [Contact Me📩](mailto:heijung.jang@ewhain.net)
+
+|[Naver Blog](https://blog.naver.com/wkdgpwjd007)|[GitHub](https://github.com/hei-jung)|[Contact Me📩](mailto:heijung.jang@ewhain.net)|
+|---|---|---|
 
 ## EDUCATION
 
-- Majoring in Computational Medicine, Ewha Womans University Graduate School (2021.09 ~)
+- Majoring in Computational Medicine, Ewha Womans University Graduate School (2021.09 ~ Present)
 - Bachelor, Hankuk University of Foreign Studies (HUFS) (2016.02 ~ 2020.02)
-  - Majored in **Dept. of Electronics Engineering** (Bachelor of Engineering)
-  - Double Majored **Japanese Interpretation and Translation** (Bachelor of Arts)
+  - Majored in **Electronics Engineering** (Bachelor of Engineering)
+  - Double Majored in **Japanese Interpretation and Translation** (Bachelor of Arts)
 
 <!-- ## HONOURS & AWARDS
 
@@ -68,30 +63,42 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 > Language Skills
 
-||English|Korean(한국어)|Japanese(日本語)|
-|:---|:---:|:---:|:---:|
-|`listening` & `speaking`|*fluent*|*native*|*conversational*|
-|`reading` & `writing`|*highly proficient*|*native*|*proficient*|
+- Korean: native
+- English: fluent / highly proficient
+- Japanese: conversational / proficient
 
-TOEIC 930, TOEFL iBT 91(MyBest 99), JLPT N2
+|   |Certificated Language Proficiency|Score/Level|
+|---|---------------------------------|-----|
+|2021.02|TOEIC|930|
+|2021.02|TEPS|437|
+|2020.12|TOEFL iBT|91 (MyBest 99)|
+|2018.08|JLPT|N2|
+
+<!-- |2020.09|FLEX| -->
 
 > Computer Skills
 
-||Details|
-|---|---|
-|Language|`C` `Java` `Python` `Arduino` `VerilogHDL`|
-|OS|`Windows` `Linux` `Mac`|
-|Database & SQL|`OracleSQL`|
-|Opensource & Framework|`Android` `SpringBoot` `TensorFlow` `PyTorch` `OpenCV` `YOLO` `React`|
-|CAD & Simulator|`OrCad` `MultiSim` `ModelSim`|
+- `Linux`
+- `C/C++` `Java` `Python`
+- `PyTorch` `TensorFlow` `OpenCV` `YOLO`
+- `VerilogHDL`
+- `OracleSQL`
+- `Android` `SpringBoot` `React`
+<!-- - `Windows` `Linux` `Mac` -->
+<!-- - `OrCad` `MultiSim` `ModelSim` -->
 
-## OTHER ACTIVITIES
+|   |National Technical Qualification|
+|---|--------------------------------|
+|2021.06.|Engineer Information Processing (정보처리기사)|
+
+
+## EXTRACURRICULAR ACTIVITIES
 
 - 2020 Completed Embedded & AI Video Analytics Convergence SW Development Course in PlayData, EnCore Education Centre
 - 2019 Member of HUFS Software Club GnuVill
 - 2019 Completed IDEC HDL Application & Design Education
 - 2018 Completed Drone Control & Development Course
 - 2018 6th Year Member of IT Club CADI
-<!-- - 2018 Cultural Exchange Program in Tokyo, Japan -->
+- 2018 Cultural Exchange Program in Tokyo, Japan
 <!-- - 2017 Math Tutor Volunteering -->
 <!-- - 2016 Member of HUFS Dept. of EE Student Council -->
