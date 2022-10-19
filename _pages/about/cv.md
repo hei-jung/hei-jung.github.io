@@ -10,6 +10,7 @@ title: "Curriculum Vitae(CV)"
 # Hi, My name is Hei-Jung!
 
 > I expect to get opportunities to learn from projects and talented people, and enhance my skills on programming and research.
+
 > 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
 - Hei-Jung Jang (장혜정)
@@ -17,8 +18,13 @@ title: "Curriculum Vitae(CV)"
 - Bachelor's Degree in Electronics Engineering, Hankuk University of Foreign Studies (HUFS)
 - Majoring in Computational Medicine, Ewha Womans University
 
-|[Naver Blog](https://blog.naver.com/wkdgpwjd007)|[GitHub](https://github.com/hei-jung)|[Contact Me📩](mailto:heijung.jang@ewhain.net)|
-|---|---|---|
+<table>
+  <tr>
+    <td>[Naver Blog](https://blog.naver.com/wkdgpwjd007)</td>
+    <td>[GitHub](https://github.com/hei-jung)</td>
+    <td>[Contact Me📩](mailto:heijung.jang@ewhain.net)</td>
+  </tr>
+</table>
 
 ## EDUCATION
 
@@ -43,14 +49,14 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 ## PROJECTS & EXPERIENCES
 
 <!-- - 2020, worked on a Web HMI project as a front end developer (business project)<br> -->
+<!-- - 2019, worked on an Android app for the student cafeteria with Android Studio<br> -->
+<!-- - 2019, studied deep learning with breast cancer dataset and Python<br> -->
 - 2020, [python application for the visually impaired](https://github.com/hei-jung/Seesun)<br>
 - 2020, [mini project no.4 - Machine Learning Pokédex](https://github.com/hei-jung/PokeDex)<br>
 - 2020, [mini project no.3 - OpenCV Attendance Application](https://github.com/hei-jung/MiniProject_OpenCV)<br>
 - 2020, [mini project no.3 - OpenCV Attendance Application](https://github.com/hei-jung/MiniProject_OpenCV)<br>
 - 2020, [mini project no.2 - IoT CatchMind Game](https://github.com/hei-jung/catchmind_game)<br>
 - 2020, [mini project no.1 - Java Food Order System](https://github.com/hei-jung/myDbApp)<br>
-<!-- - 2019, worked on an Android app for the student cafeteria with Android Studio<br> -->
-<!-- - 2019, studied deep learning with breast cancer dataset and Python<br> -->
 - 2019, studied 5G communication system and deep reinforcement learning with Python for senior project and thesis<br>
 - 2019, worked on a [digital clock project](https://github.com/hei-jung/digitalClockHDL) with Verilog HDL<br>
 - 2018, created an [Android app](https://github.com/hei-jung/LedControl) compatible 7 segment digital clock using LED strips and [Arduino module](https://github.com/hei-jung/LedControl_arduino) with Android Studio and Arduino IDE<br>
