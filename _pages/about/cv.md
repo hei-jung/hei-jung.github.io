@@ -80,7 +80,7 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 > Computer Skills
 
-- ![Linux](https://img.shields.io/badge/Linux-#FCC624?style=flat-square&logo=linux)
+- ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux)
 - `C/C++` `Java` `Python`
 - `PyTorch` `TensorFlow` `OpenCV` `YOLO`
 - `VerilogHDL`
