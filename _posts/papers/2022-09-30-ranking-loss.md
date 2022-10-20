@@ -12,19 +12,19 @@ use_math: true
 
 chronological age (subject의 실제 나이)를 $y$, estimated brain age (뇌 나이 예측값)를 $\hat{y}$이라고 할 때, 두 데이터 샘플 간 관계 즉, age 간의 차이가 중요하다는 점을 이용하여 age difference loss를 (5)번 식과 같이 두 데이터의 estimated brain age difference와 true age difference에 대한 MSE로 나타낼 수 있다. ($ N_p $ : $ (i,j) $ 데이터 쌍의 개수)
 
-$ L_d = \frac{1}{N_p} \sum_{(i,j)} ((\hat{y_i}-\hat{y_j})-(y_i-y_j))^2  (5) $
+$ L_d = \frac{1}{N_p} \sum_{(i,j)} ((\hat{y_i}-\hat{y_j})-(y_i-y_j))^2 $   (5)
 
 이때 $L_d$가 두 샘플에 대한 ranking loss이다. age difference의 부호가 곧 두 개 age의 순서를 나타내기 때문이다. $L_d$는 age difference의 크기와 부호 모두 고려한다.
 
 참고로 통계학에서 Spearman's rank correlation coefficient (SRCC; 스피어만 상관계수)라는 게 있다.<br>
 Spearman 상관 계수는 두 변수의 유사 정도를 직관적으로 파악하기 위해 사용되는 도구로, rank variable의 Pearson 상관 계수를 계산하는 것으로 구할 수 있다. 그 식이 아래와 같다.
 
-$ r_r = \frac{cov(Rank(\hat{y}), Rank(y))}{\sigma_{Rank(\hat{y})}\sigma_{Rank(y)}}  (6) $
+$ r_r = \frac{cov(Rank(\hat{y}), Rank(y))}{\sigma_{Rank(\hat{y})}\sigma_{Rank(y)}} $   (6)
 
 $Rank$는 두 변수의 순서를 결정하는 rank operator이고, $cov(Rank(\hat{y}), Rank(y))$는 두 개의 rank variable에 대한 공분산 (covariance), $\sigma$는 각 rank variable에 대한 표준편차이다.<br>
 $\{\hat{y_i}\}$와 $\{y_i\}$에서 각각 집합 안에 중복되는 값이 하나도 없으면 (6)번 식은 (7)번 식처럼 다시 쓸 수 있다. (${N}$: $\{\hat{y_i}\}$ 또는 $\{y_i\}$ 집합의 크기 = 총 데이터 수)
 
-$ r_r = 1 - \frac{6\sum_i (Rank(\hat{y_i}) - Rank(y_i))^2}{N(N^2-1)}  (7) $
+$ r_r = 1 - \frac{6\sum_i (Rank(\hat{y_i}) - Rank(y_i))^2}{N(N^2-1)} $   (7)
 
 이 식에 대한 증명은 [여기](https://stats.stackexchange.com/questions/89121/prove-the-equivalence-of-the-following-two-formulas-for-spearman-correlation/89211#89211)를 참고하면 된다.
 
@@ -44,7 +44,7 @@ cf. [fractional ranking](https://en.wikipedia.org/wiki/Ranking#Fractional_rankin
 
 여기서 ranking loss를 중복 값이 없는 두 데이터 집합 간의 Spearman 상관계수를 가지고 정의하면 다음과 같다.
 
-$ L_r = \sum_i (Rank (\hat{y_i}) - Rank (y_i))^2 (8) $
+$ L_r = \sum_i (Rank (\hat{y_i}) - Rank (y_i))^2 $   (8)
 
 $\{\hat{y_i}\}$와 $\{y_i\}$ 집합 둘 다 중복 값이 없으면 (7)번 식을 따른다고 했는데, 그렇게 되면 $L_r$이 $1 - r_r$(1에서 Spearman 상관계수를 뺀 값)에 비례한다는 점에 주목하자.
 
