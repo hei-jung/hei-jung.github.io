@@ -1,5 +1,5 @@
 ---
-title: "[논문리뷰] Ranking Loss"
+title: "[논문리뷰] Ranking Loss (2019, 2021)"
 categories: paper-review
 tags: machine-learning python pytorch
 use_math: true

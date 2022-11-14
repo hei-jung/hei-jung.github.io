@@ -1,5 +1,5 @@
 ---
-title: "[논문리뷰] Deep Imbalanced Regression"
+title: "[논문리뷰] LDS, FDS (2021)"
 categories: paper-review
 tags: machine-learning python pytorch
 toc: true
