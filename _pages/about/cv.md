@@ -23,6 +23,7 @@ title: "CV"
 ## EDUCATION
 
 - Majoring in **Computational Medicine**, Ewha Womans University Graduate School (2021.09 ~ Present)
+  - Studying deep learning based disease prediction as a member of [Medical Imaging and Learning (MIL) Lab](https://mil.ewha.ac.kr/) advised by Dr. Taehoon Shin
 - Bachelor, Hankuk University of Foreign Studies (HUFS) (2016.02 ~ 2020.02)
   - Majored in **Electronics Engineering** (Bachelor of Engineering)
   - Double Majored in **Japanese Interpretation and Translation** (Bachelor of Arts)
