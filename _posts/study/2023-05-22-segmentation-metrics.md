@@ -29,7 +29,7 @@ FN: 모델이 negative라고 예측한 값들 중에서 실제로도 negative인
 
 모델이 positive라고 답한 데이터 중에서 정답이 positive인 것들의 비율로, `0 ~ 1` 사이 값을 가지며 1에 가까울수록 좋다.
 
-$$ Precision = \frac{TP}{TP + FP} $$
+$ Precision = \frac{TP}{TP + FP} $
 
 Precision을 높이려면 FP를 낮춰야 한다.
 
@@ -37,7 +37,7 @@ Precision을 높이려면 FP를 낮춰야 한다.
 
 정답이 positive인 데이터 중에서 모델이 positive라고 예측한 것들의 비율로, `0 ~ 1` 사이 값을 가지며 1에 가까울수록 좋다.
 
-$$ Recall = \frac{TP}{TP + FN} $$
+$ Recall = \frac{TP}{TP + FN} $
 
 Recall을 높이려면 FN을 낮춰야 한다.
 
@@ -46,13 +46,13 @@ Recall을 높이려면 FN을 낮춰야 한다.
 일반적으로는 precision과 recall을 combine한 형태인 F1-score를 많이 쓴다.<br>
 F1-score는 precision과 recall의 조화 평균이고, `0 ~ 1` 사이 값을 가지며 1에 가까울수록 좋다.
 
-$$ F1-score = \frac{2 * Precision * Recall}{Precision + Recall} $$
+$ F1-score = \frac{2 * Precision * Recall}{Precision + Recall} $
 
 ## Specificity (특이도) = TNR (True Negative Rate)
 
 정답이 negative인 데이터 중에서 모델이 negative라고 예측한 것들의 비율로, `0 ~ 1` 사이 값을 가지며 1에 가까울수록 좋다.
 
-$$ Specificity = \frac{TN}{TN + FP} $$
+$ Specificity = \frac{TN}{TN + FP} $
 
 ## Dice Similarity Coefficient (DSC), Dice Coefficient, Dice Score
 
@@ -61,16 +61,18 @@ DSC는 의료 영상 segmentation에서 성능 평가 지표로 흔히 쓰인다
 
 $ DSC = \frac{2 \sum^N Pred GT}{\sum^N Pred^2 + \sum^N GT^2} $ (1)
 
-DSC는 실제 값(GT)와 예측 값(Pred)이 얼마나 겹치는지 평가하는 IoU(intersection over union)와도 유사하다.
-또한 DSC가 boolean data에 적용될 경우에는 분할을 수행할 영역(mask)을 positive class로 뒀을 때의 F1-score 식과 DSC 식이 본질적으로 같다.
+DSC는 실제 값(GT)와 예측 값(Pred)이 얼마나 겹치는지 평가하는 IoU(intersection over union)와도 유사하다. (식 2-1)<br>
+또한 DSC가 boolean data에 적용될 경우에는 분할을 수행할 영역(mask)을 positive class로 뒀을 때의 F1-score 식과 DSC 식이 본질적으로 같다. (식 2-2)
 
-$ DSC = \frac{2 |Pred \cap GT|}{|Pred| + |GT|} = \frac{2TP}{2TP + FP + FN} $ (2)
+$ DSC = \frac{2 |Pred \cap GT|}{|Pred| + |GT|} $ (2-1)
+
+$ DSC = \frac{2TP}{2TP + FP + FN} $ (2-2)
 
 ## Pixel Accuracy
 
 Pixel Accuracy는 픽셀에 따른 정확도이다. pixel별로 정답 class를 맞췄는지의 여부(True/False)를 통해 계산한다.
 
-$$ Pixel Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $$
+$ Pixel Accuracy = \frac{TP + TN}{TP + TN + FP + FN} $
 
 ## 3D image segmentation metrics Pytorch 코드
 
@@ -90,7 +92,7 @@ class SegMetrics(nn.Module):
 
         pixel_acc = (tp + tn) / (tp + tn + fp + fn + eps)
         dice = (2 * tp / (den1 + den2 + eps))  # (1)
-        dice = (2 * tp) / (2 * tp + fp + fn + eps)  # (2)
+        dice = (2 * tp) / (2 * tp + fp + fn + eps)  # (2-2)
         precision = tp / (tp + fp + eps)
         recall = tp / (tp + fn + eps)
         specificity = tn / (tn + fp + eps)
