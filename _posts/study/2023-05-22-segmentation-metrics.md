@@ -101,3 +101,11 @@ class SegMetrics(nn.Module):
 ## 참고. Dice Loss
 
 3D medical image segmentation task를 수행할 때 DSC를 1에서 뺀 값($ Dice Loss = 1 - DSC $)인 Dice Loss를 사용하여 모델을 최적화 할 수 있다.
+
+---
+
+참고.
+[1] [Minaee, S., Boykov, Y., Porikli, F., Plaza, A., Kehtarnavaz, N., & Terzopoulos, D. (2021). Image segmentation using deep learning: A survey. IEEE transactions on pattern analysis and machine intelligence, 44(7), 3523-3542.](https://arxiv.org/abs/2001.05566)<br>
+[2] [분류 모델 성능 평가 지표(Accuracy, Precision, Recall, F1 score 등)](https://white-joy.tistory.com/9)<br>
+[3] [딥러닝 Segmentation(6) - segmentation 평가(Pixel Accuracy, Mean IOU)](https://velog.io/@cha-suyeon/%EB%94%A5%EB%9F%AC%EB%8B%9D-Segmentation5-segmentation-%ED%8F%89%EA%B0%80Pixel-Accuracy-Mask-IOU)<br>
+[4] [Milletari, F., Navab, N., & Ahmadi, S. A. (2016, October). V-net: Fully convolutional neural networks for volumetric medical image segmentation. In 2016 fourth international conference on 3D vision (3DV) (pp. 565-571). Ieee.](https://arxiv.org/abs/1606.04797)
