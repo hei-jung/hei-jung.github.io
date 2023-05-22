@@ -3,6 +3,8 @@ title: "[머신러닝] image segmentation metrics"
 categories: cv-and-ml
 tags: python machine-learning pytorch
 use_math: true
+toc: true
+toc_sticky: true
 ---
 
 Image segmentation(이미지 분할)에서 자주 쓰이는 성능 평가 지표(metrics)들을 알아보자.
