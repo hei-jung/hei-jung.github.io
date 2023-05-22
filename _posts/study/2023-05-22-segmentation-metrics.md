@@ -63,13 +63,13 @@ DSC는 의료 영상 segmentation에서 성능 평가 지표로 흔히 쓰인다
 
 $ DSC = \frac{2 \sum^N Pred GT}{\sum^N Pred^2 + \sum^N GT^2} $ (1)
 
-DSC는 실제 값(GT)와 예측 값(Pred)이 얼마나 겹치는지 평가하는 IoU(intersection over union)와도 유사하다. (식 2-1)
+DSC는 실제 값(GT)와 예측 값(Pred)이 얼마나 겹치는지 평가하는 IoU(intersection over union)와도 유사하다.
 
-$ DSC = \frac{2 \vert{Pred \cap GT}\vert }{\vert{Pred}\vert + \vert{GT}\vert} $ (2-1)
+$ DSC = \frac{2 \vert{Pred \cap GT}\vert }{\vert{Pred}\vert + \vert{GT}\vert} $
 
-또한 DSC가 boolean data에 적용될 경우에는 분할을 수행할 영역(mask)을 positive class로 뒀을 때의 F1-score 식과 DSC 식이 본질적으로 같다. (식 2-2)
+또한 DSC가 boolean data에 적용될 경우에는 분할을 수행할 영역(mask)을 positive class로 뒀을 때의 F1-score 식과 DSC 식이 본질적으로 같다.
 
-$ DSC = \frac{2TP}{2TP + FP + FN} $ (2-2)
+$ DSC = \frac{2TP}{2TP + FP + FN} $ (2)
 
 ## Pixel Accuracy
 
@@ -95,7 +95,7 @@ class SegMetrics(nn.Module):
 
         pixel_acc = (tp + tn) / (tp + tn + fp + fn + eps)
         dice = (2 * tp / (den1 + den2 + eps))  # (1)
-        dice = (2 * tp) / (2 * tp + fp + fn + eps)  # (2-2)
+        dice = (2 * tp) / (2 * tp + fp + fn + eps)  # (2)
         precision = tp / (tp + fp + eps)
         recall = tp / (tp + fn + eps)
         specificity = tn / (tn + fp + eps)
