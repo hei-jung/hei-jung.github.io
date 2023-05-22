@@ -66,7 +66,7 @@ $ DSC = \frac{2 \sum^N Pred GT}{\sum^N Pred^2 + \sum^N GT^2} $ (1)
 DSC는 실제 값(GT)와 예측 값(Pred)이 얼마나 겹치는지 평가하는 IoU(intersection over union)와도 유사하다. (식 2-1)<br>
 또한 DSC가 boolean data에 적용될 경우에는 분할을 수행할 영역(mask)을 positive class로 뒀을 때의 F1-score 식과 DSC 식이 본질적으로 같다. (식 2-2)
 
-$$ DSC = \frac{2\vert{Pred \cap GT}\vert}{\vert{Pred}\vert + \vert{GT}\vert} $$ (2-1)
+$ DSC = \frac{2\vert{Pred \cap GT}\vert}{\vert{Pred}\vert + \vert{GT}\vert} $ (2-1)
 
 $ DSC = \frac{2TP}{2TP + FP + FN} $ (2-2)
 
