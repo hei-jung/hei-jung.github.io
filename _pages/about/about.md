@@ -1,7 +1,4 @@
 ---
-header:
-  overlay_image : /assets/images/headers/header_about.jpg
-  overlay_filter: 0.2
 layout: single
 permalink: /about/
 title: "About this blog"
