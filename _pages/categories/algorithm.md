@@ -10,10 +10,11 @@ sidebar:
 
 ## 알고리즘 문제 사이트
 
-백준: https://www.acmicpc.net/ (입출력까지 구현하는 연습 가능)<br>
-프로그래머스: https://programmers.co.kr/ (기업 코딩테스트 준비하기 좋음)<br>
-구름LEVEL: https://level.goorm.io/ (난이도가 쉬운 편이라 연습하기 좋음)<br>
-LeetCode: https://leetcode.com/ (영어로 문제 풀어보고 싶을 때)
+백준: <https://www.acmicpc.net/> (입출력까지 구현하는 연습 가능)<br>
+프로그래머스: <https://programmers.co.kr/> (기업 코딩테스트 준비하기 좋음)<br>
+SWEA(SW Expert Academy): <https://swexpertacademy.com/main/capacityTest/main.do> (삼성 코딩테스트 준비할 때)<br>
+구름LEVEL: <https://level.goorm.io/> (난이도가 쉬운 편이라 연습하기 좋음)<br>
+LeetCode: <https://leetcode.com/> (영어로 문제 풀어보고 싶을 때)
 
 ### 백준 문제풀이 순서
 
