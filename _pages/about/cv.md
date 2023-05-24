@@ -7,14 +7,13 @@ permalink: /cv/
 title: "CV"
 ---
 
-# Hi, My name is Hei-Jung!
+<!-- # Hi, My name is Hei-Jung! -->
 
-> I expect to get opportunities to learn from projects and talented people, and enhance my skills on programming and research.
+<!-- > I expect to get opportunities to learn from projects and talented people, and enhance my skills on programming and research. -->
 
-> 다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
+다양한 사람들과 협업하며 배울 점을 찾고, 이를 활용하여 스스로 발전해나가는 것을 목표로 합니다.
 
-- Hei-Jung Jang (장혜정)
-- from Seoul, South Korea
+- 장혜정 (Hei-Jung Jang)
 
 [![GitHub](http://img.shields.io/badge/GitHub-black?style=flat-square&logo=github)](https://github.com/hei-jung)
 [![Blog](https://img.shields.io/badge/Blog-badge?style=flat-square&logo=Naver&logoColor=white)](http://blog.naver.com/wkdgpwjd007)
@@ -55,18 +54,6 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 ## SKILLS
 
-### Language Skills
-
-<!-- - Korean: native
-- English: fluent / highly proficient
-- Japanese: conversational / proficient -->
-
-|   |Certificated Language Proficiency|Score/Level|
-|---|---------------------------------|-----|
-|2023.03|TOEIC Speaking|160(AL)|
-|2022.08|TOEIC|915|
-|2018.08|JLPT|N2|
-
 ### Computer Skills
 
 |   |Name|
@@ -81,9 +68,21 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 
 <!-- - `OrCad` `MultiSim` `ModelSim` -->
 
-|   |National Technical Qualification|
+|   |National Technical Qualification(국가기술자격증)|
 |---|--------------------------------|
-|2021.06.02|Engineer Information Processing (정보처리기사)|
+|2021.06.02|Engineer Information Processing(정보처리기사)|
+
+### Language Skills
+
+<!-- - Korean: native
+- English: fluent / highly proficient
+- Japanese: conversational / proficient -->
+
+|   |Certificated Language Proficiency|Score/Level|
+|---|---------------------------------|-----|
+|2023.03|TOEIC Speaking|160(AL)|
+|2022.08|TOEIC|915|
+|2018.08|JLPT|N2|
 
 
 ## EXTRACURRICULAR ACTIVITIES
