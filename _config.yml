@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Hei-Jung Jang"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "코딩 길 걷자"
+  bio              : "코딩 길 걷자. [about me](https://hei-jung.github.io/cv/)"
   location         : "Seoul, South Korea"
   email            :
   links:
