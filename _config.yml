@@ -27,7 +27,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hei-jung/hei-jung.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/jung.png"
-masthead_title           : "Hei-Jung's blog"
+masthead_title           : "'s blog"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -94,9 +94,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hei-Jung Jang"
+  name             : "졍"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "코딩 길 걷자. [about me](https://hei-jung.github.io/cv/)"
+  bio              : "[about me](https://hei-jung.github.io/cv/)"
   location         : "Seoul, South Korea"
   email            :
   links:
