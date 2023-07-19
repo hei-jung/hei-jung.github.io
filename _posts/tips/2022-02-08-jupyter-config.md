@@ -1,5 +1,5 @@
 ---
-title: "[메모] Jupyter Notebook 사용자 설정"
+title: "[메모] Jupyter Notebook 셀 글자 크기 변경"
 categories: note
 tags: memo jupyter-notebook
 toc: true
