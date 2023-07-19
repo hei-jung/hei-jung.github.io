@@ -1,6 +1,6 @@
 ---
 title: "[머신러닝] Online augmentation"
-categories: cv-and-ml
+categories: machine-learning
 tags: python machine-learning pytorch
 toc: true
 toc_sticky: true

@@ -1,9 +1,9 @@
 ---
-title: "Computer Vision and Machine Learning"
-permalink: /categories/cv-and-ml/
+title: "Machine Learning"
+permalink: /categories/machine-learning/
 layout: category
 author_profile: true
-taxonomy: cv-and-ml
+taxonomy: machine-learning
 sidebar:
   nav: "docs"
 ---

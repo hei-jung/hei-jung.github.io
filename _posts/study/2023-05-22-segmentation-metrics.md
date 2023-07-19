@@ -1,7 +1,7 @@
 ---
 title: "[머신러닝] image segmentation metrics"
-categories: cv-and-ml
-tags: python machine-learning pytorch
+categories: machine-learning computer-vision
+tags: python machine-learning computer-vision pytorch
 use_math: true
 toc: true
 toc_sticky: true

@@ -1,6 +1,6 @@
 ---
 title: "[머신러닝] pytorch loss function 정리"
-categories: cv-and-ml
+categories: machine-learning
 tags: python machine-learning pytorch
 ---
 

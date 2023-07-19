@@ -1,6 +1,6 @@
 ---
 title: "[머신러닝] validation loss가 training loss보다 작게 나오는 이유!?"
-categories: cv-and-ml
+categories: machine-learning
 tags: python machine-learning
 ---
 
