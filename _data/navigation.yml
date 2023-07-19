@@ -19,8 +19,8 @@ docs:
         url: /categories/algorithm/
       - title: "리눅스"
         url: /categories/linux/
-      - title: "머신러닝&컴퓨터비전"
-        url: /categories/cv-and-ml/
+      - title: "머신러닝"
+        url: /categories/machine-learning/
       - title: "논문 리뷰"
         url: /paper-review/
       - title: "디자인 패턴"
