@@ -13,7 +13,7 @@ use_mermaid: true
 [![Blog](https://img.shields.io/badge/Blog-badge?style=flat-square&logo=Naver&logoColor=white)](http://blog.naver.com/jungs-note)
 [e-mail📩](mailto:wkdgpwjd007@naver.com)
 
-```mermaid
+<!-- ```mermaid
 timeline
         title 학력사항
         section 2016
@@ -22,7 +22,13 @@ timeline
           한국외국어대학교 전자공학과 졸업<br>(2016 - 2020) : C/C++을 이용한 프로그래밍을 배웠으며 주로 임베디드 소프트웨어 개발을 수행하였습니다. : 동아리 활동을 통해 Java를 사용해서 Android App을 개발하였습니다. : 졸업 프로젝트로 Python을 사용해서 강화학습 알고리즘을 구현하였습니다.
         section 2023
           이화여자대학교 컴퓨터의학협동과정 졸업<br>(2021 - 2023) : Medical Imaging and Learning (MIL) Lab<br>지도교수 신태훈 교수님 : 3D MRI 영상을 활용한 컴퓨터 비전 연구를 수행하였습니다. : Python 언어와 PyTorch 프레임워크를 사용하였습니다. : 딥러닝 모델 개발 역량과 XAI 기술 구현 스킬을 습득하였습니다.
-```
+``` -->
+
+## 학력
+- 2013.03~2016.02, 서울 서초고등학교 졸업
+- 2016.02~2020.02, 한국외국어대학교 공과대학 전자공학과 졸업
+- 2021.09~2023.08, 이화여자대학교 컴퓨터의학협동과정 졸업
+  - Medical Imaging and Learning (MIL) Lab (엘텍공과대학 휴먼기계바이오공학부 신태훈 교수님 연구실)
 
 ## 학술대회 발표
 
