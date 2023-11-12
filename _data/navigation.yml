@@ -13,16 +13,22 @@ main:
 # sidebar
 docs:
   # test
-  - title: "개인 공부"
+  - title: "AI"
     children:
-      - title: "알고리즘"
-        url: /categories/algorithm/
-      - title: "리눅스"
-        url: /categories/linux/
       - title: "머신러닝"
         url: /categories/machine-learning/
       - title: "논문 리뷰"
         url: /paper-review/
+  - title: "Front-end"
+  - title: "Back-end"
+  - title: "OS"
+    children:
+      - title: "리눅스"
+        url: /categories/linux/
+  - title: "생산성 & 효율성"
+    children:
+      - title: "알고리즘"
+        url: /categories/algorithm/
       - title: "디자인 패턴"
         url: /design-pattern/
   - title: "Playdata 강의노트"
@@ -31,7 +37,7 @@ docs:
         url: /categories/android/
       - title: "웹"
         url: /categories/web/
-  - title: "잡다한 메모노트"
+  - title: "이것저것"
     url: /categories/note/
     children:
       - title: "메모"
