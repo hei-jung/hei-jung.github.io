@@ -10,4 +10,4 @@ sidebar:
 
 ## 리액트(React.js)란
 
-메타에서 개발한 JavaScript 라이브러리로 UI 개발에 사용된다.
+메타에서 개발한 JavaScript 라이브러리로 Web이나 모바일 앱의 UI 개발에 사용된다.
