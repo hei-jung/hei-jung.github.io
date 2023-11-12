@@ -3,7 +3,7 @@ title: "Playdata Android Notes"
 permalink: /categories/playdata-android/
 layout: category
 author_profile: true
-taxonomy: android
+taxonomy: playdata-android
 sidebar:
   nav: "docs"
 ---

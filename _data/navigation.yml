@@ -20,7 +20,12 @@ docs:
       - title: "논문 리뷰"
         url: /paper-review/
   - title: "Front-end"
+    url: /categories/front-end/
+    children:
+      - title: "React.js"
+        url: /categories/react/
   - title: "Back-end"
+    url: /categories/back-end/
   - title: "OS"
     children:
       - title: "리눅스"
@@ -34,9 +39,9 @@ docs:
   - title: "Playdata 강의노트"
     children:
       - title: "안드로이드"
-        url: /categories/android/
+        url: /categories/playdata-android/
       - title: "웹"
-        url: /categories/web/
+        url: /categories/playdata-web/
   - title: "이것저것"
     url: /categories/note/
     children:
