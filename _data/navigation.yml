@@ -47,6 +47,8 @@ docs:
     children:
       - title: "메모"
         url: /tags/memo/
+      - title: "전체 태그"
+        url: /tags/
   # - title: "Categories"
   #   url: /categories/
   # - title: "Posts"
