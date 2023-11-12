@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Content Provider"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

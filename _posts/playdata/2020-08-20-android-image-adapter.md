@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Image Adapter Application"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

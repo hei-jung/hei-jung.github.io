@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android SMS Receiver Example"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
@@ -269,7 +269,7 @@ public void onRequestPermissionsResult(int requestCode, String[] permissions, in
 
 **(2) 나머지 코드**
 
-- Receiver 등록 
+- Receiver 등록
 
 ```java
 private ListView listView;

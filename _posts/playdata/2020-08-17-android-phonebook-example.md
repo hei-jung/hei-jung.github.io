@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Phonebook Example"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
@@ -90,7 +90,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
 
 ## MainActivity.java
 
-> 액티비티 
+> 액티비티
 
 ```java
     @Override
@@ -162,7 +162,7 @@ public class PhoneAdaptor extends ArrayAdapter<Member> {
     }
 ```    
 
-> context메뉴 
+> context메뉴
 
 ```java
     @Override

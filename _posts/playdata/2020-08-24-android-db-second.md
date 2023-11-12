@@ -1,6 +1,6 @@
 ---
 title: "[Android] Connecting Android App to Database(2)"
-categories: android
+categories: playdata-android
 tags: android java database
 ---
 

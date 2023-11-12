@@ -1,6 +1,6 @@
 ---
 title: "[Android] Connecting Android App to Web Server(3)"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

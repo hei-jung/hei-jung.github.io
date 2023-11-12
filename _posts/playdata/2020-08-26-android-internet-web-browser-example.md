@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android & Internet"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

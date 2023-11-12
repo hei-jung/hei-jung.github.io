@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Open API Application(1)"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Android"
-permalink: /categories/android/
+title: "Playdata Android Notes"
+permalink: /categories/playdata-android/
 layout: category
 author_profile: true
 taxonomy: android

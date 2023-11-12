@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Socket Communication"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
@@ -12,7 +12,7 @@ tags: android java
 
 ```java
 class EchoServerTh extends Thread {
-	
+
   private Socket socket;
 
 	public EchoServerTh(Socket socket) {

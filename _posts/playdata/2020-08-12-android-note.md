@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Basics"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
@@ -44,7 +44,7 @@ cf. manifest file: 권한 설정, 추가. 프로그램에 대한 명세서.
 - onCreate() // 액티비티 초기화 코드. 뷰 생성.
   - cf. Bundle: key와 value 저장. 안드로이드 개발에서 자주 쓰이는 일종의 Map.
   - setContentView(): XML로 만든 View 객체를 현재 Activity에 붙여준다.
-  
+
 (ii) activity_main.xml
 - Attribute id: Attribute을 부를 이름. 속성들은 R 클래스(R.java)에 저장된다. 따라서 .java 파일에서 접근하려면 *R.id.정의한id*라고 쓴다.
 
@@ -99,7 +99,7 @@ cf. URI: 자원의 위치
   - requestCode: 어느 액티비티 다녀왔는지 확인
   - resultCode: 다녀온 액티비티의 처리 결과가 정상인지 아닌지 학인
   - data: 다녀온 액티비티 쪽에서 처리 결과를 담아 보낸 intent
-    
+
 cf. 왜 어떨 땐 this 쓰고 어떤 땐 액티비티명.this 쓰지?
   - 이벤트 핸들링을 하는 경우엔 context의 혼동이 있을 수도 있어, 액티비티명.this라고 쓴다.
   - 반면, 단순히 액티비티를 이동하는 경우에는 프로그램이 context를 헷갈려하지 않기 때문에 그냥 this라고 써도 무방하다.

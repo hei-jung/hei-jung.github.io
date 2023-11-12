@@ -1,6 +1,6 @@
 ---
 title: "[Android] Connecting Android App to Web Server(1)"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
@@ -114,7 +114,7 @@ try {
     if (!MainActivity.session_id.equals("")) {
         urlConn.setRequestProperty("Cookie", MainActivity.session_id);
     }
-    
+
     //...
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "[Android] Connecting Android App to Database(1)"
-categories: android
+categories: playdata-android
 tags: android java database
 ---
 
@@ -13,7 +13,7 @@ tags: android java database
 (8/21 수업 내용. 이 날 수업 하루 빠져서 내용 놓침..ㅠㅠ)
 
 - [(8/21)예디언니 필기 참고](https://github.com/Ahnyezi/Android_note/blob/master/0821/README.md)
-  
+
 - sqlite
   - 가장 정석적인 방법
 - room
@@ -37,7 +37,7 @@ public static AppDatabase getInstance(Context context){
 
 ### 새 프로젝트 생성
 
-#### 1. .allowMainThreadQueries() 쓰지 않고 UI에서 DB 
+#### 1. .allowMainThreadQueries() 쓰지 않고 UI에서 DB
 
 > build.gradle (Module: app)
 
@@ -148,7 +148,7 @@ public abstract class AppDatabase extends RoomDatabase {
 }
 ```
 
-> MemberDBAdapter 
+> MemberDBAdapter
 
 ```java
 public class MemberDBAdapter {

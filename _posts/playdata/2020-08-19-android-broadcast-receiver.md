@@ -1,6 +1,6 @@
 ---
 title : "[Android] Android Receiver"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "[Android] Android Service"
-categories: android
+categories: playdata-android
 tags: android java
 ---
 
