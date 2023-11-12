@@ -108,3 +108,43 @@ $ npm --version
 여기서 에러 페이지가 뜨는 이유는 아직 아무런 페이지도 매핑(mapping)하지 않았기 때문이다.
 
 ![back-end-browser](/assets/images/react-study/231112_backend_browser.png)
+
+## Front-end 프로젝트 생성
+
+이제 React 프레임워크를 활용하기 위한 프론트엔드 프로젝트를 생성할 것이다.<br>
+프로젝트를 만들 위치에서 터미널을 열고 아래의 명령어를 입력한다.
+
+```console
+$ npx create-react-app 프로젝트명
+```
+
+![front-end-create](/assets/images/react-study/231112_create_frontend.png)
+
+성공적으로 만들어졌으면 터미널에 이렇게 뜬다:
+
+![front-end-create](/assets/images/react-study/231112_frontend_success.png)
+
+### Front-end 프로젝트 실행
+
+터미널에서 프로젝트 폴더로 이동한 다음에 `npm start` 명령어를 통해 서버를 실행한다.
+
+```console
+$ cd 프로젝트명
+$ npm start
+```
+
+실행 결과:
+
+![back-end-java](/assets/images/react-study/231112_frontend_run.png)
+
+웹 브라우저에서 'localhost:3000'으로 접속하면 기본 UI 화면이 뜬다.
+
+![back-end-browser](/assets/images/react-study/231112_frontend_browser.png)
+
+여기까지 React 프로젝트 연습을 위한 환경 설정이다!
+
+---
+
+## 참고자료
+
+- [스프링부트 (Spring Boot) VSCode에서 프로젝트 시작하기 (feat. 웹IDE gitpod)](https://konkukcodekat.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-Spring-Boot-VSCode%EC%97%90%EC%84%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-feat-%EC%9B%B9IDE-gitpod)
