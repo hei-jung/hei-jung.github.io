@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "졍"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "[about me](https://hei-jung.github.io/cv/)"
+  bio              : "개발자 지망생"
   location         : "Seoul, South Korea"
   email            :
   links:
