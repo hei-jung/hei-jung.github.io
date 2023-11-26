@@ -1,6 +1,6 @@
 ---
-title: "[React/연습] #01. Visual Studio Code에서 React 개발하기"
-categories: front-end react web vscode settings
+title: "[React/연습] #00. Visual Studio Code에서 React 개발하기"
+categories: front-end back-end react web vscode settings
 tags: java javascript react
 toc: true
 toc_sticky: true
@@ -135,11 +135,11 @@ $ npm start
 
 실행 결과:
 
-![back-end-java](/assets/images/react-study/231112_frontend_run.png)
+![front-end-run](/assets/images/react-study/231112_frontend_run.png)
 
 웹 브라우저에서 'localhost:3000'으로 접속하면 기본 UI 화면이 뜬다.
 
-![back-end-browser](/assets/images/react-study/231112_frontend_browser.png)
+![front-end-browser](/assets/images/react-study/231112_frontend_browser.png)
 
 여기까지 React 프로젝트 연습을 위한 환경 설정이다!
 
