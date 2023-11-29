@@ -64,6 +64,19 @@ $ java -version
 
 ![openjdk17](/assets/images/react-study/231129_java17.png)
 
+## Visual Studio Code 프로젝트 생성
+
+본격적으로 다시 Java 17 버전에 맞는 프로젝트를 생성해 보자.<br>
+[이 글](https://hei-jung.github.io/front-end/back-end/react/web/vscode/settings/react-init/)에서 했던 것처럼 그대로 버전만 바꿔서 생성하려고 한다.
+
+1. '`command⌘`+`shift⇧`+`p`' => 'Spring Initializr: Create a Gradle Project' 선택
+2. Spring Boot 버전 선택: ex. <span style="color:red">3.2.0</span>
+3. 개발 언어 선택: <span style="color:red">**Java**</span>
+4. GroupId 입력 => ArtifactId 입력
+5. 패키지 타입 선택: <span style="color:red">**Jar**</span>
+6. Java 버전 선택: 개발 환경에 맞는 버전으로 선택: <span style="color:red">17</span>
+7. dependencies 선택: **Spring Web**, **Thymeleaf**
+
 ---
 
 ## 참고자료
