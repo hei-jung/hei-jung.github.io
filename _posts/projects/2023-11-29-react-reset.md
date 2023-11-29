@@ -1,0 +1,71 @@
+---
+title: "[React/연습] #번외. React 개발 위해 back-end 세팅 다시 하기"
+categories: back-end web vscode
+tags: java
+toc: true
+toc_sticky: true
+---
+
+어제까지 개발 잘 하고 있었는데 VS Code의 Spring Boot extension이 업데이트 되면서 원래 사용하고 있던 버전 설정에서 오류가 났다.
+오늘은 이 오류를 해결해보고자 한다.
+
+## Java 17 for MAC
+
+원래 내 맥북에 설치된 JDK 버전은 15인데 이제 스프링부트를 쓸 수 있는 최소 버전이 17 버전이라, 우선 이걸 설치하기로 했다.
+
+JDK17을 설치하기에 앞서 먼저 맥북에 brew가 설치되어 있어야 하는데 이 부분에 대한 정리는 생략하겠다.
+
+### openjdk17 설치
+
+```console
+$ brew install openjdk@17
+```
+
+잘 설치되었다면 이런 식으로 뜬다.
+
+![openjdk17-installed](/assets/images/react-study/231129_openjdk17.png)
+
+### (참고) 위에서 설치 안 될 경우
+
+아래의 명령어를 먼저 실행해 볼 것.
+
+```console
+$ brew tap adoptopenjdk/openjdk
+```
+
+### path 지정
+
+```console
+$ echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+```
+
+```console
+$ vi ~/.zshrc
+```
+
+파일에 아래의 내용을 추가한다.
+
+```zshrc
+export PATH=${PATH}:$JAVA_HOME/bin
+export CPPFLAGS="-I/usr/local/opt/openjdk@17/include"
+```
+
+```console
+$ source ~/.zshrc
+```
+
+### 버전 확인
+
+```console
+$ java -version
+```
+
+그럼 이제 17 버전으로 나오고 있는 것을 확인할 수 있다.
+
+![openjdk17](/assets/images/react-study/231129_java17.png)
+
+---
+
+## 참고자료
+
+- [Java 17 설치(Mac)](https://vkein.tistory.com/176)
