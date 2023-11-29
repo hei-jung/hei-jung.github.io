@@ -1,6 +1,6 @@
 ---
 title: "[React/연습] #번외. React 개발 위해 back-end 세팅 다시 하기"
-categories: back-end web vscode
+categories: back-end react web vscode
 tags: java
 toc: true
 toc_sticky: true
@@ -45,7 +45,7 @@ $ vi ~/.zshrc
 
 파일에 아래의 내용을 추가한다.
 
-```zshrc
+```
 export PATH=${PATH}:$JAVA_HOME/bin
 export CPPFLAGS="-I/usr/local/opt/openjdk@17/include"
 ```
