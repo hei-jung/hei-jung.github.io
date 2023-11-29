@@ -68,4 +68,5 @@ $ java -version
 
 ## 참고자료
 
+- [MacOS 환경에서 Java JDK 설정 및 변경하기 : homebrew, 다운로드 파일](https://adjh54.tistory.com/216) => 16 이하의 버전을 설치하는 방법에 대해서도 잘 정리되어 있다.
 - [Java 17 설치(Mac)](https://vkein.tistory.com/176)
