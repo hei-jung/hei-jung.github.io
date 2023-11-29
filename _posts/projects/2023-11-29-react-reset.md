@@ -70,12 +70,50 @@ $ java -version
 [이 글](https://hei-jung.github.io/front-end/back-end/react/web/vscode/settings/react-init/)에서 했던 것처럼 그대로 버전만 바꿔서 생성하려고 한다.
 
 1. '`command⌘`+`shift⇧`+`p`' => 'Spring Initializr: Create a Gradle Project' 선택
-2. Spring Boot 버전 선택: ex. <span style="color:red">3.2.0</span>
+2. Spring Boot 버전 선택: ex. <span style="color:red">대충 아무 버전</span>(어차피 나중에 파일에서 수정할 것.)
 3. 개발 언어 선택: <span style="color:red">**Java**</span>
 4. GroupId 입력 => ArtifactId 입력
 5. 패키지 타입 선택: <span style="color:red">**Jar**</span>
 6. Java 버전 선택: 개발 환경에 맞는 버전으로 선택: <span style="color:red">17</span>
 7. dependencies 선택: **Spring Web**, **Thymeleaf**
+
+프로젝트 생성 후에는 반드시 Main 클래스인 `src/main/~~Application.java` 파일을 열어 `Run` 버튼을 실행해 본다.
+아래와 같이 실행되는지 확인한다.
+
+![back-end-java](/assets/images/react-study/231112_backend_run.png)
+
+![back-end-browser](/assets/images/react-study/231112_backend_browser.png)
+
+## build.gradle 수정
+
+내 컴퓨터에서는 spring boot 버전의 선택지가 `3.2.0`/`3.2.1 (SNAPSHOT)`/`3.1.7 (SNAPSHOT)`/`3.1.6` 이렇게 넷뿐이었다.<br>
+이 버전들을 선택하게 되면 문제점이, 내가 참고하려고 하는 블로그에서 쓰는 h2-console을 사용할 수가 없다.
+
+뭔가 사용할 수 있는 다른 방법을 찾을 수도 있지만 여기선 손쉽게 빌드 파일에서 spring boot 버전을 임의로 수정할 것이다.
+
+`build.gradle` 파일을 열면 맨 위에 이렇게 되어 있다.
+
+```gradle
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.6'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+```
+
+여기서 spring boot 버전과 dependency-management 버전을 다음과 같이 수정한다.
+
+```gradle
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.10'
+  id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+```
+
+이렇게 수정해도 서버를 run 하면 잘 실행되는 것을 확인할 수 있다.
+
+이러한 설정을 마치고 난 뒤에 [이 포스팅](https://hei-jung.github.io/back-end/react/web/vscode/react-2/)으로 넘어가자.
 
 ---
 
