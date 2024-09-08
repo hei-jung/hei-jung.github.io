@@ -1,7 +1,7 @@
 ---
-title: "[Linux] jupyter notebook 원격 서버 설정"
-categories: linux
-tags: linux jupyter-notebook
+title: "[머신러닝] jupyter notebook 원격 서버 설정"
+categories: machine-learning
+tags: python machine-learning jupyter-notebook
 toc: true
 toc_sticky: true
 ---
