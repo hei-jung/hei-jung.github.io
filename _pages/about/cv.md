@@ -19,10 +19,14 @@ title: "CV"
 [![Blog](https://img.shields.io/badge/Blog-badge?style=flat-square&logo=Naver&logoColor=white)](http://blog.naver.com/wkdgpwjd007)
 [Contact Me📩](mailto:heijung.jang@ewhain.net)
 
+## CAREER
+
+- Canon Medical Systems Korea Co., Ltd. (2024.02 ~)
+
 ## EDUCATION
 
 - Master of Science in **Computational Medicine**, Ewha Womans University Graduate School (2021.09 ~ 2023.08)
-  - Studied deep learning based cerebrovascular disease prediction as a member of [Medical Imaging and Learning (MIL) Lab](https://mil.ewha.ac.kr/) advised by Dr. Taehoon Shin
+  - Studied deep learning based white matter hyperintensity volume prediction as a member of [Medical Imaging and Learning (MIL) Lab](https://mil.ewha.ac.kr/) advised by Dr. Taehoon Shin
 - Bachelor, Hankuk University of Foreign Studies (HUFS) (2016.02 ~ 2020.02)
   - Majored in **Electronics Engineering** (Bachelor of Engineering)
   - Double Majored in **Japanese Interpretation and Translation** (Bachelor of Arts)
@@ -37,7 +41,7 @@ First Distinction Scholarship, *1st Semester of 2017* -->
 <!-- - 2020, worked on a Web HMI project as a front end developer (business project)<br> -->
 <!-- - 2019, studied deep learning with breast cancer dataset and Python<br> -->
 <!-- - 2018, designed an amplifier circuit using BJT<br> -->
-- 2021, \[Graduate Research\] Deep learning based white matter hyperintensity volume prediction
+- 2023, \[Graduate Research\] Deep learning based white matter hyperintensity volume prediction
 - 2021, \[Datathon\] [Heart Disease AI Datathon 2021](https://github.com/hei-jung/HDAI-2021-ECG.git)<br>
 - 2020, \[Playdata mini project no.5\] [Python application for the visually impaired](https://github.com/hei-jung/Seesun)<br>
 - 2020, \[Playdata mini project no.4\] [Machine Learning based Pokédex](https://github.com/hei-jung/PokeDex)<br>
